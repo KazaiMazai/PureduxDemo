@@ -56,6 +56,8 @@
 		EAE4B5AD266925BF0005ACD2 /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5AC266925BF0005ACD2 /* AuthTextField.swift */; };
 		EAE4B5B2266926790005ACD2 /* View+Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5B1266926790005ACD2 /* View+Placeholder.swift */; };
 		EAE4B5B726692CAD0005ACD2 /* ThemeSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5B626692CAD0005ACD2 /* ThemeSizes.swift */; };
+		EAE4B5BC266939CD0005ACD2 /* AuthSecuredTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5BB266939CD0005ACD2 /* AuthSecuredTextField.swift */; };
+		EAE4B5CB26693C820005ACD2 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5C0266939E10005ACD2 /* CustomTextField.swift */; };
 		EAEE43842667F1C800F2C5FD /* PureduxCommonCore in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43832667F1C800F2C5FD /* PureduxCommonCore */; };
 		EAEE438A2667F64F00F2C5FD /* PureduxCommonOperators in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43892667F64F00F2C5FD /* PureduxCommonOperators */; };
 /* End PBXBuildFile section */
@@ -131,6 +133,8 @@
 		EAE4B5AC266925BF0005ACD2 /* AuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextField.swift; sourceTree = "<group>"; };
 		EAE4B5B1266926790005ACD2 /* View+Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Placeholder.swift"; sourceTree = "<group>"; };
 		EAE4B5B626692CAD0005ACD2 /* ThemeSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSizes.swift; sourceTree = "<group>"; };
+		EAE4B5BB266939CD0005ACD2 /* AuthSecuredTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSecuredTextField.swift; sourceTree = "<group>"; };
+		EAE4B5C0266939E10005ACD2 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -449,6 +453,8 @@
 		EAE4B58026690A240005ACD2 /* AuthSecuredTextField */ = {
 			isa = PBXGroup;
 			children = (
+				EAE4B5C0266939E10005ACD2 /* CustomTextField.swift */,
+				EAE4B5BB266939CD0005ACD2 /* AuthSecuredTextField.swift */,
 			);
 			path = AuthSecuredTextField;
 			sourceTree = "<group>";
@@ -706,6 +712,7 @@
 				EA00C2942667E597001EED8D /* Storage.swift in Sources */,
 				EA00C29B2667E597001EED8D /* Action.swift in Sources */,
 				EA00C2B02667E597001EED8D /* Types.swift in Sources */,
+				EAE4B5CB26693C820005ACD2 /* CustomTextField.swift in Sources */,
 				EAE4B59B266917120005ACD2 /* ComponentsStyles.swift in Sources */,
 				EA00C28F2667E596001EED8D /* AppState.swift in Sources */,
 				EAE4B5B726692CAD0005ACD2 /* ThemeSizes.swift in Sources */,
@@ -726,6 +733,7 @@
 				EAE4B59526690F130005ACD2 /* ThemeColors.swift in Sources */,
 				EA00C2AC2667E597001EED8D /* ViewStoreExtensions.swift in Sources */,
 				EA00C2962667E597001EED8D /* ModelSchema.swift in Sources */,
+				EAE4B5BC266939CD0005ACD2 /* AuthSecuredTextField.swift in Sources */,
 				EAE4B58C26690EAB0005ACD2 /* UIColor+hex.swift in Sources */,
 				EA00C2AB2667E597001EED8D /* AppUIThemeKey.swift in Sources */,
 				EA00C2A52667E597001EED8D /* ScreenViewFactory.swift in Sources */,

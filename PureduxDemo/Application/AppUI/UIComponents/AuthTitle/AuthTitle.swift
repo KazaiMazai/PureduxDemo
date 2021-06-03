@@ -15,7 +15,9 @@ extension AuthTitle {
             Props(text: "Title")
         }
     }
+}
 
+extension AuthTitle {
     struct Style {
         let titleColor: Color
         let font: Font

@@ -10,25 +10,16 @@ import SwiftUI
 
 extension AppUITheme {
     struct Styles {
-        private let config: AppUITheme.Config
+        let navBar: NavBarStyle
+        let authTitle: AuthTitle.Style
+        let authTextField: AuthTextField.Style
 
         static func stylesForTheme(config: AppUITheme.Config) -> Styles {
-            Styles(config: config)
+            Styles(navBar: .nativeStyle,
+                   authTitle: .with(configs: config),
+                   authTextField: .with(configs: config)
+            )
         }
-    }
-}
-
-extension AppUITheme.Styles {
-    var navBar: NavBarStyle {
-        NavBarStyle.nativeStyle
-    }
-
-    var authTitle: AuthTitle.Style {
-        .with(configs: config)
-    }
-
-    var authTextField: AuthTextField.Style {
-        .with(configs: config)
     }
 }
 
@@ -64,6 +55,25 @@ extension AuthTitle.Style {
         AuthTitle.Style(
             titleColor: configs.colors.title.color,
             font: configs.fonts.title.font)
+    }
+}
+
+extension AuthSecuredTextField.Style {
+    static func with(configs: AppUITheme.Config) -> AuthSecuredTextField.Style {
+        AuthSecuredTextField.Style(
+            keyboardType: .default,
+            alignment: .center,
+            titleFont: configs.fonts.title,
+            borderColor: configs.colors.border.color,
+            borderColorFocused: configs.colors.primary.color,
+            placehodlerColor: configs.colors.lightPlaceholder.color,
+            titleColor: configs.colors.title,
+            backgroundColor: configs.colors.background.color,
+            height: configs.sizes.components.inputFields,
+            cornerRadius: 8,
+            borderWidth: 1,
+            horizontalPadding: configs.paddings.large
+        )
     }
 }
 

@@ -1,5 +1,5 @@
 //
-//  AuthTextField.swift
+//  AuthSecuredTextField.swift
 //  PureduxDemo
 //
 //  Created by Sergey Kazakov on 03.06.2021.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension AuthTextField {
+extension AuthSecuredTextField {
     struct Props: Hashable, Equatable {
         @Binding var binding: String
         let placeholder: String
@@ -19,11 +19,12 @@ extension AuthTextField {
         }
 
         static var preview: Props {
-            Props(binding: .constant(""),
-                  placeholder: "TextField")
+            Props(
+                binding: .constant(""),
+                placeholder: "TextField")
         }
 
-        static func == (lhs: AuthTextField.Props, rhs: AuthTextField.Props) -> Bool {
+        static func == (lhs: AuthSecuredTextField.Props, rhs: AuthSecuredTextField.Props) -> Bool {
             lhs.binding == rhs.binding && lhs.placeholder == rhs.placeholder
         }
 
@@ -34,16 +35,16 @@ extension AuthTextField {
     }
 }
 
-extension AuthTextField {
+extension AuthSecuredTextField {
     struct Style {
         let keyboardType: UIKeyboardType
         let alignment: TextAlignment
-        let titleFont: Font
+        let titleFont: AppUITheme.FontType
 
         let borderColor: Color
         let borderColorFocused: Color
         let placehodlerColor: Color
-        let titleColor: Color
+        let titleColor: AppUITheme.ColorType
         let backgroundColor: Color
 
         let height: CGFloat
@@ -78,10 +79,22 @@ extension AuthTextField {
                 return .trailing
             }
         }
+
+        fileprivate var textAlignment: NSTextAlignment {
+            switch alignment {
+            case .leading:
+                return .left
+            case .center:
+                return.center
+            case .trailing:
+                return .right
+            }
+        }
     }
+
 }
 
-struct AuthTextField: View {
+struct AuthSecuredTextField: View {
     let props: Props
     let style: Style
 
@@ -95,37 +108,41 @@ struct AuthTextField: View {
     }
 
     var body: some View {
-        TextField("",
-                  text: props.$binding,
-                  onEditingChanged: { isEditing = $0 })
-            .placeHolder(
-                Text(props.placeholder)
-                    .multilineTextAlignment(style.alignment)
-                    .font(style.titleFont)
-                    .foregroundColor(style.placehodlerColor),
-                alignment: style.placeholderAlignment,
-                show: props.$binding.wrappedValue.isEmpty && !isEditing)
+        CustomTextField(
+            text: props.$binding,
+            onEditingChanged: { isEditing = $0 },
+            modifier: {
+                $0.borderStyle = .none
+                $0.textColor = style.titleColor.uiColor
+                $0.font = style.titleFont.uiFont
+
+                $0.keyboardType = .default
+                $0.textAlignment = style.textAlignment
+                $0.isSecureTextEntry = true
+            })
+            .placeHolder(Text(props.placeholder)
+                            .multilineTextAlignment(style.alignment)
+                            .font(style.titleFont.font)
+                            .foregroundColor(style.placehodlerColor),
+                         alignment: style.placeholderAlignment,
+                         show: props.$binding.wrappedValue.isEmpty && !isEditing)
             .padding(.horizontal, style.horizontalPadding)
-            .multilineTextAlignment(style.alignment)
-            .keyboardType(style.keyboardType)
-            .font(style.titleFont)
-            .foregroundColor(style.titleColor)
+
             .frame(height: style.height)
             .background(style.backgroundColor)
             .clipShape(RoundedRectangle(cornerRadius: style.cornerRadius))
             .overlay(
-                RoundedRectangle(cornerRadius: style.cornerRadius,
-                                 style: .continuous)
+                RoundedRectangle(cornerRadius: style.cornerRadius, style: .continuous)
                     .stroke(isEditing ?
                                 style.borderColorFocused
                                 : style.borderColor,
-                            lineWidth: style.borderWidth)
-            )
+                            lineWidth: style.borderWidth))
+         
     }
 }
 
-struct AuthTextField_Previews: PreviewProvider {
+struct AuthSecuredTextField_Previews: PreviewProvider {
     static var previews: some View {
-        AuthTextField(props: .preview, style: .defaultStyle)
+        AuthSecuredTextField(props: .preview, style: .defaultStyle)
     }
 }
