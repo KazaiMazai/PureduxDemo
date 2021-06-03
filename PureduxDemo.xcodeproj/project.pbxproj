@@ -38,6 +38,11 @@
 		EA00C2B72667E597001EED8D /* DarkHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C2892667E596001EED8D /* DarkHostingController.swift */; };
 		EA00C2CC2667E623001EED8D /* Puredux in Frameworks */ = {isa = PBXBuildFile; productRef = EA00C2CB2667E623001EED8D /* Puredux */; };
 		EA00C2D22667E640001EED8D /* PureduxSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = EA00C2D12667E640001EED8D /* PureduxSwiftUI */; };
+		EAE4B4212668F55E0005ACD2 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = EAE4B41F2668F55E0005ACD2 /* swiftgen.yml */; };
+		EAE4B4222668F55E0005ACD2 /* runswiftgen.sh in Resources */ = {isa = PBXBuildFile; fileRef = EAE4B4202668F55E0005ACD2 /* runswiftgen.sh */; };
+		EAE4B4972668F7B40005ACD2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EAE4B4992668F7B40005ACD2 /* Localizable.strings */; };
+		EAE4B4B32668F86E0005ACD2 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B4B12668F86E0005ACD2 /* Strings+Generated.swift */; };
+		EAE4B4B42668F86E0005ACD2 /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B4B22668F86E0005ACD2 /* Assets+Generated.swift */; };
 		EAEE43842667F1C800F2C5FD /* PureduxCommonCore in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43832667F1C800F2C5FD /* PureduxCommonCore */; };
 		EAEE438A2667F64F00F2C5FD /* PureduxCommonOperators in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43892667F64F00F2C5FD /* PureduxCommonOperators */; };
 /* End PBXBuildFile section */
@@ -95,6 +100,11 @@
 		EA00C2832667E596001EED8D /* TimeEventsSideEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeEventsSideEffects.swift; sourceTree = "<group>"; };
 		EA00C2882667E596001EED8D /* Color+hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+hex.swift"; sourceTree = "<group>"; };
 		EA00C2892667E596001EED8D /* DarkHostingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkHostingController.swift; sourceTree = "<group>"; };
+		EAE4B41F2668F55E0005ACD2 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		EAE4B4202668F55E0005ACD2 /* runswiftgen.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = runswiftgen.sh; sourceTree = "<group>"; };
+		EAE4B4982668F7B40005ACD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EAE4B4B12668F86E0005ACD2 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		EAE4B4B22668F86E0005ACD2 /* Assets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assets+Generated.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,8 +254,10 @@
 		EA00C25D2667E596001EED8D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EAE4B4AA2668F85A0005ACD2 /* Generated */,
 				EA00C2182667E4F8001EED8D /* Preview Content */,
 				EA00C2162667E4F8001EED8D /* Assets.xcassets */,
+				EAE4B4992668F7B40005ACD2 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -370,6 +382,15 @@
 			path = SwiftUIExtensions;
 			sourceTree = "<group>";
 		};
+		EAE4B4AA2668F85A0005ACD2 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B4B22668F86E0005ACD2 /* Assets+Generated.swift */,
+				EAE4B4B12668F86E0005ACD2 /* Strings+Generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 		EAEE43C12667FECD00F2C5FD /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -394,9 +415,19 @@
 		EAEE43E22668EDE000F2C5FD /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				EAEE44012668F45F00F2C5FD /* SwiftGen */,
 				EA00C21E2667E4F8001EED8D /* Info.plist */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EAEE44012668F45F00F2C5FD /* SwiftGen */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B4202668F55E0005ACD2 /* runswiftgen.sh */,
+				EAE4B41F2668F55E0005ACD2 /* swiftgen.yml */,
+			);
+			path = SwiftGen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,6 +437,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA00C2372667E4F9001EED8D /* Build configuration list for PBXNativeTarget "PureduxDemo" */;
 			buildPhases = (
+				EAE4B4262668F5FB0005ACD2 /* Run SwiftGen */,
 				EA00C2092667E4F6001EED8D /* Sources */,
 				EA00C20A2667E4F6001EED8D /* Frameworks */,
 				EA00C20B2667E4F6001EED8D /* Resources */,
@@ -515,8 +547,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA00C21D2667E4F8001EED8D /* LaunchScreen.storyboard in Resources */,
+				EAE4B4972668F7B40005ACD2 /* Localizable.strings in Resources */,
 				EA00C21A2667E4F8001EED8D /* Preview Assets.xcassets in Resources */,
+				EAE4B4222668F55E0005ACD2 /* runswiftgen.sh in Resources */,
 				EA00C2172667E4F8001EED8D /* Assets.xcassets in Resources */,
+				EAE4B4212668F55E0005ACD2 /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,11 +571,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		EAE4B4262668F5FB0005ACD2 /* Run SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftGen";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT\"/PureduxDemo/Configuration/SwiftGen/runswiftgen.sh \"$SRCROOT\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EA00C2092667E4F6001EED8D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAE4B4B32668F86E0005ACD2 /* Strings+Generated.swift in Sources */,
 				EA00C2B62667E597001EED8D /* Color+hex.swift in Sources */,
 				EA00C2B22667E597001EED8D /* SceneDelegate.swift in Sources */,
 				EA00C2B72667E597001EED8D /* DarkHostingController.swift in Sources */,
@@ -554,6 +611,7 @@
 				EA00C2902667E596001EED8D /* AppStateConfig.swift in Sources */,
 				EA00C2922667E596001EED8D /* CurrentTime.swift in Sources */,
 				EA00C2AF2667E597001EED8D /* AppLauncher.swift in Sources */,
+				EAE4B4B42668F86E0005ACD2 /* Assets+Generated.swift in Sources */,
 				EA00C2B32667E597001EED8D /* TimeEventsSideEffects.swift in Sources */,
 				EA00C2A22667E597001EED8D /* ScreenViewsFactoryProtocol.swift in Sources */,
 				EA00C2A32667E597001EED8D /* ScreenViews.swift in Sources */,
@@ -606,6 +664,14 @@
 				EA00C21C2667E4F8001EED8D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EAE4B4992668F7B40005ACD2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAE4B4982668F7B40005ACD2 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -736,6 +802,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PureduxDemo/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = ZC6RHMUG6E;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PureduxDemo/Configuration/SwiftGen/swiftgen/lib",
+				);
 				INFOPLIST_FILE = PureduxDemo/Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -757,6 +827,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PureduxDemo/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = ZC6RHMUG6E;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PureduxDemo/Configuration/SwiftGen/swiftgen/lib",
+				);
 				INFOPLIST_FILE = PureduxDemo/Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
