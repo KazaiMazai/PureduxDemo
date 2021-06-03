@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         self.window = appLauncher.launchUIWith(scene: scene)
         window?.makeKeyAndVisible()
-        
+
         appLauncher.run()
     }
 

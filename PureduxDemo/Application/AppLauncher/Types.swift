@@ -24,7 +24,6 @@ typealias Logger = PureduxSideEffects.Logger
 typealias Loglevel = PureduxSideEffects.LogLevel
 typealias ConsoleLogger = PureduxSideEffects.Logger
 
-typealias PresentableView = PureduxSwiftUI.PresentableView 
+typealias PresentableView = PureduxSwiftUI.PresentableView
 typealias Equating<T> = PureduxCommon.Equating<T>
 typealias StoreProvidingView<Content: View> = PureduxSwiftUI.StoreProvidingView<AppState, Action, Content>
-

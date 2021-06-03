@@ -19,13 +19,12 @@ struct AppUITheme {
 extension AppUITheme {
     struct NavBarStyle {
         let titleColor = Color.black
-        let backgroundColor = Color(red: 247.0 / 255.0,  green: 247.0 / 255.0, blue: 247.0 / 255.0)
-        let separatorColor = Color(red: 210.0 / 255.0,  green: 210.0 / 255.0, blue: 210.0 / 255.0)
+        let backgroundColor = Color(red: 247.0 / 255.0, green: 247.0 / 255.0, blue: 247.0 / 255.0)
+        let separatorColor = Color(red: 210.0 / 255.0, green: 210.0 / 255.0, blue: 210.0 / 255.0)
         let titleFont = Font.system(size: 17, weight: .semibold)
         let height: CGFloat = 44
     }
 }
-
 
 extension AppUITheme {
     struct Shadow {

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class DarkHostingController<ContentView> : UIHostingController<ContentView> where ContentView : View {
+class DarkHostingController<ContentView>: UIHostingController<ContentView> where ContentView: View {
     override dynamic open var preferredStatusBarStyle: UIStatusBarStyle {
         .darkContent
     }

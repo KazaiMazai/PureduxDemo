@@ -9,7 +9,5 @@ import Foundation
 import PureduxCommonCore
 
 public struct ModelSchema: Codable {
-    
+
 }
-
-
