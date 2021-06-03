@@ -10,21 +10,33 @@ import UIKit
 
 struct AppUITheme {
     let styles: Styles
-    let colors: Colors
-    let fonts: Fonts
-    let paddings: Paddings
+    let config: Config
 
     static var defaultTheme: AppUITheme = {
-        let colors = Colors.defaultColors
-        let fonts = Fonts.defaultFonts
-        let paddings =  Paddings.defaultPaddings
-
-        let styles = Styles.defaultStyles(colors: colors, fonts: fonts)
+        let configs = Config.defaultConfig
 
         return AppUITheme(
-            styles: styles,
-            colors: colors,
-            fonts: fonts,
-            paddings: paddings)
+            styles: .stylesForTheme(configs: configs),
+            config: Config.defaultConfig)
     }()
+
+    struct Config {
+        let colors: Colors
+        let fonts: Fonts
+        let paddings: Paddings
+        let sizes: Sizes
+
+        static var defaultConfig: Config = {
+            let colors = Colors.defaultColors
+            let fonts = Fonts.defaultFonts
+            let paddings =  Paddings.defaultPaddings
+            let sizes = Sizes.defaultSizes
+
+            return Config(
+                colors: colors,
+                fonts: fonts,
+                paddings: paddings,
+                sizes: sizes)
+        }()
+    }
 }

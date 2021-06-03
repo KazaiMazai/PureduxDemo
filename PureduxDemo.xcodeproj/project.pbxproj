@@ -53,6 +53,9 @@
 		EAE4B59B266917120005ACD2 /* ComponentsStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B59A266917120005ACD2 /* ComponentsStyles.swift */; };
 		EAE4B5A326691A3B0005ACD2 /* ThemeFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5A226691A3B0005ACD2 /* ThemeFonts.swift */; };
 		EAE4B5A82669203D0005ACD2 /* ThemePaddings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5A72669203D0005ACD2 /* ThemePaddings.swift */; };
+		EAE4B5AD266925BF0005ACD2 /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5AC266925BF0005ACD2 /* AuthTextField.swift */; };
+		EAE4B5B2266926790005ACD2 /* View+Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5B1266926790005ACD2 /* View+Placeholder.swift */; };
+		EAE4B5B726692CAD0005ACD2 /* ThemeSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5B626692CAD0005ACD2 /* ThemeSizes.swift */; };
 		EAEE43842667F1C800F2C5FD /* PureduxCommonCore in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43832667F1C800F2C5FD /* PureduxCommonCore */; };
 		EAEE438A2667F64F00F2C5FD /* PureduxCommonOperators in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43892667F64F00F2C5FD /* PureduxCommonOperators */; };
 /* End PBXBuildFile section */
@@ -125,6 +128,9 @@
 		EAE4B59A266917120005ACD2 /* ComponentsStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsStyles.swift; sourceTree = "<group>"; };
 		EAE4B5A226691A3B0005ACD2 /* ThemeFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFonts.swift; sourceTree = "<group>"; };
 		EAE4B5A72669203D0005ACD2 /* ThemePaddings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePaddings.swift; sourceTree = "<group>"; };
+		EAE4B5AC266925BF0005ACD2 /* AuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextField.swift; sourceTree = "<group>"; };
+		EAE4B5B1266926790005ACD2 /* View+Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Placeholder.swift"; sourceTree = "<group>"; };
+		EAE4B5B626692CAD0005ACD2 /* ThemeSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSizes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,6 +354,7 @@
 			children = (
 				EA00C2762667E596001EED8D /* AppUITheme.swift */,
 				EAE4B5A72669203D0005ACD2 /* ThemePaddings.swift */,
+				EAE4B5B626692CAD0005ACD2 /* ThemeSizes.swift */,
 				EAE4B59426690F130005ACD2 /* ThemeColors.swift */,
 				EAE4B5A226691A3B0005ACD2 /* ThemeFonts.swift */,
 				EAE4B59A266917120005ACD2 /* ComponentsStyles.swift */,
@@ -406,6 +413,7 @@
 				EA00C27B2667E596001EED8D /* View+AnyView.swift */,
 				EA00C2882667E596001EED8D /* Color+hex.swift */,
 				EA00C2892667E596001EED8D /* DarkHostingController.swift */,
+				EAE4B5B1266926790005ACD2 /* View+Placeholder.swift */,
 			);
 			path = SwiftUIExtensions;
 			sourceTree = "<group>";
@@ -433,6 +441,7 @@
 		EAE4B57F26690A190005ACD2 /* AuthTextField */ = {
 			isa = PBXGroup;
 			children = (
+				EAE4B5AC266925BF0005ACD2 /* AuthTextField.swift */,
 			);
 			path = AuthTextField;
 			sourceTree = "<group>";
@@ -699,6 +708,7 @@
 				EA00C2B02667E597001EED8D /* Types.swift in Sources */,
 				EAE4B59B266917120005ACD2 /* ComponentsStyles.swift in Sources */,
 				EA00C28F2667E596001EED8D /* AppState.swift in Sources */,
+				EAE4B5B726692CAD0005ACD2 /* ThemeSizes.swift in Sources */,
 				EAE4B5A326691A3B0005ACD2 /* ThemeFonts.swift in Sources */,
 				EA00C2982667E597001EED8D /* Time.swift in Sources */,
 				EAE4B5A82669203D0005ACD2 /* ThemePaddings.swift in Sources */,
@@ -711,6 +721,7 @@
 				EAE4B4B42668F86E0005ACD2 /* Assets+Generated.swift in Sources */,
 				EA00C2B32667E597001EED8D /* TimeEventsSideEffects.swift in Sources */,
 				EA00C2A22667E597001EED8D /* ScreenViewsFactoryProtocol.swift in Sources */,
+				EAE4B5AD266925BF0005ACD2 /* AuthTextField.swift in Sources */,
 				EA00C2A32667E597001EED8D /* ScreenViews.swift in Sources */,
 				EAE4B59526690F130005ACD2 /* ThemeColors.swift in Sources */,
 				EA00C2AC2667E597001EED8D /* ViewStoreExtensions.swift in Sources */,
@@ -721,6 +732,7 @@
 				EA00C2AE2667E597001EED8D /* View+AnyView.swift in Sources */,
 				EA00C2AA2667E597001EED8D /* AppUITheme.swift in Sources */,
 				EA00C2912667E596001EED8D /* AppEnvironment.swift in Sources */,
+				EAE4B5B2266926790005ACD2 /* View+Placeholder.swift in Sources */,
 				EA00C2A42667E597001EED8D /* ScreenViewFactoryKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,7 +12,7 @@ extension AuthTitle {
         let text: String
 
         static var preview: Props {
-            .init(text: "Title")
+            Props(text: "Title")
         }
     }
 
@@ -36,5 +36,4 @@ struct AuthTitle: View {
             .foregroundColor(style.titleColor)
             .font(style.font)
     }
-
 }

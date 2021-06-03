@@ -68,8 +68,8 @@ extension AppUITheme {
         let background: ColorType
         let backgroundDark: ColorType
 
-        let accent: ColorType
-        let basicAdding: ColorType
+        let primary: ColorType
+        let secondary: ColorType
 
         let lightTitle: ColorType
         let darkTitle: ColorType
@@ -78,27 +78,30 @@ extension AppUITheme {
         let subtitle: ColorType
 
         let lightPlaceholder: ColorType
+        let border: ColorType
 
         static let defaultColors: Colors = {
             Colors(
                 background: .hex(ColorHex.grayScale5),
                 backgroundDark: .hex(ColorHex.grayScale1),
 
-                accent: .hex(ColorHex.mainBlue),
-                basicAdding: .hex(ColorHex.darkBlue),
+                primary: .hex(ColorHex.mainBlue),
+                secondary: .hex(ColorHex.darkBlue),
 
                 lightTitle: .hex(ColorHex.grayScale4),
                 darkTitle: .hex(ColorHex.grayScale1),
 
                 title: .hex(ColorHex.grayScale3),
                 subtitle: .hex(ColorHex.grayScale4),
-                lightPlaceholder: .hex(ColorHex.grayScale5))
+                lightPlaceholder: .hex(ColorHex.grayScale5),
+                border: .hex(ColorHex.grayScale3)
+            )
         }()
     }
 }
 
 extension AppUITheme.Colors {
-    enum ColorHex {
+    private enum ColorHex {
         static let grayScale1: String = "#333333"
         static let grayScale2: String = "#5A5A5A"
         static let grayScale3: String = "#858585"

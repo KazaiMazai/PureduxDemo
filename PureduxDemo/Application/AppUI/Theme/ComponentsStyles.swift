@@ -10,13 +10,15 @@ import SwiftUI
 
 extension AppUITheme {
     struct Styles {
-        let navBarStyle: NavBarStyle
-        let authTitleStyle: AuthTitle.Style
+        let navBar: NavBarStyle
+        let authTitle: AuthTitle.Style
+        let authTextField: AuthTextField.Style
 
-        static func defaultStyles(colors: Colors, fonts: Fonts) -> Styles {
+        static func stylesForTheme(configs: AppUITheme.Config) -> Styles {
             Styles(
-                navBarStyle: NavBarStyle.nativeStyle,
-                authTitleStyle: .with(colors: colors, fonts: fonts))
+                navBar: NavBarStyle.nativeStyle,
+                authTitle: .with(configs: configs),
+                authTextField: .with(configs: configs))
         }
     }
 }
@@ -49,10 +51,28 @@ extension AppUITheme.Styles {
 }
 
 extension AuthTitle.Style {
-    static func with(colors: AppUITheme.Colors,
-                     fonts: AppUITheme.Fonts) -> AuthTitle.Style {
+    static func with(configs: AppUITheme.Config) -> AuthTitle.Style {
         AuthTitle.Style(
-            titleColor: colors.title.color,
-            font: fonts.title.font)
+            titleColor: configs.colors.title.color,
+            font: configs.fonts.title.font)
+    }
+}
+
+extension AuthTextField.Style {
+    static func with(configs: AppUITheme.Config) -> AuthTextField.Style {
+        AuthTextField.Style(
+            keyboardType: .default,
+            alignment: .center,
+            titleFont: configs.fonts.title.font,
+            borderColor: configs.colors.border.color,
+            borderColorFocused: configs.colors.primary.color,
+            placehodlerColor: configs.colors.lightPlaceholder.color,
+            titleColor: configs.colors.title.color,
+            backgroundColor: configs.colors.background.color,
+            height: configs.sizes.components.inputFields,
+            cornerRadius: 8,
+            borderWidth: 1,
+            horizontalPadding: configs.paddings.large
+        )
     }
 }
