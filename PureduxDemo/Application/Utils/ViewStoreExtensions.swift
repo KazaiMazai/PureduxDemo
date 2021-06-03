@@ -6,8 +6,9 @@
 //
 
 import SwiftUI
+import PureduxSwiftUI
 
-extension ObservableStore {
+extension ViewStore {
     func dispatching(_ action: Action) -> Command {
         return {
             self.dispatch(action)

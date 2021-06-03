@@ -26,7 +26,7 @@
 		EA00C2A52667E597001EED8D /* ScreenViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C26D2667E596001EED8D /* ScreenViewFactory.swift */; };
 		EA00C2AA2667E597001EED8D /* AppUITheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C2762667E596001EED8D /* AppUITheme.swift */; };
 		EA00C2AB2667E597001EED8D /* AppUIThemeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C2772667E596001EED8D /* AppUIThemeKey.swift */; };
-		EA00C2AC2667E597001EED8D /* ObservableStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C2792667E596001EED8D /* ObservableStore.swift */; };
+		EA00C2AC2667E597001EED8D /* ViewStoreExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C2792667E596001EED8D /* ViewStoreExtensions.swift */; };
 		EA00C2AD2667E597001EED8D /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C27A2667E596001EED8D /* Command.swift */; };
 		EA00C2AE2667E597001EED8D /* View+AnyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C27B2667E596001EED8D /* View+AnyView.swift */; };
 		EA00C2AF2667E597001EED8D /* AppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C27D2667E596001EED8D /* AppLauncher.swift */; };
@@ -85,7 +85,7 @@
 		EA00C26D2667E596001EED8D /* ScreenViewFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenViewFactory.swift; sourceTree = "<group>"; };
 		EA00C2762667E596001EED8D /* AppUITheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUITheme.swift; sourceTree = "<group>"; };
 		EA00C2772667E596001EED8D /* AppUIThemeKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUIThemeKey.swift; sourceTree = "<group>"; };
-		EA00C2792667E596001EED8D /* ObservableStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableStore.swift; sourceTree = "<group>"; };
+		EA00C2792667E596001EED8D /* ViewStoreExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewStoreExtensions.swift; sourceTree = "<group>"; };
 		EA00C27A2667E596001EED8D /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		EA00C27B2667E596001EED8D /* View+AnyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+AnyView.swift"; sourceTree = "<group>"; };
 		EA00C27D2667E596001EED8D /* AppLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLauncher.swift; sourceTree = "<group>"; };
@@ -153,8 +153,7 @@
 				EA00C2442667E596001EED8D /* Core */,
 				EAEE43E22668EDE000F2C5FD /* Configuration */,
 				EA00C25D2667E596001EED8D /* Resources */,
-				EA00C21B2667E4F8001EED8D /* LaunchScreen.storyboard */,
-				EA00C21E2667E4F8001EED8D /* Info.plist */,
+				EA00C2862667E596001EED8D /* Library */,
 			);
 			path = PureduxDemo;
 			sourceTree = "<group>";
@@ -188,10 +187,10 @@
 		EA00C2442667E596001EED8D /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				EA00C2452667E596001EED8D /* Models */,
-				EA00C24B2667E596001EED8D /* AppState */,
-				EA00C24F2667E596001EED8D /* AppStateComponents */,
 				EA00C2572667E596001EED8D /* Actions */,
+				EA00C24B2667E596001EED8D /* State */,
+				EA00C24F2667E596001EED8D /* StateComponents */,
+				EA00C2452667E596001EED8D /* Models */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -205,23 +204,23 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		EA00C24B2667E596001EED8D /* AppState */ = {
+		EA00C24B2667E596001EED8D /* State */ = {
 			isa = PBXGroup;
 			children = (
 				EA00C24C2667E596001EED8D /* AppState.swift */,
 				EA00C24D2667E596001EED8D /* AppStateConfig.swift */,
 				EA00C24E2667E596001EED8D /* AppEnvironment.swift */,
 			);
-			path = AppState;
+			path = State;
 			sourceTree = "<group>";
 		};
-		EA00C24F2667E596001EED8D /* AppStateComponents */ = {
+		EA00C24F2667E596001EED8D /* StateComponents */ = {
 			isa = PBXGroup;
 			children = (
 				EA00C2502667E596001EED8D /* CurrentTime.swift */,
 				EA00C2522667E596001EED8D /* EntitiesStorage */,
 			);
-			path = AppStateComponents;
+			path = StateComponents;
 			sourceTree = "<group>";
 		};
 		EA00C2522667E596001EED8D /* EntitiesStorage */ = {
@@ -245,7 +244,6 @@
 		EA00C25D2667E596001EED8D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EA00C2862667E596001EED8D /* Library */,
 				EA00C2182667E4F8001EED8D /* Preview Content */,
 				EA00C2162667E4F8001EED8D /* Assets.xcassets */,
 			);
@@ -298,6 +296,7 @@
 		EA00C26E2667E596001EED8D /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				EA00C21B2667E4F8001EED8D /* LaunchScreen.storyboard */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -321,7 +320,7 @@
 		EA00C2782667E596001EED8D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				EA00C2792667E596001EED8D /* ObservableStore.swift */,
+				EA00C2792667E596001EED8D /* ViewStoreExtensions.swift */,
 				EA00C27A2667E596001EED8D /* Command.swift */,
 			);
 			path = Utils;
@@ -395,6 +394,7 @@
 		EAEE43E22668EDE000F2C5FD /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				EA00C21E2667E4F8001EED8D /* Info.plist */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -557,7 +557,7 @@
 				EA00C2B32667E597001EED8D /* TimeEventsSideEffects.swift in Sources */,
 				EA00C2A22667E597001EED8D /* ScreenViewsFactoryProtocol.swift in Sources */,
 				EA00C2A32667E597001EED8D /* ScreenViews.swift in Sources */,
-				EA00C2AC2667E597001EED8D /* ObservableStore.swift in Sources */,
+				EA00C2AC2667E597001EED8D /* ViewStoreExtensions.swift in Sources */,
 				EA00C2962667E597001EED8D /* ModelSchema.swift in Sources */,
 				EA00C2AB2667E597001EED8D /* AppUIThemeKey.swift in Sources */,
 				EA00C2A52667E597001EED8D /* ScreenViewFactory.swift in Sources */,
@@ -736,7 +736,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PureduxDemo/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = ZC6RHMUG6E;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = PureduxDemo/Info.plist;
+				INFOPLIST_FILE = PureduxDemo/Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -757,7 +757,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PureduxDemo/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = ZC6RHMUG6E;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = PureduxDemo/Info.plist;
+				INFOPLIST_FILE = PureduxDemo/Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
