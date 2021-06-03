@@ -1,0 +1,79 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Puredux",
+        "repositoryURL": "https://github.com/KazaiMazai/Puredux.git",
+        "state": {
+          "branch": "dev",
+          "revision": "c06c655f616a0beaca704de592e8698e18dbb30c",
+          "version": null
+        }
+      },
+      {
+        "package": "PureduxCommon",
+        "repositoryURL": "https://github.com/KazaiMazai/PureduxCommon.git",
+        "state": {
+          "branch": "dev",
+          "revision": "2c9f5807dbe8e01c989214baf57669884b9c9ac4",
+          "version": null
+        }
+      },
+      {
+        "package": "PureduxCommonCore",
+        "repositoryURL": "https://github.com/KazaiMazai/PureduxCommonCore.git",
+        "state": {
+          "branch": "dev",
+          "revision": "d3c19ba450628884b2626d3537ba8ff9436f27f4",
+          "version": null
+        }
+      },
+      {
+        "package": "PureduxCommonOperators",
+        "repositoryURL": "https://github.com/KazaiMazai/PureduxCommonOperators.git",
+        "state": {
+          "branch": "dev",
+          "revision": "8e7591e914b0b7a30048bbc6630e741a874558f1",
+          "version": null
+        }
+      },
+      {
+        "package": "PureduxNetworkOperator",
+        "repositoryURL": "https://github.com/KazaiMazai/PureduxNetworkOperator.git",
+        "state": {
+          "branch": "dev",
+          "revision": "5b3362328be0805048f5cdcfcc063d0bf2376878",
+          "version": null
+        }
+      },
+      {
+        "package": "PureduxSideEffects",
+        "repositoryURL": "https://github.com/KazaiMazai/PureduxSideEffects.git",
+        "state": {
+          "branch": "dev",
+          "revision": "70b759af9ebfb25d698db91a51f6796d20a6d487",
+          "version": null
+        }
+      },
+      {
+        "package": "PureduxStore",
+        "repositoryURL": "https://github.com/KazaiMazai/PureduxStore.git",
+        "state": {
+          "branch": "dev",
+          "revision": "0f5305273fa41e04cb95a6e4ea697eb6345ec917",
+          "version": null
+        }
+      },
+      {
+        "package": "PureduxSwiftUI",
+        "repositoryURL": "https://github.com/KazaiMazai/PureduxSwiftUI.git",
+        "state": {
+          "branch": "dev",
+          "revision": "77e89e60c372bdc6935c033635d08817e286f582",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

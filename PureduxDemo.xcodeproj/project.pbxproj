@@ -3,18 +3,43 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EA00C2112667E4F6001EED8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C2102667E4F6001EED8D /* AppDelegate.swift */; };
-		EA00C2132667E4F6001EED8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C2122667E4F6001EED8D /* SceneDelegate.swift */; };
-		EA00C2152667E4F6001EED8D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C2142667E4F6001EED8D /* ContentView.swift */; };
 		EA00C2172667E4F8001EED8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA00C2162667E4F8001EED8D /* Assets.xcassets */; };
 		EA00C21A2667E4F8001EED8D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA00C2192667E4F8001EED8D /* Preview Assets.xcassets */; };
 		EA00C21D2667E4F8001EED8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA00C21B2667E4F8001EED8D /* LaunchScreen.storyboard */; };
 		EA00C2282667E4F8001EED8D /* PureduxDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C2272667E4F8001EED8D /* PureduxDemoTests.swift */; };
 		EA00C2332667E4F9001EED8D /* PureduxDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C2322667E4F9001EED8D /* PureduxDemoUITests.swift */; };
+		EA00C28F2667E596001EED8D /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C24C2667E596001EED8D /* AppState.swift */; };
+		EA00C2902667E596001EED8D /* AppStateConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C24D2667E596001EED8D /* AppStateConfig.swift */; };
+		EA00C2912667E596001EED8D /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C24E2667E596001EED8D /* AppEnvironment.swift */; };
+		EA00C2922667E596001EED8D /* CurrentTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C2502667E596001EED8D /* CurrentTime.swift */; };
+		EA00C2942667E597001EED8D /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C2532667E596001EED8D /* Storage.swift */; };
+		EA00C2962667E597001EED8D /* ModelSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C2552667E596001EED8D /* ModelSchema.swift */; };
+		EA00C2982667E597001EED8D /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C2582667E596001EED8D /* Time.swift */; };
+		EA00C29B2667E597001EED8D /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C25B2667E596001EED8D /* Action.swift */; };
+		EA00C2A22667E597001EED8D /* ScreenViewsFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C26A2667E596001EED8D /* ScreenViewsFactoryProtocol.swift */; };
+		EA00C2A32667E597001EED8D /* ScreenViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C26B2667E596001EED8D /* ScreenViews.swift */; };
+		EA00C2A42667E597001EED8D /* ScreenViewFactoryKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C26C2667E596001EED8D /* ScreenViewFactoryKey.swift */; };
+		EA00C2A52667E597001EED8D /* ScreenViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C26D2667E596001EED8D /* ScreenViewFactory.swift */; };
+		EA00C2AA2667E597001EED8D /* AppUITheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C2762667E596001EED8D /* AppUITheme.swift */; };
+		EA00C2AB2667E597001EED8D /* AppUIThemeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C2772667E596001EED8D /* AppUIThemeKey.swift */; };
+		EA00C2AC2667E597001EED8D /* ObservableStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C2792667E596001EED8D /* ObservableStore.swift */; };
+		EA00C2AD2667E597001EED8D /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C27A2667E596001EED8D /* Command.swift */; };
+		EA00C2AE2667E597001EED8D /* View+AnyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C27B2667E596001EED8D /* View+AnyView.swift */; };
+		EA00C2AF2667E597001EED8D /* AppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C27D2667E596001EED8D /* AppLauncher.swift */; };
+		EA00C2B02667E597001EED8D /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C27E2667E596001EED8D /* Types.swift */; };
+		EA00C2B12667E597001EED8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C2802667E596001EED8D /* AppDelegate.swift */; };
+		EA00C2B22667E597001EED8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C2812667E596001EED8D /* SceneDelegate.swift */; };
+		EA00C2B32667E597001EED8D /* TimeEventsSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C2832667E596001EED8D /* TimeEventsSideEffects.swift */; };
+		EA00C2B62667E597001EED8D /* Color+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C2882667E596001EED8D /* Color+hex.swift */; };
+		EA00C2B72667E597001EED8D /* DarkHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C2892667E596001EED8D /* DarkHostingController.swift */; };
+		EA00C2CC2667E623001EED8D /* Puredux in Frameworks */ = {isa = PBXBuildFile; productRef = EA00C2CB2667E623001EED8D /* Puredux */; };
+		EA00C2D22667E640001EED8D /* PureduxSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = EA00C2D12667E640001EED8D /* PureduxSwiftUI */; };
+		EAEE43842667F1C800F2C5FD /* PureduxCommonCore in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43832667F1C800F2C5FD /* PureduxCommonCore */; };
+		EAEE438A2667F64F00F2C5FD /* PureduxCommonOperators in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43892667F64F00F2C5FD /* PureduxCommonOperators */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +61,6 @@
 
 /* Begin PBXFileReference section */
 		EA00C20D2667E4F6001EED8D /* PureduxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PureduxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA00C2102667E4F6001EED8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA00C2122667E4F6001EED8D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EA00C2142667E4F6001EED8D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EA00C2162667E4F8001EED8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA00C2192667E4F8001EED8D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EA00C21C2667E4F8001EED8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +71,30 @@
 		EA00C22E2667E4F9001EED8D /* PureduxDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PureduxDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA00C2322667E4F9001EED8D /* PureduxDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PureduxDemoUITests.swift; sourceTree = "<group>"; };
 		EA00C2342667E4F9001EED8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA00C24C2667E596001EED8D /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		EA00C24D2667E596001EED8D /* AppStateConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStateConfig.swift; sourceTree = "<group>"; };
+		EA00C24E2667E596001EED8D /* AppEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		EA00C2502667E596001EED8D /* CurrentTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentTime.swift; sourceTree = "<group>"; };
+		EA00C2532667E596001EED8D /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		EA00C2552667E596001EED8D /* ModelSchema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelSchema.swift; sourceTree = "<group>"; };
+		EA00C2582667E596001EED8D /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		EA00C25B2667E596001EED8D /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		EA00C26A2667E596001EED8D /* ScreenViewsFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenViewsFactoryProtocol.swift; sourceTree = "<group>"; };
+		EA00C26B2667E596001EED8D /* ScreenViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenViews.swift; sourceTree = "<group>"; };
+		EA00C26C2667E596001EED8D /* ScreenViewFactoryKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenViewFactoryKey.swift; sourceTree = "<group>"; };
+		EA00C26D2667E596001EED8D /* ScreenViewFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenViewFactory.swift; sourceTree = "<group>"; };
+		EA00C2762667E596001EED8D /* AppUITheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUITheme.swift; sourceTree = "<group>"; };
+		EA00C2772667E596001EED8D /* AppUIThemeKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUIThemeKey.swift; sourceTree = "<group>"; };
+		EA00C2792667E596001EED8D /* ObservableStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableStore.swift; sourceTree = "<group>"; };
+		EA00C27A2667E596001EED8D /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		EA00C27B2667E596001EED8D /* View+AnyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+AnyView.swift"; sourceTree = "<group>"; };
+		EA00C27D2667E596001EED8D /* AppLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLauncher.swift; sourceTree = "<group>"; };
+		EA00C27E2667E596001EED8D /* Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		EA00C2802667E596001EED8D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EA00C2812667E596001EED8D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EA00C2832667E596001EED8D /* TimeEventsSideEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeEventsSideEffects.swift; sourceTree = "<group>"; };
+		EA00C2882667E596001EED8D /* Color+hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+hex.swift"; sourceTree = "<group>"; };
+		EA00C2892667E596001EED8D /* DarkHostingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkHostingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +102,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA00C2D22667E640001EED8D /* PureduxSwiftUI in Frameworks */,
+				EAEE43842667F1C800F2C5FD /* PureduxCommonCore in Frameworks */,
+				EA00C2CC2667E623001EED8D /* Puredux in Frameworks */,
+				EAEE438A2667F64F00F2C5FD /* PureduxCommonOperators in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,13 +149,12 @@
 		EA00C20F2667E4F6001EED8D /* PureduxDemo */ = {
 			isa = PBXGroup;
 			children = (
-				EA00C2102667E4F6001EED8D /* AppDelegate.swift */,
-				EA00C2122667E4F6001EED8D /* SceneDelegate.swift */,
-				EA00C2142667E4F6001EED8D /* ContentView.swift */,
-				EA00C2162667E4F8001EED8D /* Assets.xcassets */,
+				EA00C25F2667E596001EED8D /* Application */,
+				EA00C2442667E596001EED8D /* Core */,
+				EAEE43E22668EDE000F2C5FD /* Configuration */,
+				EA00C25D2667E596001EED8D /* Resources */,
 				EA00C21B2667E4F8001EED8D /* LaunchScreen.storyboard */,
 				EA00C21E2667E4F8001EED8D /* Info.plist */,
-				EA00C2182667E4F8001EED8D /* Preview Content */,
 			);
 			path = PureduxDemo;
 			sourceTree = "<group>";
@@ -136,6 +185,220 @@
 			path = PureduxDemoUITests;
 			sourceTree = "<group>";
 		};
+		EA00C2442667E596001EED8D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EA00C2452667E596001EED8D /* Models */,
+				EA00C24B2667E596001EED8D /* AppState */,
+				EA00C24F2667E596001EED8D /* AppStateComponents */,
+				EA00C2572667E596001EED8D /* Actions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EA00C2452667E596001EED8D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EAEE43C92667FF0800F2C5FD /* PlainModels */,
+				EAEE43C82667FF0100F2C5FD /* Entities */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EA00C24B2667E596001EED8D /* AppState */ = {
+			isa = PBXGroup;
+			children = (
+				EA00C24C2667E596001EED8D /* AppState.swift */,
+				EA00C24D2667E596001EED8D /* AppStateConfig.swift */,
+				EA00C24E2667E596001EED8D /* AppEnvironment.swift */,
+			);
+			path = AppState;
+			sourceTree = "<group>";
+		};
+		EA00C24F2667E596001EED8D /* AppStateComponents */ = {
+			isa = PBXGroup;
+			children = (
+				EA00C2502667E596001EED8D /* CurrentTime.swift */,
+				EA00C2522667E596001EED8D /* EntitiesStorage */,
+			);
+			path = AppStateComponents;
+			sourceTree = "<group>";
+		};
+		EA00C2522667E596001EED8D /* EntitiesStorage */ = {
+			isa = PBXGroup;
+			children = (
+				EA00C2532667E596001EED8D /* Storage.swift */,
+				EA00C2552667E596001EED8D /* ModelSchema.swift */,
+			);
+			path = EntitiesStorage;
+			sourceTree = "<group>";
+		};
+		EA00C2572667E596001EED8D /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				EA00C2582667E596001EED8D /* Time.swift */,
+				EA00C25B2667E596001EED8D /* Action.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		EA00C25D2667E596001EED8D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EA00C2862667E596001EED8D /* Library */,
+				EA00C2182667E4F8001EED8D /* Preview Content */,
+				EA00C2162667E4F8001EED8D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EA00C25F2667E596001EED8D /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				EA00C2682667E596001EED8D /* AppUI */,
+				EA00C27C2667E596001EED8D /* AppLauncher */,
+				EA00C27F2667E596001EED8D /* AppDelegate */,
+				EA00C2822667E596001EED8D /* SideEffects */,
+				EA00C2602667E596001EED8D /* Operators */,
+				EAEE43C12667FECD00F2C5FD /* Services */,
+				EA00C2782667E596001EED8D /* Utils */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		EA00C2602667E596001EED8D /* Operators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Operators;
+			sourceTree = "<group>";
+		};
+		EA00C2682667E596001EED8D /* AppUI */ = {
+			isa = PBXGroup;
+			children = (
+				EA00C2692667E596001EED8D /* ScreenViewFactory */,
+				EA00C26E2667E596001EED8D /* Screens */,
+				EA00C2722667E596001EED8D /* UIComponents */,
+				EA00C2752667E596001EED8D /* Theme */,
+			);
+			path = AppUI;
+			sourceTree = "<group>";
+		};
+		EA00C2692667E596001EED8D /* ScreenViewFactory */ = {
+			isa = PBXGroup;
+			children = (
+				EA00C26A2667E596001EED8D /* ScreenViewsFactoryProtocol.swift */,
+				EA00C26B2667E596001EED8D /* ScreenViews.swift */,
+				EA00C26C2667E596001EED8D /* ScreenViewFactoryKey.swift */,
+				EA00C26D2667E596001EED8D /* ScreenViewFactory.swift */,
+			);
+			path = ScreenViewFactory;
+			sourceTree = "<group>";
+		};
+		EA00C26E2667E596001EED8D /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		EA00C2722667E596001EED8D /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		EA00C2752667E596001EED8D /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				EA00C2762667E596001EED8D /* AppUITheme.swift */,
+				EA00C2772667E596001EED8D /* AppUIThemeKey.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		EA00C2782667E596001EED8D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EA00C2792667E596001EED8D /* ObservableStore.swift */,
+				EA00C27A2667E596001EED8D /* Command.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		EA00C27C2667E596001EED8D /* AppLauncher */ = {
+			isa = PBXGroup;
+			children = (
+				EA00C27D2667E596001EED8D /* AppLauncher.swift */,
+				EA00C27E2667E596001EED8D /* Types.swift */,
+			);
+			path = AppLauncher;
+			sourceTree = "<group>";
+		};
+		EA00C27F2667E596001EED8D /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				EA00C2802667E596001EED8D /* AppDelegate.swift */,
+				EA00C2812667E596001EED8D /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		EA00C2822667E596001EED8D /* SideEffects */ = {
+			isa = PBXGroup;
+			children = (
+				EA00C2832667E596001EED8D /* TimeEventsSideEffects.swift */,
+			);
+			path = SideEffects;
+			sourceTree = "<group>";
+		};
+		EA00C2862667E596001EED8D /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				EA00C2872667E596001EED8D /* SwiftUIExtensions */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		EA00C2872667E596001EED8D /* SwiftUIExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				EA00C27B2667E596001EED8D /* View+AnyView.swift */,
+				EA00C2882667E596001EED8D /* Color+hex.swift */,
+				EA00C2892667E596001EED8D /* DarkHostingController.swift */,
+			);
+			path = SwiftUIExtensions;
+			sourceTree = "<group>";
+		};
+		EAEE43C12667FECD00F2C5FD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EAEE43C82667FF0100F2C5FD /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		EAEE43C92667FF0800F2C5FD /* PlainModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PlainModels;
+			sourceTree = "<group>";
+		};
+		EAEE43E22668EDE000F2C5FD /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,6 +415,12 @@
 			dependencies = (
 			);
 			name = PureduxDemo;
+			packageProductDependencies = (
+				EA00C2CB2667E623001EED8D /* Puredux */,
+				EA00C2D12667E640001EED8D /* PureduxSwiftUI */,
+				EAEE43832667F1C800F2C5FD /* PureduxCommonCore */,
+				EAEE43892667F64F00F2C5FD /* PureduxCommonOperators */,
+			);
 			productName = PureduxDemo;
 			productReference = EA00C20D2667E4F6001EED8D /* PureduxDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +492,12 @@
 				Base,
 			);
 			mainGroup = EA00C2042667E4F6001EED8D;
+			packageReferences = (
+				EA00C2CA2667E623001EED8D /* XCRemoteSwiftPackageReference "Puredux" */,
+				EA00C2D02667E640001EED8D /* XCRemoteSwiftPackageReference "PureduxSwiftUI" */,
+				EAEE43822667F1C800F2C5FD /* XCRemoteSwiftPackageReference "PureduxCommonCore" */,
+				EAEE43882667F64F00F2C5FD /* XCRemoteSwiftPackageReference "PureduxCommonOperators" */,
+			);
 			productRefGroup = EA00C20E2667E4F6001EED8D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -266,9 +541,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA00C2112667E4F6001EED8D /* AppDelegate.swift in Sources */,
-				EA00C2132667E4F6001EED8D /* SceneDelegate.swift in Sources */,
-				EA00C2152667E4F6001EED8D /* ContentView.swift in Sources */,
+				EA00C2B62667E597001EED8D /* Color+hex.swift in Sources */,
+				EA00C2B22667E597001EED8D /* SceneDelegate.swift in Sources */,
+				EA00C2B72667E597001EED8D /* DarkHostingController.swift in Sources */,
+				EA00C2942667E597001EED8D /* Storage.swift in Sources */,
+				EA00C29B2667E597001EED8D /* Action.swift in Sources */,
+				EA00C2B02667E597001EED8D /* Types.swift in Sources */,
+				EA00C28F2667E596001EED8D /* AppState.swift in Sources */,
+				EA00C2982667E597001EED8D /* Time.swift in Sources */,
+				EA00C2AD2667E597001EED8D /* Command.swift in Sources */,
+				EA00C2B12667E597001EED8D /* AppDelegate.swift in Sources */,
+				EA00C2902667E596001EED8D /* AppStateConfig.swift in Sources */,
+				EA00C2922667E596001EED8D /* CurrentTime.swift in Sources */,
+				EA00C2AF2667E597001EED8D /* AppLauncher.swift in Sources */,
+				EA00C2B32667E597001EED8D /* TimeEventsSideEffects.swift in Sources */,
+				EA00C2A22667E597001EED8D /* ScreenViewsFactoryProtocol.swift in Sources */,
+				EA00C2A32667E597001EED8D /* ScreenViews.swift in Sources */,
+				EA00C2AC2667E597001EED8D /* ObservableStore.swift in Sources */,
+				EA00C2962667E597001EED8D /* ModelSchema.swift in Sources */,
+				EA00C2AB2667E597001EED8D /* AppUIThemeKey.swift in Sources */,
+				EA00C2A52667E597001EED8D /* ScreenViewFactory.swift in Sources */,
+				EA00C2AE2667E597001EED8D /* View+AnyView.swift in Sources */,
+				EA00C2AA2667E597001EED8D /* AppUITheme.swift in Sources */,
+				EA00C2912667E596001EED8D /* AppEnvironment.swift in Sources */,
+				EA00C2A42667E597001EED8D /* ScreenViewFactoryKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +662,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -421,7 +717,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -437,7 +733,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"PureduxDemo/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PureduxDemo/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = ZC6RHMUG6E;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = PureduxDemo/Info.plist;
@@ -458,7 +754,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"PureduxDemo/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PureduxDemo/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = ZC6RHMUG6E;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = PureduxDemo/Info.plist;
@@ -597,6 +893,64 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EA00C2CA2667E623001EED8D /* XCRemoteSwiftPackageReference "Puredux" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/KazaiMazai/Puredux.git";
+			requirement = {
+				branch = dev;
+				kind = branch;
+			};
+		};
+		EA00C2D02667E640001EED8D /* XCRemoteSwiftPackageReference "PureduxSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/KazaiMazai/PureduxSwiftUI.git";
+			requirement = {
+				branch = dev;
+				kind = branch;
+			};
+		};
+		EAEE43822667F1C800F2C5FD /* XCRemoteSwiftPackageReference "PureduxCommonCore" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/KazaiMazai/PureduxCommonCore.git";
+			requirement = {
+				branch = dev;
+				kind = branch;
+			};
+		};
+		EAEE43882667F64F00F2C5FD /* XCRemoteSwiftPackageReference "PureduxCommonOperators" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/KazaiMazai/PureduxCommonOperators.git";
+			requirement = {
+				branch = dev;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EA00C2CB2667E623001EED8D /* Puredux */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA00C2CA2667E623001EED8D /* XCRemoteSwiftPackageReference "Puredux" */;
+			productName = Puredux;
+		};
+		EA00C2D12667E640001EED8D /* PureduxSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA00C2D02667E640001EED8D /* XCRemoteSwiftPackageReference "PureduxSwiftUI" */;
+			productName = PureduxSwiftUI;
+		};
+		EAEE43832667F1C800F2C5FD /* PureduxCommonCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EAEE43822667F1C800F2C5FD /* XCRemoteSwiftPackageReference "PureduxCommonCore" */;
+			productName = PureduxCommonCore;
+		};
+		EAEE43892667F64F00F2C5FD /* PureduxCommonOperators */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EAEE43882667F64F00F2C5FD /* XCRemoteSwiftPackageReference "PureduxCommonOperators" */;
+			productName = PureduxCommonOperators;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EA00C2052667E4F6001EED8D /* Project object */;
 }
