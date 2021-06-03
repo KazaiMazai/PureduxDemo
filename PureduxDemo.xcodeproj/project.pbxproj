@@ -43,6 +43,10 @@
 		EAE4B4972668F7B40005ACD2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EAE4B4992668F7B40005ACD2 /* Localizable.strings */; };
 		EAE4B4B32668F86E0005ACD2 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B4B12668F86E0005ACD2 /* Strings+Generated.swift */; };
 		EAE4B4B42668F86E0005ACD2 /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B4B22668F86E0005ACD2 /* Assets+Generated.swift */; };
+		EAE4B5302668FC4F0005ACD2 /* swiftlint in Resources */ = {isa = PBXBuildFile; fileRef = EAE4B52E2668FC4F0005ACD2 /* swiftlint */; };
+		EAE4B5312668FC4F0005ACD2 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = EAE4B52F2668FC4F0005ACD2 /* LICENSE */; };
+		EAE4B53B2668FE880005ACD2 /* swiftlint-ci.yml in Resources */ = {isa = PBXBuildFile; fileRef = EAE4B5392668FE880005ACD2 /* swiftlint-ci.yml */; };
+		EAE4B53C2668FE880005ACD2 /* swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EAE4B53A2668FE880005ACD2 /* swiftlint.yml */; };
 		EAEE43842667F1C800F2C5FD /* PureduxCommonCore in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43832667F1C800F2C5FD /* PureduxCommonCore */; };
 		EAEE438A2667F64F00F2C5FD /* PureduxCommonOperators in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43892667F64F00F2C5FD /* PureduxCommonOperators */; };
 /* End PBXBuildFile section */
@@ -105,6 +109,10 @@
 		EAE4B4982668F7B40005ACD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EAE4B4B12668F86E0005ACD2 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		EAE4B4B22668F86E0005ACD2 /* Assets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assets+Generated.swift"; sourceTree = "<group>"; };
+		EAE4B52E2668FC4F0005ACD2 /* swiftlint */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = swiftlint; sourceTree = "<group>"; };
+		EAE4B52F2668FC4F0005ACD2 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		EAE4B5392668FE880005ACD2 /* swiftlint-ci.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = "swiftlint-ci.yml"; sourceTree = "<group>"; };
+		EAE4B53A2668FE880005ACD2 /* swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -391,6 +399,17 @@
 			path = Generated;
 			sourceTree = "<group>";
 		};
+		EAE4B52D2668FC140005ACD2 /* SwiftLint */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B5392668FE880005ACD2 /* swiftlint-ci.yml */,
+				EAE4B53A2668FE880005ACD2 /* swiftlint.yml */,
+				EAE4B52F2668FC4F0005ACD2 /* LICENSE */,
+				EAE4B52E2668FC4F0005ACD2 /* swiftlint */,
+			);
+			path = SwiftLint;
+			sourceTree = "<group>";
+		};
 		EAEE43C12667FECD00F2C5FD /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -415,6 +434,7 @@
 		EAEE43E22668EDE000F2C5FD /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				EAE4B52D2668FC140005ACD2 /* SwiftLint */,
 				EAEE44012668F45F00F2C5FD /* SwiftGen */,
 				EA00C21E2667E4F8001EED8D /* Info.plist */,
 			);
@@ -438,6 +458,7 @@
 			buildConfigurationList = EA00C2372667E4F9001EED8D /* Build configuration list for PBXNativeTarget "PureduxDemo" */;
 			buildPhases = (
 				EAE4B4262668F5FB0005ACD2 /* Run SwiftGen */,
+				EAE4B5352668FC690005ACD2 /* Run SwiftLint */,
 				EA00C2092667E4F6001EED8D /* Sources */,
 				EA00C20A2667E4F6001EED8D /* Frameworks */,
 				EA00C20B2667E4F6001EED8D /* Resources */,
@@ -547,9 +568,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA00C21D2667E4F8001EED8D /* LaunchScreen.storyboard in Resources */,
+				EAE4B53C2668FE880005ACD2 /* swiftlint.yml in Resources */,
 				EAE4B4972668F7B40005ACD2 /* Localizable.strings in Resources */,
+				EAE4B5312668FC4F0005ACD2 /* LICENSE in Resources */,
 				EA00C21A2667E4F8001EED8D /* Preview Assets.xcassets in Resources */,
 				EAE4B4222668F55E0005ACD2 /* runswiftgen.sh in Resources */,
+				EAE4B53B2668FE880005ACD2 /* swiftlint-ci.yml in Resources */,
+				EAE4B5302668FC4F0005ACD2 /* swiftlint in Resources */,
 				EA00C2172667E4F8001EED8D /* Assets.xcassets in Resources */,
 				EAE4B4212668F55E0005ACD2 /* swiftgen.yml in Resources */,
 			);
@@ -589,6 +614,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"$SRCROOT\"/PureduxDemo/Configuration/SwiftGen/runswiftgen.sh \"$SRCROOT\"\n";
+		};
+		EAE4B5352668FC690005ACD2 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#Run only when CI env var is missing\nif [ -z \"$CI\" ]; then\n    ${SRCROOT}/PureduxDemo/Configuration/SwiftLint/swiftlint autocorrect --config \"${SRCROOT}/PureduxDemo/Configuration/SwiftLint/swiftlint.yml\"\n    ${SRCROOT}/PureduxDemo/Configuration//SwiftLint/swiftlint --config \"${SRCROOT}/PureduxDemo/Configuration/SwiftLint/swiftlint.yml\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
