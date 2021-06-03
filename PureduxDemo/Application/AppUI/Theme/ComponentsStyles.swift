@@ -10,16 +10,25 @@ import SwiftUI
 
 extension AppUITheme {
     struct Styles {
-        let navBar: NavBarStyle
-        let authTitle: AuthTitle.Style
-        let authTextField: AuthTextField.Style
+        private let config: AppUITheme.Config
 
-        static func stylesForTheme(configs: AppUITheme.Config) -> Styles {
-            Styles(
-                navBar: NavBarStyle.nativeStyle,
-                authTitle: .with(configs: configs),
-                authTextField: .with(configs: configs))
+        static func stylesForTheme(config: AppUITheme.Config) -> Styles {
+            Styles(config: config)
         }
+    }
+}
+
+extension AppUITheme.Styles {
+    var navBar: NavBarStyle {
+        NavBarStyle.nativeStyle
+    }
+
+    var authTitle: AuthTitle.Style {
+        .with(configs: config)
+    }
+
+    var authTextField: AuthTextField.Style {
+        .with(configs: config)
     }
 }
 

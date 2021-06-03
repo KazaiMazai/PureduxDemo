@@ -13,11 +13,11 @@ struct AppUITheme {
     let config: Config
 
     static var defaultTheme: AppUITheme = {
-        let configs = Config.defaultConfig
+        let config = Config.defaultConfig
 
         return AppUITheme(
-            styles: .stylesForTheme(configs: configs),
-            config: Config.defaultConfig)
+            styles: .stylesForTheme(config: config),
+            config: config)
     }()
 
     struct Config {
