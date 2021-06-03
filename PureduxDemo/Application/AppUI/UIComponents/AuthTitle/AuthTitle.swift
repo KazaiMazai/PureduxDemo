@@ -1,0 +1,40 @@
+//
+//  AuthTitle.swift
+//  PureduxDemo
+//
+//  Created by Sergey Kazakov on 03.06.2021.
+//
+
+import SwiftUI
+
+extension AuthTitle {
+    struct Props: Hashable, Equatable {
+        let text: String
+
+        static var preview: Props {
+            .init(text: "Title")
+        }
+    }
+
+    struct Style {
+        let titleColor: Color
+        let font: Font
+
+        static var defaultStyle: Style {
+            Style(titleColor: .black,
+                  font: Font.title)
+        }
+    }
+}
+
+struct AuthTitle: View {
+    let props: Props
+    let style: Style
+
+    var body: some View {
+        Text(props.text)
+            .foregroundColor(style.titleColor)
+            .font(style.font)
+    }
+
+}

@@ -47,6 +47,12 @@
 		EAE4B5312668FC4F0005ACD2 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = EAE4B52F2668FC4F0005ACD2 /* LICENSE */; };
 		EAE4B53B2668FE880005ACD2 /* swiftlint-ci.yml in Resources */ = {isa = PBXBuildFile; fileRef = EAE4B5392668FE880005ACD2 /* swiftlint-ci.yml */; };
 		EAE4B53C2668FE880005ACD2 /* swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EAE4B53A2668FE880005ACD2 /* swiftlint.yml */; };
+		EAE4B58326690A850005ACD2 /* AuthTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B58226690A850005ACD2 /* AuthTitle.swift */; };
+		EAE4B58C26690EAB0005ACD2 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B58B26690EAB0005ACD2 /* UIColor+hex.swift */; };
+		EAE4B59526690F130005ACD2 /* ThemeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B59426690F130005ACD2 /* ThemeColors.swift */; };
+		EAE4B59B266917120005ACD2 /* ComponentsStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B59A266917120005ACD2 /* ComponentsStyles.swift */; };
+		EAE4B5A326691A3B0005ACD2 /* ThemeFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5A226691A3B0005ACD2 /* ThemeFonts.swift */; };
+		EAE4B5A82669203D0005ACD2 /* ThemePaddings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5A72669203D0005ACD2 /* ThemePaddings.swift */; };
 		EAEE43842667F1C800F2C5FD /* PureduxCommonCore in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43832667F1C800F2C5FD /* PureduxCommonCore */; };
 		EAEE438A2667F64F00F2C5FD /* PureduxCommonOperators in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43892667F64F00F2C5FD /* PureduxCommonOperators */; };
 /* End PBXBuildFile section */
@@ -113,6 +119,12 @@
 		EAE4B52F2668FC4F0005ACD2 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		EAE4B5392668FE880005ACD2 /* swiftlint-ci.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = "swiftlint-ci.yml"; sourceTree = "<group>"; };
 		EAE4B53A2668FE880005ACD2 /* swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftlint.yml; sourceTree = "<group>"; };
+		EAE4B58226690A850005ACD2 /* AuthTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTitle.swift; sourceTree = "<group>"; };
+		EAE4B58B26690EAB0005ACD2 /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
+		EAE4B59426690F130005ACD2 /* ThemeColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColors.swift; sourceTree = "<group>"; };
+		EAE4B59A266917120005ACD2 /* ComponentsStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsStyles.swift; sourceTree = "<group>"; };
+		EAE4B5A226691A3B0005ACD2 /* ThemeFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFonts.swift; sourceTree = "<group>"; };
+		EAE4B5A72669203D0005ACD2 /* ThemePaddings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePaddings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -324,6 +336,9 @@
 		EA00C2722667E596001EED8D /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				EAE4B58126690A5F0005ACD2 /* AuthTitle */,
+				EAE4B58026690A240005ACD2 /* AuthSecuredTextField */,
+				EAE4B57F26690A190005ACD2 /* AuthTextField */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -332,6 +347,10 @@
 			isa = PBXGroup;
 			children = (
 				EA00C2762667E596001EED8D /* AppUITheme.swift */,
+				EAE4B5A72669203D0005ACD2 /* ThemePaddings.swift */,
+				EAE4B59426690F130005ACD2 /* ThemeColors.swift */,
+				EAE4B5A226691A3B0005ACD2 /* ThemeFonts.swift */,
+				EAE4B59A266917120005ACD2 /* ComponentsStyles.swift */,
 				EA00C2772667E596001EED8D /* AppUIThemeKey.swift */,
 			);
 			path = Theme;
@@ -375,6 +394,7 @@
 		EA00C2862667E596001EED8D /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				EAE4B58A26690E9E0005ACD2 /* UIKitExtensions */,
 				EA00C2872667E596001EED8D /* SwiftUIExtensions */,
 			);
 			path = Library;
@@ -408,6 +428,36 @@
 				EAE4B52E2668FC4F0005ACD2 /* swiftlint */,
 			);
 			path = SwiftLint;
+			sourceTree = "<group>";
+		};
+		EAE4B57F26690A190005ACD2 /* AuthTextField */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AuthTextField;
+			sourceTree = "<group>";
+		};
+		EAE4B58026690A240005ACD2 /* AuthSecuredTextField */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AuthSecuredTextField;
+			sourceTree = "<group>";
+		};
+		EAE4B58126690A5F0005ACD2 /* AuthTitle */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B58226690A850005ACD2 /* AuthTitle.swift */,
+			);
+			path = AuthTitle;
+			sourceTree = "<group>";
+		};
+		EAE4B58A26690E9E0005ACD2 /* UIKitExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B58B26690EAB0005ACD2 /* UIColor+hex.swift */,
+			);
+			path = UIKitExtensions;
 			sourceTree = "<group>";
 		};
 		EAEE43C12667FECD00F2C5FD /* Services */ = {
@@ -647,10 +697,14 @@
 				EA00C2942667E597001EED8D /* Storage.swift in Sources */,
 				EA00C29B2667E597001EED8D /* Action.swift in Sources */,
 				EA00C2B02667E597001EED8D /* Types.swift in Sources */,
+				EAE4B59B266917120005ACD2 /* ComponentsStyles.swift in Sources */,
 				EA00C28F2667E596001EED8D /* AppState.swift in Sources */,
+				EAE4B5A326691A3B0005ACD2 /* ThemeFonts.swift in Sources */,
 				EA00C2982667E597001EED8D /* Time.swift in Sources */,
+				EAE4B5A82669203D0005ACD2 /* ThemePaddings.swift in Sources */,
 				EA00C2AD2667E597001EED8D /* Command.swift in Sources */,
 				EA00C2B12667E597001EED8D /* AppDelegate.swift in Sources */,
+				EAE4B58326690A850005ACD2 /* AuthTitle.swift in Sources */,
 				EA00C2902667E596001EED8D /* AppStateConfig.swift in Sources */,
 				EA00C2922667E596001EED8D /* CurrentTime.swift in Sources */,
 				EA00C2AF2667E597001EED8D /* AppLauncher.swift in Sources */,
@@ -658,8 +712,10 @@
 				EA00C2B32667E597001EED8D /* TimeEventsSideEffects.swift in Sources */,
 				EA00C2A22667E597001EED8D /* ScreenViewsFactoryProtocol.swift in Sources */,
 				EA00C2A32667E597001EED8D /* ScreenViews.swift in Sources */,
+				EAE4B59526690F130005ACD2 /* ThemeColors.swift in Sources */,
 				EA00C2AC2667E597001EED8D /* ViewStoreExtensions.swift in Sources */,
 				EA00C2962667E597001EED8D /* ModelSchema.swift in Sources */,
+				EAE4B58C26690EAB0005ACD2 /* UIColor+hex.swift in Sources */,
 				EA00C2AB2667E597001EED8D /* AppUIThemeKey.swift in Sources */,
 				EA00C2A52667E597001EED8D /* ScreenViewFactory.swift in Sources */,
 				EA00C2AE2667E597001EED8D /* View+AnyView.swift in Sources */,
