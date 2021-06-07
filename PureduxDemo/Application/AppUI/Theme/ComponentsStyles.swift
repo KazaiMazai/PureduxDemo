@@ -15,13 +15,15 @@ extension AppUITheme {
         let authTextField: AuthTextField.Style
         let authSecuredTextField: AuthSecuredTextField.Style
         let mainActionButton: ActionButton.Style
+        let movieListItem: MovieListItem.Style
 
         static func stylesForTheme(config: AppUITheme.Config) -> Styles {
             Styles(navBar: .nativeStyle,
                    authTitle: .with(configs: config),
                    authTextField: .with(configs: config),
                    authSecuredTextField: .with(configs: config),
-                   mainActionButton: .with(configs: config)
+                   mainActionButton: .with(configs: config),
+                   movieListItem: .with(configs: config)
             )
         }
     }
@@ -51,6 +53,12 @@ extension AppUITheme.Styles {
                     weight: .semibold),
                 height: 44)
         }
+    }
+}
+
+extension MovieListItem.Style {
+    static func with(configs: AppUITheme.Config) -> MovieListItem.Style {
+        .defaultStyle
     }
 }
 
