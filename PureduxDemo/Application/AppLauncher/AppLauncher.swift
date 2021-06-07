@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AppLauncher {
     private let theme: AppUITheme
-    private let screenViewsFactory: ScreenViewsFactoryProtocol
+    private let screenViewsFactory: ScreenViewsFactory
     private let environmentStore: ObservableStore<AppState, Action>
     private let store: Store
     private let appStateEnvironment: AppEnvironment
@@ -51,7 +51,7 @@ extension AppLauncher {
         }
 
         let window = UIWindow(windowScene: windowScene)
-        let rootView = rootViewWith(view: screenViewsFactory.makeView(for: .dialogue))
+        let rootView = rootViewWith(view: screenViewsFactory.makeView(for: .login))
         window.rootViewController = DarkHostingController(rootView: rootView)
         return window
     }

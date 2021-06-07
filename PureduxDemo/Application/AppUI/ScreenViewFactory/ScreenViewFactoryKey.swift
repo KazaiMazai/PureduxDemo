@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct ScreenViewFactoryKey: EnvironmentKey {
-    static let defaultValue: ScreenViewsFactoryProtocol = ScreenViewsFactory.defaultScreenViewsFactory
+    static let defaultValue: ScreenViewsFactory = ScreenViewsFactory.defaultScreenViewsFactory
 }
 
 extension EnvironmentValues {
-    var screenViewsFactory: ScreenViewsFactoryProtocol {
+    var screenViewsFactory: ScreenViewsFactory {
         get { self[ScreenViewFactoryKey.self] }
         set { self[ScreenViewFactoryKey.self] = newValue }
     }

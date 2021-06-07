@@ -9,40 +9,34 @@ import SwiftUI
 import UIKit
 
 struct AppUITheme {
-    let navBarStyle: NavBarStyle
+    let styles: Styles
+    let config: Config
 
-    static var defaultTheme: AppUITheme {
-        AppUITheme(navBarStyle: NavBarStyle())
-    }
-}
+    static var defaultTheme: AppUITheme = {
+        let config = Config.defaultConfig
 
-extension AppUITheme {
-    struct NavBarStyle {
-        let titleColor = Color.black
-        let backgroundColor = Color(red: 247.0 / 255.0, green: 247.0 / 255.0, blue: 247.0 / 255.0)
-        let separatorColor = Color(red: 210.0 / 255.0, green: 210.0 / 255.0, blue: 210.0 / 255.0)
-        let titleFont = Font.system(size: 17, weight: .semibold)
-        let height: CGFloat = 44
-    }
-}
+        return AppUITheme(
+            styles: .stylesForTheme(config: config),
+            config: config)
+    }()
 
-extension AppUITheme {
-    struct Shadow {
-        let color = Color(hex: "#000000")
-        let alpha: Double = 0.5
-        let offset = CGSize(width: 1, height: 1)
-        let blur: CGFloat = 4
-    }
-}
+    struct Config {
+        let colors: Colors
+        let fonts: Fonts
+        let paddings: Paddings
+        let sizes: Sizes
 
-extension AppUITheme {
-    struct Paddings {
-        let interItemSpacing: CGFloat = 30
-        let textPaddings: CGFloat = 10
-        let leftContentInset: CGFloat = 20
-        let leftBodyInset: CGFloat = 11
-        let triangularHeight: CGFloat = 18
-        let triangeSize = CGSize(width: 11, height: 18)
-        let maxWidthProportion: CGFloat = 0.75
+        static var defaultConfig: Config = {
+            let colors = Colors.defaultColors
+            let fonts = Fonts.defaultFonts
+            let paddings =  Paddings.defaultPaddings
+            let sizes = Sizes.defaultSizes
+
+            return Config(
+                colors: colors,
+                fonts: fonts,
+                paddings: paddings,
+                sizes: sizes)
+        }()
     }
 }

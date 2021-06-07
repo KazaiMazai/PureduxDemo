@@ -8,5 +8,7 @@
 import Foundation
 
 enum ScreenViews {
-    case dialogue
+    case login
+    case moviesFeed
+    case movieDetail
 }

@@ -20,7 +20,6 @@
 		EA00C2962667E597001EED8D /* ModelSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C2552667E596001EED8D /* ModelSchema.swift */; };
 		EA00C2982667E597001EED8D /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C2582667E596001EED8D /* Time.swift */; };
 		EA00C29B2667E597001EED8D /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C25B2667E596001EED8D /* Action.swift */; };
-		EA00C2A22667E597001EED8D /* ScreenViewsFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C26A2667E596001EED8D /* ScreenViewsFactoryProtocol.swift */; };
 		EA00C2A32667E597001EED8D /* ScreenViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C26B2667E596001EED8D /* ScreenViews.swift */; };
 		EA00C2A42667E597001EED8D /* ScreenViewFactoryKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C26C2667E596001EED8D /* ScreenViewFactoryKey.swift */; };
 		EA00C2A52667E597001EED8D /* ScreenViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C26D2667E596001EED8D /* ScreenViewFactory.swift */; };
@@ -47,6 +46,22 @@
 		EAE4B5312668FC4F0005ACD2 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = EAE4B52F2668FC4F0005ACD2 /* LICENSE */; };
 		EAE4B53B2668FE880005ACD2 /* swiftlint-ci.yml in Resources */ = {isa = PBXBuildFile; fileRef = EAE4B5392668FE880005ACD2 /* swiftlint-ci.yml */; };
 		EAE4B53C2668FE880005ACD2 /* swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EAE4B53A2668FE880005ACD2 /* swiftlint.yml */; };
+		EAE4B58326690A850005ACD2 /* AuthTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B58226690A850005ACD2 /* AuthTitle.swift */; };
+		EAE4B58C26690EAB0005ACD2 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B58B26690EAB0005ACD2 /* UIColor+hex.swift */; };
+		EAE4B59526690F130005ACD2 /* ThemeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B59426690F130005ACD2 /* ThemeColors.swift */; };
+		EAE4B59B266917120005ACD2 /* ComponentsStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B59A266917120005ACD2 /* ComponentsStyles.swift */; };
+		EAE4B5A326691A3B0005ACD2 /* ThemeFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5A226691A3B0005ACD2 /* ThemeFonts.swift */; };
+		EAE4B5A82669203D0005ACD2 /* ThemePaddings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5A72669203D0005ACD2 /* ThemePaddings.swift */; };
+		EAE4B5AD266925BF0005ACD2 /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5AC266925BF0005ACD2 /* AuthTextField.swift */; };
+		EAE4B5B2266926790005ACD2 /* View+Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5B1266926790005ACD2 /* View+Placeholder.swift */; };
+		EAE4B5B726692CAD0005ACD2 /* ThemeSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5B626692CAD0005ACD2 /* ThemeSizes.swift */; };
+		EAE4B5BC266939CD0005ACD2 /* AuthSecuredTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5BB266939CD0005ACD2 /* AuthSecuredTextField.swift */; };
+		EAE4B5CB26693C820005ACD2 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5C0266939E10005ACD2 /* CustomTextField.swift */; };
+		EAE4B5D9266E50E00005ACD2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5D8266E50E00005ACD2 /* LoginView.swift */; };
+		EAE4B5E1266E50EA0005ACD2 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5E0266E50EA0005ACD2 /* LoginPresenter.swift */; };
+		EAE4B5EA266E51460005ACD2 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5E9266E51460005ACD2 /* ActionButton.swift */; };
+		EAE4B5EF266E5AB20005ACD2 /* View+KeyboardAdaptive.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5EE266E5AB20005ACD2 /* View+KeyboardAdaptive.swift */; };
+		EAE4B5F7266E5B230005ACD2 /* KeyboardHeightPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5F6266E5B230005ACD2 /* KeyboardHeightPublisher.swift */; };
 		EAEE43842667F1C800F2C5FD /* PureduxCommonCore in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43832667F1C800F2C5FD /* PureduxCommonCore */; };
 		EAEE438A2667F64F00F2C5FD /* PureduxCommonOperators in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43892667F64F00F2C5FD /* PureduxCommonOperators */; };
 /* End PBXBuildFile section */
@@ -88,7 +103,6 @@
 		EA00C2552667E596001EED8D /* ModelSchema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelSchema.swift; sourceTree = "<group>"; };
 		EA00C2582667E596001EED8D /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		EA00C25B2667E596001EED8D /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
-		EA00C26A2667E596001EED8D /* ScreenViewsFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenViewsFactoryProtocol.swift; sourceTree = "<group>"; };
 		EA00C26B2667E596001EED8D /* ScreenViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenViews.swift; sourceTree = "<group>"; };
 		EA00C26C2667E596001EED8D /* ScreenViewFactoryKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenViewFactoryKey.swift; sourceTree = "<group>"; };
 		EA00C26D2667E596001EED8D /* ScreenViewFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenViewFactory.swift; sourceTree = "<group>"; };
@@ -113,6 +127,22 @@
 		EAE4B52F2668FC4F0005ACD2 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		EAE4B5392668FE880005ACD2 /* swiftlint-ci.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = "swiftlint-ci.yml"; sourceTree = "<group>"; };
 		EAE4B53A2668FE880005ACD2 /* swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftlint.yml; sourceTree = "<group>"; };
+		EAE4B58226690A850005ACD2 /* AuthTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTitle.swift; sourceTree = "<group>"; };
+		EAE4B58B26690EAB0005ACD2 /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
+		EAE4B59426690F130005ACD2 /* ThemeColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColors.swift; sourceTree = "<group>"; };
+		EAE4B59A266917120005ACD2 /* ComponentsStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsStyles.swift; sourceTree = "<group>"; };
+		EAE4B5A226691A3B0005ACD2 /* ThemeFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFonts.swift; sourceTree = "<group>"; };
+		EAE4B5A72669203D0005ACD2 /* ThemePaddings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePaddings.swift; sourceTree = "<group>"; };
+		EAE4B5AC266925BF0005ACD2 /* AuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextField.swift; sourceTree = "<group>"; };
+		EAE4B5B1266926790005ACD2 /* View+Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Placeholder.swift"; sourceTree = "<group>"; };
+		EAE4B5B626692CAD0005ACD2 /* ThemeSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSizes.swift; sourceTree = "<group>"; };
+		EAE4B5BB266939CD0005ACD2 /* AuthSecuredTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSecuredTextField.swift; sourceTree = "<group>"; };
+		EAE4B5C0266939E10005ACD2 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		EAE4B5D8266E50E00005ACD2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		EAE4B5E0266E50EA0005ACD2 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		EAE4B5E9266E51460005ACD2 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		EAE4B5EE266E5AB20005ACD2 /* View+KeyboardAdaptive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+KeyboardAdaptive.swift"; sourceTree = "<group>"; };
+		EAE4B5F6266E5B230005ACD2 /* KeyboardHeightPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHeightPublisher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,7 +335,6 @@
 		EA00C2692667E596001EED8D /* ScreenViewFactory */ = {
 			isa = PBXGroup;
 			children = (
-				EA00C26A2667E596001EED8D /* ScreenViewsFactoryProtocol.swift */,
 				EA00C26B2667E596001EED8D /* ScreenViews.swift */,
 				EA00C26C2667E596001EED8D /* ScreenViewFactoryKey.swift */,
 				EA00C26D2667E596001EED8D /* ScreenViewFactory.swift */,
@@ -316,6 +345,7 @@
 		EA00C26E2667E596001EED8D /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				EAE4B5D6266E50C80005ACD2 /* Auth */,
 				EA00C21B2667E4F8001EED8D /* LaunchScreen.storyboard */,
 			);
 			path = Screens;
@@ -324,6 +354,10 @@
 		EA00C2722667E596001EED8D /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				EAE4B5E8266E513A0005ACD2 /* ActionButton */,
+				EAE4B58126690A5F0005ACD2 /* AuthTitle */,
+				EAE4B58026690A240005ACD2 /* AuthSecuredTextField */,
+				EAE4B57F26690A190005ACD2 /* AuthTextField */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -332,6 +366,11 @@
 			isa = PBXGroup;
 			children = (
 				EA00C2762667E596001EED8D /* AppUITheme.swift */,
+				EAE4B5A72669203D0005ACD2 /* ThemePaddings.swift */,
+				EAE4B5B626692CAD0005ACD2 /* ThemeSizes.swift */,
+				EAE4B59426690F130005ACD2 /* ThemeColors.swift */,
+				EAE4B5A226691A3B0005ACD2 /* ThemeFonts.swift */,
+				EAE4B59A266917120005ACD2 /* ComponentsStyles.swift */,
 				EA00C2772667E596001EED8D /* AppUIThemeKey.swift */,
 			);
 			path = Theme;
@@ -375,6 +414,7 @@
 		EA00C2862667E596001EED8D /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				EAE4B58A26690E9E0005ACD2 /* UIKitExtensions */,
 				EA00C2872667E596001EED8D /* SwiftUIExtensions */,
 			);
 			path = Library;
@@ -383,9 +423,11 @@
 		EA00C2872667E596001EED8D /* SwiftUIExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				EAE4B5FB266E5B510005ACD2 /* KeyboardAdaptive */,
 				EA00C27B2667E596001EED8D /* View+AnyView.swift */,
 				EA00C2882667E596001EED8D /* Color+hex.swift */,
 				EA00C2892667E596001EED8D /* DarkHostingController.swift */,
+				EAE4B5B1266926790005ACD2 /* View+Placeholder.swift */,
 			);
 			path = SwiftUIExtensions;
 			sourceTree = "<group>";
@@ -408,6 +450,73 @@
 				EAE4B52E2668FC4F0005ACD2 /* swiftlint */,
 			);
 			path = SwiftLint;
+			sourceTree = "<group>";
+		};
+		EAE4B57F26690A190005ACD2 /* AuthTextField */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B5AC266925BF0005ACD2 /* AuthTextField.swift */,
+			);
+			path = AuthTextField;
+			sourceTree = "<group>";
+		};
+		EAE4B58026690A240005ACD2 /* AuthSecuredTextField */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B5C0266939E10005ACD2 /* CustomTextField.swift */,
+				EAE4B5BB266939CD0005ACD2 /* AuthSecuredTextField.swift */,
+			);
+			path = AuthSecuredTextField;
+			sourceTree = "<group>";
+		};
+		EAE4B58126690A5F0005ACD2 /* AuthTitle */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B58226690A850005ACD2 /* AuthTitle.swift */,
+			);
+			path = AuthTitle;
+			sourceTree = "<group>";
+		};
+		EAE4B58A26690E9E0005ACD2 /* UIKitExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B58B26690EAB0005ACD2 /* UIColor+hex.swift */,
+			);
+			path = UIKitExtensions;
+			sourceTree = "<group>";
+		};
+		EAE4B5D6266E50C80005ACD2 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B5D7266E50D00005ACD2 /* Login */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		EAE4B5D7266E50D00005ACD2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B5D8266E50E00005ACD2 /* LoginView.swift */,
+				EAE4B5E0266E50EA0005ACD2 /* LoginPresenter.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EAE4B5E8266E513A0005ACD2 /* ActionButton */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B5E9266E51460005ACD2 /* ActionButton.swift */,
+			);
+			path = ActionButton;
+			sourceTree = "<group>";
+		};
+		EAE4B5FB266E5B510005ACD2 /* KeyboardAdaptive */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B5F6266E5B230005ACD2 /* KeyboardHeightPublisher.swift */,
+				EAE4B5EE266E5AB20005ACD2 /* View+KeyboardAdaptive.swift */,
+			);
+			path = KeyboardAdaptive;
 			sourceTree = "<group>";
 		};
 		EAEE43C12667FECD00F2C5FD /* Services */ = {
@@ -642,29 +751,44 @@
 			files = (
 				EAE4B4B32668F86E0005ACD2 /* Strings+Generated.swift in Sources */,
 				EA00C2B62667E597001EED8D /* Color+hex.swift in Sources */,
+				EAE4B5EA266E51460005ACD2 /* ActionButton.swift in Sources */,
 				EA00C2B22667E597001EED8D /* SceneDelegate.swift in Sources */,
 				EA00C2B72667E597001EED8D /* DarkHostingController.swift in Sources */,
 				EA00C2942667E597001EED8D /* Storage.swift in Sources */,
 				EA00C29B2667E597001EED8D /* Action.swift in Sources */,
 				EA00C2B02667E597001EED8D /* Types.swift in Sources */,
+				EAE4B5CB26693C820005ACD2 /* CustomTextField.swift in Sources */,
+				EAE4B59B266917120005ACD2 /* ComponentsStyles.swift in Sources */,
 				EA00C28F2667E596001EED8D /* AppState.swift in Sources */,
+				EAE4B5B726692CAD0005ACD2 /* ThemeSizes.swift in Sources */,
+				EAE4B5A326691A3B0005ACD2 /* ThemeFonts.swift in Sources */,
 				EA00C2982667E597001EED8D /* Time.swift in Sources */,
+				EAE4B5D9266E50E00005ACD2 /* LoginView.swift in Sources */,
+				EAE4B5A82669203D0005ACD2 /* ThemePaddings.swift in Sources */,
 				EA00C2AD2667E597001EED8D /* Command.swift in Sources */,
+				EAE4B5E1266E50EA0005ACD2 /* LoginPresenter.swift in Sources */,
+				EAE4B5F7266E5B230005ACD2 /* KeyboardHeightPublisher.swift in Sources */,
 				EA00C2B12667E597001EED8D /* AppDelegate.swift in Sources */,
+				EAE4B58326690A850005ACD2 /* AuthTitle.swift in Sources */,
 				EA00C2902667E596001EED8D /* AppStateConfig.swift in Sources */,
 				EA00C2922667E596001EED8D /* CurrentTime.swift in Sources */,
 				EA00C2AF2667E597001EED8D /* AppLauncher.swift in Sources */,
 				EAE4B4B42668F86E0005ACD2 /* Assets+Generated.swift in Sources */,
 				EA00C2B32667E597001EED8D /* TimeEventsSideEffects.swift in Sources */,
-				EA00C2A22667E597001EED8D /* ScreenViewsFactoryProtocol.swift in Sources */,
+				EAE4B5AD266925BF0005ACD2 /* AuthTextField.swift in Sources */,
 				EA00C2A32667E597001EED8D /* ScreenViews.swift in Sources */,
+				EAE4B59526690F130005ACD2 /* ThemeColors.swift in Sources */,
 				EA00C2AC2667E597001EED8D /* ViewStoreExtensions.swift in Sources */,
 				EA00C2962667E597001EED8D /* ModelSchema.swift in Sources */,
+				EAE4B5EF266E5AB20005ACD2 /* View+KeyboardAdaptive.swift in Sources */,
+				EAE4B5BC266939CD0005ACD2 /* AuthSecuredTextField.swift in Sources */,
+				EAE4B58C26690EAB0005ACD2 /* UIColor+hex.swift in Sources */,
 				EA00C2AB2667E597001EED8D /* AppUIThemeKey.swift in Sources */,
 				EA00C2A52667E597001EED8D /* ScreenViewFactory.swift in Sources */,
 				EA00C2AE2667E597001EED8D /* View+AnyView.swift in Sources */,
 				EA00C2AA2667E597001EED8D /* AppUITheme.swift in Sources */,
 				EA00C2912667E596001EED8D /* AppEnvironment.swift in Sources */,
+				EAE4B5B2266926790005ACD2 /* View+Placeholder.swift in Sources */,
 				EA00C2A42667E597001EED8D /* ScreenViewFactoryKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

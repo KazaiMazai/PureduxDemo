@@ -7,15 +7,16 @@
 
 import SwiftUI
 
-protocol ScreenViewsFactoryProtocol {
-    func makeView(for type: ScreenViews) -> AnyView
-}
-
-struct ScreenViewsFactory: ScreenViewsFactoryProtocol {
-    func makeView(for type: ScreenViews) -> AnyView {
+struct ScreenViewsFactory {
+    @ViewBuilder
+    func makeView(for type: ScreenViews) -> some View {
         switch type {
-        case .dialogue:
-            return EmptyView().eraseToAnyView
+        case .login:
+            Color.green
+        case .moviesFeed:
+            Color.red
+        case .movieDetail:
+            Color.yellow
         }
     }
 }
