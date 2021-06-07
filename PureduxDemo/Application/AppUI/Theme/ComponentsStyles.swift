@@ -13,11 +13,13 @@ extension AppUITheme {
         let navBar: NavBarStyle
         let authTitle: AuthTitle.Style
         let authTextField: AuthTextField.Style
+        let mainActionButton: ActionButton.Style
 
         static func stylesForTheme(config: AppUITheme.Config) -> Styles {
             Styles(navBar: .nativeStyle,
                    authTitle: .with(configs: config),
-                   authTextField: .with(configs: config)
+                   authTextField: .with(configs: config),
+                   mainActionButton: .with(configs: config)
             )
         }
     }
