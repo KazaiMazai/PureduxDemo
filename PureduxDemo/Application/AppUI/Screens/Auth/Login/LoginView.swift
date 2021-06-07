@@ -32,23 +32,29 @@ struct LoginView: View {
     var body: some View {
         VStack(spacing: 0) {
             Spacer()
-            AuthTitle(props: props.title, style: theme.styles.authTitle)
+            AuthTitle(
+                props: props.title,
+                style: theme.styles.authTitle)
             Spacer()
 
             VStack(spacing: theme.config.paddings.large) {
-                AuthTextField(props: props.emailTextField,
-                              style: theme.styles.authTextField)
-                AuthSecuredTextField(props: props.passwordTextField,
-                                     style: .defaultStyle)
-                ActionButton(props: props.actionButton,
-                             style: theme.styles.mainActionButton)
+                AuthTextField(
+                    props: props.emailTextField,
+                    style: theme.styles.authTextField)
+                AuthSecuredTextField(
+                    props: props.passwordTextField,
+                    style: theme.styles.authSecuredTextField)
             }
 
             Spacer()
+
+            ActionButton(
+                props: props.actionButton,
+                style: theme.styles.mainActionButton)
         }
-        .padding([.leading, .trailing], theme.config.paddings.huge)
+        .padding([.leading, .trailing, .bottom], theme.config.paddings.huge)
         .nativeKeyboardAdaptive()
-        .background(theme.config.colors.background.color.edgesIgnoringSafeArea(.all))
+        .background(theme.config.colors.mainBackground.color.edgesIgnoringSafeArea(.all))
     }
 }
 

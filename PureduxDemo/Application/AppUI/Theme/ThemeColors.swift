@@ -65,6 +65,7 @@ extension AppUITheme {
 
 extension AppUITheme {
     struct Colors {
+        let mainBackground: ColorType
         let background: ColorType
         let backgroundDark: ColorType
 
@@ -82,7 +83,8 @@ extension AppUITheme {
 
         static let defaultColors: Colors = {
             Colors(
-                background: .hex(ColorHex.grayScale5),
+                mainBackground: .hex(ColorHex.grayScale5),
+                background: .hex(ColorHex.grayScale3),
                 backgroundDark: .hex(ColorHex.grayScale1),
 
                 primary: .hex(ColorHex.mainBlue),

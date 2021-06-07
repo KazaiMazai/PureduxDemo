@@ -45,9 +45,9 @@ extension ActionButton {
         let height: CGFloat
         let maxWidth: CGFloat
 
-        static var defaulStyle: Style {
+        static var defaultStyle: Style {
             Style(titleFont: .title,
-                  titleColor: .black,
+                  titleColor: .white,
                   backgroundColor: .blue,
                   backgroundDisabledColor: .gray,
                   cornerRadius: 8,
@@ -76,7 +76,7 @@ struct ActionButton: View {
 
 struct MainActionButton_Previews: PreviewProvider {
     static var previews: some View {
-        ActionButton(props: .preview, style: .defaulStyle)
+        ActionButton(props: .preview, style: .defaultStyle)
     }
 }
 
