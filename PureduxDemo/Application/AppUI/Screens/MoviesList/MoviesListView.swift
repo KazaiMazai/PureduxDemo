@@ -15,6 +15,7 @@ extension MoviesListView {
 }
 
 struct MoviesListView: View {
+    @Environment(\.appUITheme) var theme
     let props: Props
 
     var body: some View {
@@ -22,7 +23,7 @@ struct MoviesListView: View {
             ForEach(props.items) {
                 switch $0.element {
                 case .movieListItem(let props):
-                    MovieListItem(props: props, style: .defaultStyle)
+                    MovieListItem(props: props, style: theme.styles.movieListItem)
                 case .placeholder:
                     Color.gray.frame(height: 52)
                 }
