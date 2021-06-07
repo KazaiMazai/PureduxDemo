@@ -37,37 +37,21 @@ extension AuthSecuredTextField {
 
 extension AuthSecuredTextField {
     struct Style {
-        let keyboardType: UIKeyboardType
-        let alignment: TextAlignment
-        let titleFont: AppUITheme.FontType
+        var keyboardType: UIKeyboardType = .default
+        var alignment: TextAlignment = .center
+        var titleFont: AppUITheme.FontType = .title
 
-        let borderColor: Color
-        let borderColorFocused: Color
-        let placehodlerColor: Color
-        let titleColor: AppUITheme.ColorType
-        let backgroundColor: Color
+        var borderColor: Color = .gray
+        var borderColorFocused: Color = .blue
+        var placehodlerColor: Color = .gray
+        var titleColor: AppUITheme.ColorType = .black
+        var backgroundColor: Color = .white
 
-        let height: CGFloat
-        let cornerRadius: CGFloat
+        var height: CGFloat = 52
+        var cornerRadius: CGFloat = 8
 
-        let borderWidth: CGFloat
-        let horizontalPadding: CGFloat
-
-        static var defaultStyle: Style {
-            Style(keyboardType: .default,
-                  alignment: .center,
-                  titleFont: .title,
-                  borderColor: .gray,
-                  borderColorFocused: .blue,
-                  placehodlerColor: .gray,
-                  titleColor: .black,
-                  backgroundColor: .white,
-                  height: 52,
-                  cornerRadius: 8,
-                  borderWidth: 1,
-                  horizontalPadding: 16
-            )
-        }
+        var borderWidth: CGFloat = 1
+        var horizontalPadding: CGFloat = 16
 
         fileprivate var placeholderAlignment: Alignment {
             switch alignment {
@@ -91,7 +75,6 @@ extension AuthSecuredTextField {
             }
         }
     }
-
 }
 
 struct AuthSecuredTextField: View {
@@ -142,6 +125,6 @@ struct AuthSecuredTextField: View {
 
 struct AuthSecuredTextField_Previews: PreviewProvider {
     static var previews: some View {
-        AuthSecuredTextField(props: .preview, style: .defaultStyle)
+        AuthSecuredTextField(props: .preview, style: AuthSecuredTextField.Style())
     }
 }

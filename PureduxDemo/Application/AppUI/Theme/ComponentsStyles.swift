@@ -58,13 +58,13 @@ extension AppUITheme.Styles {
 
 extension MovieListItem.Style {
     static func with(configs: AppUITheme.Config) -> MovieListItem.Style {
-        .defaultStyle
+        MovieListItem.Style()
     }
 }
 
 extension AuthTitle.Style {
     static func with(configs: AppUITheme.Config) -> AuthTitle.Style {
-        .defaultStyle
+        AuthTitle.Style()
 //        AuthTitle.Style(
 //            titleColor: configs.colors.title.color,
 //            font: configs.fonts.title.font)
@@ -73,7 +73,7 @@ extension AuthTitle.Style {
 
 extension AuthSecuredTextField.Style {
     static func with(configs: AppUITheme.Config) -> AuthSecuredTextField.Style {
-        .defaultStyle
+        AuthSecuredTextField.Style()
 //        AuthSecuredTextField.Style(
 //            keyboardType: .default,
 //            alignment: .center,
@@ -93,7 +93,7 @@ extension AuthSecuredTextField.Style {
 
 extension AuthTextField.Style {
     static func with(configs: AppUITheme.Config) -> AuthTextField.Style {
-        .defaultStyle
+        AuthTextField.Style()
 //        AuthTextField.Style(
 //            keyboardType: .default,
 //            alignment: .center,
@@ -113,7 +113,7 @@ extension AuthTextField.Style {
 
 extension ActionButton.Style {
     static func with(configs: AppUITheme.Config) -> ActionButton.Style {
-        .defaultStyle
+        ActionButton.Style()
 //        ActionButton.Style(
 //            titleFont: configs.fonts.title.font,
 //            titleColor: configs.colors.title.color,

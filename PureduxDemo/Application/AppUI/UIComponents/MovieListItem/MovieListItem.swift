@@ -22,20 +22,12 @@ extension MovieListItem {
 
 extension MovieListItem {
     struct Style {
-        let titleColor: Color
-        let descriptionTitleColor: Color
+        var titleColor: Color = .black
+        var descriptionTitleColor: Color = .gray
 
-        let titleFont: Font
-        let descriptionFont: Font
-        let padding: CGFloat
-
-        static var defaultStyle: Style {
-            Style(titleColor: .black,
-                  descriptionTitleColor: .gray,
-                  titleFont: Font.title,
-                  descriptionFont: Font.body,
-                  padding: 8)
-        }
+        var titleFont: Font = .title
+        var descriptionFont: Font = .body
+        var padding: CGFloat = 8
     }
 }
 

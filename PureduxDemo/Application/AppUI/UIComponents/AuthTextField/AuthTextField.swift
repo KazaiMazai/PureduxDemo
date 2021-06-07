@@ -36,37 +36,21 @@ extension AuthTextField {
 
 extension AuthTextField {
     struct Style {
-        let keyboardType: UIKeyboardType
-        let alignment: TextAlignment
-        let titleFont: Font
+        var keyboardType: UIKeyboardType = .default
+        var alignment: TextAlignment = .center
+        var titleFont: Font = .title
 
-        let borderColor: Color
-        let borderColorFocused: Color
-        let placehodlerColor: Color
-        let titleColor: Color
-        let backgroundColor: Color
+        var borderColor: Color = .gray
+        var borderColorFocused: Color = .blue
+        var placehodlerColor: Color = .gray
+        var titleColor: Color = .black
+        var backgroundColor: Color = .white
 
-        let height: CGFloat
-        let cornerRadius: CGFloat
+        var height: CGFloat = 52
+        var cornerRadius: CGFloat = 8
 
-        let borderWidth: CGFloat
-        let horizontalPadding: CGFloat
-
-        static var defaultStyle: Style {
-            Style(keyboardType: .default,
-                  alignment: .center,
-                  titleFont: .title,
-                  borderColor: .gray,
-                  borderColorFocused: .blue,
-                  placehodlerColor: .gray,
-                  titleColor: .black,
-                  backgroundColor: .white,
-                  height: 52,
-                  cornerRadius: 8,
-                  borderWidth: 1,
-                  horizontalPadding: 16
-            )
-        }
+        var borderWidth: CGFloat = 1
+        var horizontalPadding: CGFloat = 16
 
         fileprivate var placeholderAlignment: Alignment {
             switch alignment {
@@ -126,6 +110,6 @@ struct AuthTextField: View {
 
 struct AuthTextField_Previews: PreviewProvider {
     static var previews: some View {
-        AuthTextField(props: .preview, style: .defaultStyle)
+        AuthTextField(props: .preview, style: AuthTextField.Style())
     }
 }
