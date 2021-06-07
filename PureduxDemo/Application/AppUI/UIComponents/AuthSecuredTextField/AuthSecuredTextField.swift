@@ -115,8 +115,7 @@ struct AuthSecuredTextField: View {
                 $0.borderStyle = .none
                 $0.textColor = style.titleColor.uiColor
                 $0.font = style.titleFont.uiFont
-
-                $0.keyboardType = .default
+                $0.keyboardType = style.keyboardType
                 $0.textAlignment = style.textAlignment
                 $0.isSecureTextEntry = true
             })
