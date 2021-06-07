@@ -27,7 +27,7 @@ extension MovieListItem {
 
         var titleFont: Font = .title
         var descriptionFont: Font = .body
-        var padding: CGFloat = 8
+        var verticalPadding: CGFloat = 8
     }
 }
 
@@ -36,7 +36,7 @@ struct MovieListItem: View {
     let style: Style
 
     var body: some View {
-        VStack(alignment: .leading, spacing: style.padding) {
+        VStack(alignment: .leading, spacing: style.verticalPadding) {
             Text(props.title)
                 .foregroundColor(style.titleColor)
                 .font(style.titleFont)

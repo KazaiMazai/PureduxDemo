@@ -11,6 +11,7 @@ import SwiftUI
 extension AppUITheme {
     enum ColorType {
         case black
+        case blue
         case gray
         case white
         case green
@@ -23,6 +24,8 @@ extension AppUITheme {
             switch self {
             case .black:
                 return Color.black
+            case .blue:
+                return Color.blue
             case .gray:
                 return Color.gray
             case .white:
@@ -46,6 +49,8 @@ extension AppUITheme {
             switch self {
             case .black:
                 return UIColor.black
+            case .blue:
+                return UIColor.blue
             case .gray:
                 return UIColor.gray
             case .white:
@@ -83,20 +88,20 @@ extension AppUITheme {
 
         static let defaultColors: Colors = {
             Colors(
-                mainBackground: .hex(ColorHex.grayScale5),
-                background: .hex(ColorHex.grayScale3),
-                backgroundDark: .hex(ColorHex.grayScale1),
+                mainBackground: .white,
+                background: .white,
+                backgroundDark: .gray,
 
-                primary: .hex(ColorHex.mainBlue),
-                secondary: .hex(ColorHex.darkBlue),
+                primary: .blue,
+                secondary: .blue,
 
-                lightTitle: .hex(ColorHex.grayScale4),
-                darkTitle: .hex(ColorHex.grayScale1),
+                lightTitle: .gray,
+                darkTitle: .black,
 
-                title: .hex(ColorHex.grayScale3),
-                subtitle: .hex(ColorHex.grayScale4),
-                lightPlaceholder: .hex(ColorHex.grayScale5),
-                border: .hex(ColorHex.grayScale3)
+                title: .black,
+                subtitle: .gray,
+                lightPlaceholder: .gray,
+                border: .gray
             )
         }()
     }
@@ -104,18 +109,6 @@ extension AppUITheme {
 
 extension AppUITheme.Colors {
     private enum ColorHex {
-        static let grayScale1: String = "#333333"
-        static let grayScale2: String = "#5A5A5A"
-        static let grayScale3: String = "#858585"
-        static let grayScale4: String = "#D6D6D6"
-        static let grayScale5: String = "#EBEBEB"
-
-        static let lightWhite: String = "#FFFFFF"
-
         static let mainBlue: String = "#3286FA"
-        static let darkBlue: String = "#0061F9"
-        static let paleBlue: String = "#3286FA"
-
-        static let richRed: String = "#FF3B30"
     }
 }
