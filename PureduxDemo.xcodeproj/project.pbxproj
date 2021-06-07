@@ -62,6 +62,9 @@
 		EAE4B5EA266E51460005ACD2 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5E9266E51460005ACD2 /* ActionButton.swift */; };
 		EAE4B5EF266E5AB20005ACD2 /* View+KeyboardAdaptive.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5EE266E5AB20005ACD2 /* View+KeyboardAdaptive.swift */; };
 		EAE4B5F7266E5B230005ACD2 /* KeyboardHeightPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5F6266E5B230005ACD2 /* KeyboardHeightPublisher.swift */; };
+		EAE4B608266E61A40005ACD2 /* MovieListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B607266E61A40005ACD2 /* MovieListItem.swift */; };
+		EAE4B61A266E642E0005ACD2 /* MoviesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B619266E642E0005ACD2 /* MoviesListView.swift */; };
+		EAE4B620266E64AC0005ACD2 /* IdentifiableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B61F266E64AC0005ACD2 /* IdentifiableItem.swift */; };
 		EAEE43842667F1C800F2C5FD /* PureduxCommonCore in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43832667F1C800F2C5FD /* PureduxCommonCore */; };
 		EAEE438A2667F64F00F2C5FD /* PureduxCommonOperators in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43892667F64F00F2C5FD /* PureduxCommonOperators */; };
 /* End PBXBuildFile section */
@@ -143,6 +146,9 @@
 		EAE4B5E9266E51460005ACD2 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		EAE4B5EE266E5AB20005ACD2 /* View+KeyboardAdaptive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+KeyboardAdaptive.swift"; sourceTree = "<group>"; };
 		EAE4B5F6266E5B230005ACD2 /* KeyboardHeightPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHeightPublisher.swift; sourceTree = "<group>"; };
+		EAE4B607266E61A40005ACD2 /* MovieListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListItem.swift; sourceTree = "<group>"; };
+		EAE4B619266E642E0005ACD2 /* MoviesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListView.swift; sourceTree = "<group>"; };
+		EAE4B61F266E64AC0005ACD2 /* IdentifiableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -345,6 +351,7 @@
 		EA00C26E2667E596001EED8D /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				EAE4B606266E61980005ACD2 /* MoviesList */,
 				EAE4B5D6266E50C80005ACD2 /* Auth */,
 				EA00C21B2667E4F8001EED8D /* LaunchScreen.storyboard */,
 			);
@@ -354,6 +361,8 @@
 		EA00C2722667E596001EED8D /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				EAE4B61E266E649D0005ACD2 /* Common */,
+				EAE4B612266E61B50005ACD2 /* MovieListItem */,
 				EAE4B5E8266E513A0005ACD2 /* ActionButton */,
 				EAE4B58126690A5F0005ACD2 /* AuthTitle */,
 				EAE4B58026690A240005ACD2 /* AuthSecuredTextField */,
@@ -517,6 +526,30 @@
 				EAE4B5EE266E5AB20005ACD2 /* View+KeyboardAdaptive.swift */,
 			);
 			path = KeyboardAdaptive;
+			sourceTree = "<group>";
+		};
+		EAE4B606266E61980005ACD2 /* MoviesList */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B619266E642E0005ACD2 /* MoviesListView.swift */,
+			);
+			path = MoviesList;
+			sourceTree = "<group>";
+		};
+		EAE4B612266E61B50005ACD2 /* MovieListItem */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B607266E61A40005ACD2 /* MovieListItem.swift */,
+			);
+			path = MovieListItem;
+			sourceTree = "<group>";
+		};
+		EAE4B61E266E649D0005ACD2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B61F266E64AC0005ACD2 /* IdentifiableItem.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		EAEE43C12667FECD00F2C5FD /* Services */ = {
@@ -757,6 +790,7 @@
 				EA00C2942667E597001EED8D /* Storage.swift in Sources */,
 				EA00C29B2667E597001EED8D /* Action.swift in Sources */,
 				EA00C2B02667E597001EED8D /* Types.swift in Sources */,
+				EAE4B620266E64AC0005ACD2 /* IdentifiableItem.swift in Sources */,
 				EAE4B5CB26693C820005ACD2 /* CustomTextField.swift in Sources */,
 				EAE4B59B266917120005ACD2 /* ComponentsStyles.swift in Sources */,
 				EA00C28F2667E596001EED8D /* AppState.swift in Sources */,
@@ -775,6 +809,7 @@
 				EA00C2AF2667E597001EED8D /* AppLauncher.swift in Sources */,
 				EAE4B4B42668F86E0005ACD2 /* Assets+Generated.swift in Sources */,
 				EA00C2B32667E597001EED8D /* TimeEventsSideEffects.swift in Sources */,
+				EAE4B61A266E642E0005ACD2 /* MoviesListView.swift in Sources */,
 				EAE4B5AD266925BF0005ACD2 /* AuthTextField.swift in Sources */,
 				EA00C2A32667E597001EED8D /* ScreenViews.swift in Sources */,
 				EAE4B59526690F130005ACD2 /* ThemeColors.swift in Sources */,
@@ -786,6 +821,7 @@
 				EA00C2AB2667E597001EED8D /* AppUIThemeKey.swift in Sources */,
 				EA00C2A52667E597001EED8D /* ScreenViewFactory.swift in Sources */,
 				EA00C2AE2667E597001EED8D /* View+AnyView.swift in Sources */,
+				EAE4B608266E61A40005ACD2 /* MovieListItem.swift in Sources */,
 				EA00C2AA2667E597001EED8D /* AppUITheme.swift in Sources */,
 				EA00C2912667E596001EED8D /* AppEnvironment.swift in Sources */,
 				EAE4B5B2266926790005ACD2 /* View+Placeholder.swift in Sources */,

@@ -34,6 +34,5 @@ extension AppUITheme {
         static var defaultPaddings: Paddings {
             Paddings(step: 8)
         }
-
     }
 }

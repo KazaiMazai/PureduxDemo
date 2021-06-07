@@ -15,13 +15,15 @@ extension AppUITheme {
         let authTextField: AuthTextField.Style
         let authSecuredTextField: AuthSecuredTextField.Style
         let mainActionButton: ActionButton.Style
+        let movieListItem: MovieListItem.Style
 
         static func stylesForTheme(config: AppUITheme.Config) -> Styles {
             Styles(navBar: .nativeStyle,
-                   authTitle: .with(configs: config),
-                   authTextField: .with(configs: config),
-                   authSecuredTextField: .with(configs: config),
-                   mainActionButton: .with(configs: config)
+                   authTitle: .styleFor(config: config),
+                   authTextField: .styleFor(config: config),
+                   authSecuredTextField: .styleFor(config: config),
+                   mainActionButton: .styleFor(config: config),
+                   movieListItem: .styleFor(config: config)
             )
         }
     }
@@ -54,66 +56,73 @@ extension AppUITheme.Styles {
     }
 }
 
+extension MovieListItem.Style {
+    static func styleFor(config: AppUITheme.Config) -> MovieListItem.Style {
+        MovieListItem.Style(
+            titleColor: config.colors.title.color,
+            descriptionTitleColor: config.colors.subtitle.color,
+            titleFont: config.fonts.title.font,
+            descriptionFont: config.fonts.body.font,
+            verticalPadding: config.paddings.normal)
+    }
+}
+
 extension AuthTitle.Style {
-    static func with(configs: AppUITheme.Config) -> AuthTitle.Style {
-        .defaultStyle
-//        AuthTitle.Style(
-//            titleColor: configs.colors.title.color,
-//            font: configs.fonts.title.font)
+    static func styleFor(config: AppUITheme.Config) -> AuthTitle.Style {
+        AuthTitle.Style(
+            titleColor: config.colors.title.color,
+            font: config.fonts.title.font)
     }
 }
 
 extension AuthSecuredTextField.Style {
-    static func with(configs: AppUITheme.Config) -> AuthSecuredTextField.Style {
-        .defaultStyle
-//        AuthSecuredTextField.Style(
-//            keyboardType: .default,
-//            alignment: .center,
-//            titleFont: configs.fonts.title,
-//            borderColor: configs.colors.border.color,
-//            borderColorFocused: configs.colors.primary.color,
-//            placehodlerColor: configs.colors.lightPlaceholder.color,
-//            titleColor: configs.colors.title,
-//            backgroundColor: configs.colors.background.color,
-//            height: configs.sizes.components.inputFields,
-//            cornerRadius: configs.sizes.corners.small,
-//            borderWidth: configs.sizes.boarders.line,
-//            horizontalPadding: configs.paddings.large
-//        )
+    static func styleFor(config: AppUITheme.Config) -> AuthSecuredTextField.Style {
+        AuthSecuredTextField.Style(
+            keyboardType: .default,
+            alignment: .center,
+            titleFont: config.fonts.title,
+            borderColor: config.colors.border.color,
+            borderColorFocused: config.colors.primary.color,
+            placehodlerColor: config.colors.lightPlaceholder.color,
+            titleColor: config.colors.title,
+            backgroundColor: config.colors.background.color,
+            height: config.sizes.components.inputFields,
+            cornerRadius: config.sizes.corners.small,
+            borderWidth: config.sizes.boarders.line,
+            horizontalPadding: config.paddings.large
+        )
     }
 }
 
 extension AuthTextField.Style {
-    static func with(configs: AppUITheme.Config) -> AuthTextField.Style {
-        .defaultStyle
-//        AuthTextField.Style(
-//            keyboardType: .default,
-//            alignment: .center,
-//            titleFont: configs.fonts.title.font,
-//            borderColor: configs.colors.border.color,
-//            borderColorFocused: configs.colors.primary.color,
-//            placehodlerColor: configs.colors.lightPlaceholder.color,
-//            titleColor: configs.colors.title.color,
-//            backgroundColor: configs.colors.background.color,
-//            height: configs.sizes.components.inputFields,
-//            cornerRadius: configs.sizes.corners.small,
-//            borderWidth: configs.sizes.boarders.line,
-//            horizontalPadding: configs.paddings.large
-//        )
+    static func styleFor(config: AppUITheme.Config) -> AuthTextField.Style {
+        AuthTextField.Style(
+            keyboardType: .default,
+            alignment: .center,
+            titleFont: config.fonts.title.font,
+            borderColor: config.colors.border.color,
+            borderColorFocused: config.colors.primary.color,
+            placehodlerColor: config.colors.lightPlaceholder.color,
+            titleColor: config.colors.title.color,
+            backgroundColor: config.colors.background.color,
+            height: config.sizes.components.inputFields,
+            cornerRadius: config.sizes.corners.small,
+            borderWidth: config.sizes.boarders.line,
+            horizontalPadding: config.paddings.large
+        )
     }
 }
 
 extension ActionButton.Style {
-    static func with(configs: AppUITheme.Config) -> ActionButton.Style {
-        .defaultStyle
-//        ActionButton.Style(
-//            titleFont: configs.fonts.title.font,
-//            titleColor: configs.colors.title.color,
-//            backgroundColor: configs.colors.primary.color,
-//            backgroundDisabledColor: configs.colors.lightPlaceholder.color,
-//            cornerRadius: configs.sizes.corners.small,
-//            height: configs.sizes.components.mainButtonHeight,
-//            maxWidth: configs.sizes.components.mainButtonMaxWidth
-//        )
+    static func styleFor(config: AppUITheme.Config) -> ActionButton.Style {
+        ActionButton.Style(
+            titleFont: config.fonts.title.font,
+            titleColor: config.colors.title.color,
+            backgroundColor: config.colors.primary.color,
+            backgroundDisabledColor: config.colors.lightPlaceholder.color,
+            cornerRadius: config.sizes.corners.small,
+            height: config.sizes.components.mainButtonHeight,
+            maxWidth: config.sizes.components.mainButtonMaxWidth
+        )
     }
 }

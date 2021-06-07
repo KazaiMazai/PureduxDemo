@@ -12,7 +12,7 @@ struct ScreenViewsFactory {
     func makeView(for type: ScreenViews) -> some View {
         switch type {
         case .login:
-            Color.green
+            LoginPresenter()
         case .moviesFeed:
             Color.red
         case .movieDetail:

@@ -5,4 +5,10 @@
 //  Created by Sergey Kazakov on 07.06.2021.
 //
 
-import Foundation
+import SwiftUI
+
+struct LoginPresenter: View {
+    var body: some View {
+        LoginView(props: .preview)
+    }
+}

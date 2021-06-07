@@ -37,23 +37,13 @@ extension ActionButton {
 
 extension ActionButton {
     struct Style {
-        let titleFont: Font
-        let titleColor: Color
-        let backgroundColor: Color
-        let backgroundDisabledColor: Color
-        let cornerRadius: CGFloat
-        let height: CGFloat
-        let maxWidth: CGFloat
-
-        static var defaultStyle: Style {
-            Style(titleFont: .title,
-                  titleColor: .white,
-                  backgroundColor: .blue,
-                  backgroundDisabledColor: .gray,
-                  cornerRadius: 8,
-                  height: 52,
-                  maxWidth: .infinity)
-        }
+        var titleFont: Font = .title
+        var titleColor: Color = .white
+        var backgroundColor: Color = .blue
+        var backgroundDisabledColor: Color = .gray
+        var cornerRadius: CGFloat = 8
+        var height: CGFloat = 52
+        var maxWidth: CGFloat = .infinity
     }
 }
 
@@ -76,7 +66,7 @@ struct ActionButton: View {
 
 struct MainActionButton_Previews: PreviewProvider {
     static var previews: some View {
-        ActionButton(props: .preview, style: .defaultStyle)
+        ActionButton(props: .preview, style: ActionButton.Style())
     }
 }
 

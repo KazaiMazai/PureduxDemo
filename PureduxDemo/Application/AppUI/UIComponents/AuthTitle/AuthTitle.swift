@@ -19,13 +19,8 @@ extension AuthTitle {
 
 extension AuthTitle {
     struct Style {
-        let titleColor: Color
-        let font: Font
-
-        static var defaultStyle: Style {
-            Style(titleColor: .black,
-                  font: Font.title)
-        }
+        var titleColor: Color = .black
+        var font: Font = .title
     }
 }
 

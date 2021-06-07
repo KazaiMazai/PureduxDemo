@@ -36,7 +36,6 @@ struct LoginView: View {
                 props: props.title,
                 style: theme.styles.authTitle)
             Spacer()
-
             VStack(spacing: theme.config.paddings.large) {
                 AuthTextField(
                     props: props.emailTextField,
@@ -45,9 +44,7 @@ struct LoginView: View {
                     props: props.passwordTextField,
                     style: theme.styles.authSecuredTextField)
             }
-
             Spacer()
-
             ActionButton(
                 props: props.actionButton,
                 style: theme.styles.mainActionButton)
