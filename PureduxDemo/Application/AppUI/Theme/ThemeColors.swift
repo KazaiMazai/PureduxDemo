@@ -112,6 +112,7 @@ extension AppUITheme.Colors {
 
         static let mainBlue: String = "#3286FA"
         static let darkBlue: String = "#0061F9"
+        static let paleBlue: String = "#3286FA"
 
         static let richRed: String = "#FF3B30"
     }

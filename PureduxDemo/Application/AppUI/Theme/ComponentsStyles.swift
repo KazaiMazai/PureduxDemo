@@ -70,8 +70,8 @@ extension AuthSecuredTextField.Style {
             titleColor: configs.colors.title,
             backgroundColor: configs.colors.background.color,
             height: configs.sizes.components.inputFields,
-            cornerRadius: 8,
-            borderWidth: 1,
+            cornerRadius: configs.sizes.corners.small,
+            borderWidth: configs.sizes.boarders.line,
             horizontalPadding: configs.paddings.large
         )
     }
@@ -89,9 +89,22 @@ extension AuthTextField.Style {
             titleColor: configs.colors.title.color,
             backgroundColor: configs.colors.background.color,
             height: configs.sizes.components.inputFields,
-            cornerRadius: 8,
-            borderWidth: 1,
+            cornerRadius: configs.sizes.corners.small,
+            borderWidth: configs.sizes.boarders.line,
             horizontalPadding: configs.paddings.large
+        )
+    }
+}
+
+extension ActionButton.Style {
+    static func with(configs: AppUITheme.Config) -> ActionButton.Style {
+        ActionButton.Style(titleFont: configs.fonts.title.font,
+                           titleColor: configs.colors.title.color,
+                           backgroundColor: configs.colors.primary.color,
+                           backgroundDisabledColor: configs.colors.lightPlaceholder.color,
+                           cornerRadius: configs.sizes.corners.small,
+                           height: configs.sizes.components.mainButtonHeight,
+                           maxWidth: configs.sizes.components.mainButtonMaxWidth
         )
     }
 }

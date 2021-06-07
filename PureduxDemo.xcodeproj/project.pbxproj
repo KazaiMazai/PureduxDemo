@@ -57,6 +57,9 @@
 		EAE4B5B726692CAD0005ACD2 /* ThemeSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5B626692CAD0005ACD2 /* ThemeSizes.swift */; };
 		EAE4B5BC266939CD0005ACD2 /* AuthSecuredTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5BB266939CD0005ACD2 /* AuthSecuredTextField.swift */; };
 		EAE4B5CB26693C820005ACD2 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5C0266939E10005ACD2 /* CustomTextField.swift */; };
+		EAE4B5D9266E50E00005ACD2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5D8266E50E00005ACD2 /* LoginView.swift */; };
+		EAE4B5E1266E50EA0005ACD2 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5E0266E50EA0005ACD2 /* LoginPresenter.swift */; };
+		EAE4B5EA266E51460005ACD2 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B5E9266E51460005ACD2 /* ActionButton.swift */; };
 		EAEE43842667F1C800F2C5FD /* PureduxCommonCore in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43832667F1C800F2C5FD /* PureduxCommonCore */; };
 		EAEE438A2667F64F00F2C5FD /* PureduxCommonOperators in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43892667F64F00F2C5FD /* PureduxCommonOperators */; };
 /* End PBXBuildFile section */
@@ -133,6 +136,9 @@
 		EAE4B5B626692CAD0005ACD2 /* ThemeSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSizes.swift; sourceTree = "<group>"; };
 		EAE4B5BB266939CD0005ACD2 /* AuthSecuredTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSecuredTextField.swift; sourceTree = "<group>"; };
 		EAE4B5C0266939E10005ACD2 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		EAE4B5D8266E50E00005ACD2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		EAE4B5E0266E50EA0005ACD2 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		EAE4B5E9266E51460005ACD2 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,6 +341,7 @@
 		EA00C26E2667E596001EED8D /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				EAE4B5D6266E50C80005ACD2 /* Auth */,
 				EA00C21B2667E4F8001EED8D /* LaunchScreen.storyboard */,
 			);
 			path = Screens;
@@ -343,6 +350,7 @@
 		EA00C2722667E596001EED8D /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				EAE4B5E8266E513A0005ACD2 /* ActionButton */,
 				EAE4B58126690A5F0005ACD2 /* AuthTitle */,
 				EAE4B58026690A240005ACD2 /* AuthSecuredTextField */,
 				EAE4B57F26690A190005ACD2 /* AuthTextField */,
@@ -470,6 +478,31 @@
 				EAE4B58B26690EAB0005ACD2 /* UIColor+hex.swift */,
 			);
 			path = UIKitExtensions;
+			sourceTree = "<group>";
+		};
+		EAE4B5D6266E50C80005ACD2 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B5D7266E50D00005ACD2 /* Login */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		EAE4B5D7266E50D00005ACD2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B5D8266E50E00005ACD2 /* LoginView.swift */,
+				EAE4B5E0266E50EA0005ACD2 /* LoginPresenter.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EAE4B5E8266E513A0005ACD2 /* ActionButton */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B5E9266E51460005ACD2 /* ActionButton.swift */,
+			);
+			path = ActionButton;
 			sourceTree = "<group>";
 		};
 		EAEE43C12667FECD00F2C5FD /* Services */ = {
@@ -704,6 +737,7 @@
 			files = (
 				EAE4B4B32668F86E0005ACD2 /* Strings+Generated.swift in Sources */,
 				EA00C2B62667E597001EED8D /* Color+hex.swift in Sources */,
+				EAE4B5EA266E51460005ACD2 /* ActionButton.swift in Sources */,
 				EA00C2B22667E597001EED8D /* SceneDelegate.swift in Sources */,
 				EA00C2B72667E597001EED8D /* DarkHostingController.swift in Sources */,
 				EA00C2942667E597001EED8D /* Storage.swift in Sources */,
@@ -715,8 +749,10 @@
 				EAE4B5B726692CAD0005ACD2 /* ThemeSizes.swift in Sources */,
 				EAE4B5A326691A3B0005ACD2 /* ThemeFonts.swift in Sources */,
 				EA00C2982667E597001EED8D /* Time.swift in Sources */,
+				EAE4B5D9266E50E00005ACD2 /* LoginView.swift in Sources */,
 				EAE4B5A82669203D0005ACD2 /* ThemePaddings.swift in Sources */,
 				EA00C2AD2667E597001EED8D /* Command.swift in Sources */,
+				EAE4B5E1266E50EA0005ACD2 /* LoginPresenter.swift in Sources */,
 				EA00C2B12667E597001EED8D /* AppDelegate.swift in Sources */,
 				EAE4B58326690A850005ACD2 /* AuthTitle.swift in Sources */,
 				EA00C2902667E596001EED8D /* AppStateConfig.swift in Sources */,
