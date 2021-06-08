@@ -1508,32 +1508,32 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/KazaiMazai/Puredux.git";
 			requirement = {
-				branch = dev;
-				kind = branch;
+				kind = exactVersion;
+				version = "1.0.0-beta.2";
 			};
 		};
 		EA00C2D02667E640001EED8D /* XCRemoteSwiftPackageReference "PureduxSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/KazaiMazai/PureduxSwiftUI.git";
 			requirement = {
-				branch = dev;
-				kind = branch;
+				kind = exactVersion;
+				version = "1.0.0-beta.2";
 			};
 		};
 		EAEE43822667F1C800F2C5FD /* XCRemoteSwiftPackageReference "PureduxCommonCore" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/KazaiMazai/PureduxCommonCore.git";
 			requirement = {
-				branch = dev;
-				kind = branch;
+				kind = exactVersion;
+				version = "1.0.0-beta.2";
 			};
 		};
 		EAEE43882667F64F00F2C5FD /* XCRemoteSwiftPackageReference "PureduxCommonOperators" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/KazaiMazai/PureduxCommonOperators.git";
 			requirement = {
-				branch = dev;
-				kind = branch;
+				kind = exactVersion;
+				version = "1.0.0-beta.2";
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
