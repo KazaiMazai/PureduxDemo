@@ -55,7 +55,7 @@ extension AppLauncher {
         }
 
         let window = UIWindow(windowScene: windowScene)
-        let rootView = rootViewWith(view: screenViewsFactory.makeView(for: .login))
+        let rootView = rootViewWith(view: screenViewsFactory.makeView(for: .root))
         window.rootViewController = DarkHostingController(rootView: rootView)
         return window
     }
