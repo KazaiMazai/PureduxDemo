@@ -36,6 +36,7 @@
 		EA00C2B72667E597001EED8D /* DarkHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C2892667E596001EED8D /* DarkHostingController.swift */; };
 		EA00C2CC2667E623001EED8D /* Puredux in Frameworks */ = {isa = PBXBuildFile; productRef = EA00C2CB2667E623001EED8D /* Puredux */; };
 		EA00C2D22667E640001EED8D /* PureduxSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = EA00C2D12667E640001EED8D /* PureduxSwiftUI */; };
+		EAA616B826701A9800F933FE /* NavBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA616B726701A9800F933FE /* NavBarButton.swift */; };
 		EAE4B4212668F55E0005ACD2 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = EAE4B41F2668F55E0005ACD2 /* swiftgen.yml */; };
 		EAE4B4222668F55E0005ACD2 /* runswiftgen.sh in Resources */ = {isa = PBXBuildFile; fileRef = EAE4B4202668F55E0005ACD2 /* runswiftgen.sh */; };
 		EAE4B4972668F7B40005ACD2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EAE4B4992668F7B40005ACD2 /* Localizable.strings */; };
@@ -163,6 +164,7 @@
 		EA00C2832667E596001EED8D /* TimeEventsSideEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeEventsSideEffects.swift; sourceTree = "<group>"; };
 		EA00C2882667E596001EED8D /* Color+hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+hex.swift"; sourceTree = "<group>"; };
 		EA00C2892667E596001EED8D /* DarkHostingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkHostingController.swift; sourceTree = "<group>"; };
+		EAA616B726701A9800F933FE /* NavBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarButton.swift; sourceTree = "<group>"; };
 		EAE4B41F2668F55E0005ACD2 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		EAE4B4202668F55E0005ACD2 /* runswiftgen.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = runswiftgen.sh; sourceTree = "<group>"; };
 		EAE4B4982668F7B40005ACD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -456,6 +458,7 @@
 				EAE4B6F8266F9B630005ACD2 /* FlowView */,
 				EAE4B61E266E649D0005ACD2 /* Common */,
 				EAE4B612266E61B50005ACD2 /* MovieListItem */,
+				EAA616B626701A7D00F933FE /* NavBarButton */,
 				EAE4B5E8266E513A0005ACD2 /* ActionButton */,
 				EAE4B58126690A5F0005ACD2 /* AuthTitle */,
 				EAE4B58026690A240005ACD2 /* AuthSecuredTextField */,
@@ -534,6 +537,14 @@
 				EAE4B5B1266926790005ACD2 /* View+Placeholder.swift */,
 			);
 			path = SwiftUIExtensions;
+			sourceTree = "<group>";
+		};
+		EAA616B626701A7D00F933FE /* NavBarButton */ = {
+			isa = PBXGroup;
+			children = (
+				EAA616B726701A9800F933FE /* NavBarButton.swift */,
+			);
+			path = NavBarButton;
 			sourceTree = "<group>";
 		};
 		EAE4B4AA2668F85A0005ACD2 /* Generated */ = {
@@ -1114,6 +1125,7 @@
 				EA00C2902667E596001EED8D /* AppStateConfig.swift in Sources */,
 				EAE4B72C266FA19B0005ACD2 /* RootView.swift in Sources */,
 				EAE4B6FA266F9B700005ACD2 /* FlowView.swift in Sources */,
+				EAA616B826701A9800F933FE /* NavBarButton.swift in Sources */,
 				EA00C2922667E596001EED8D /* CurrentTime.swift in Sources */,
 				EAE4B74B266FA4500005ACD2 /* RootPresenter.swift in Sources */,
 				EA00C2AF2667E597001EED8D /* AppLauncher.swift in Sources */,

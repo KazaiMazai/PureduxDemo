@@ -17,6 +17,9 @@ struct MoviesFeedPresenter: PresentableView {
     func props(for state: AppState, on store: ObservableStore<AppState, Action>) -> MoviesFeedView.Props {
         Props(
             navBarTitle: L10n.MoviesFeed.NavBar.title,
+            logout: NavBarButton.Props(
+                title: L10n.MoviesFeed.NavBar.Buttons.logout,
+                action: store.dispatching(Actions.Auth.Logout.PerformLogout(forced: false))),
             items: movieItemsProps(for: state, on: store),
             onAppear: store.dispatching(Actions.MoviesFeed.Flow(isActive: true))
         )

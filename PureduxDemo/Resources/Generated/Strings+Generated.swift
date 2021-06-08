@@ -30,10 +30,10 @@ internal enum L10n {
       internal static let title = L10n.tr("Localizable", "Login.MainButton.title")
     }
     internal enum Placeholder {
-      /// Email
-      internal static let email = L10n.tr("Localizable", "Login.Placeholder.email")
       /// Password
       internal static let password = L10n.tr("Localizable", "Login.Placeholder.password")
+      /// Username
+      internal static let username = L10n.tr("Localizable", "Login.Placeholder.username")
     }
   }
 
@@ -41,6 +41,10 @@ internal enum L10n {
     internal enum NavBar {
       /// Discover Movies
       internal static let title = L10n.tr("Localizable", "MoviesFeed.NavBar.title")
+      internal enum Buttons {
+        /// Logout
+        internal static let logout = L10n.tr("Localizable", "MoviesFeed.NavBar.Buttons.logout")
+      }
     }
   }
 }

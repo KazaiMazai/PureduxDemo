@@ -21,7 +21,7 @@ struct LoginPresenter: PresentableView {
                     get: { state.login.pickCredentials.username },
                     set: { store.dispatch(Actions.Auth.Login.UpdateUsername(value: $0)) }
                 ),
-                placeholder: L10n.Login.Placeholder.email),
+                placeholder: L10n.Login.Placeholder.username),
             password: AuthSecuredTextField.Props(
                 binding: Binding(
                     get: { state.login.pickCredentials.password },

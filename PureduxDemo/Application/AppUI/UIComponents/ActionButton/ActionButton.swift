@@ -64,12 +64,6 @@ struct ActionButton: View {
     }
 }
 
-struct MainActionButton_Previews: PreviewProvider {
-    static var previews: some View {
-        ActionButton(props: .preview, style: ActionButton.Style())
-    }
-}
-
 extension ActionButton.Props {
     enum State {
         case disabled
@@ -113,5 +107,11 @@ extension ActionButton.Props {
 
             return command
         }
+    }
+}
+
+struct MainActionButton_Previews: PreviewProvider {
+    static var previews: some View {
+        ActionButton(props: .preview, style: ActionButton.Style())
     }
 }

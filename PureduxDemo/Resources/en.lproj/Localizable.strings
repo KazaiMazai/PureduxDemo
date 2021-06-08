@@ -12,10 +12,11 @@
 "Errors.Alert.Actions.defaultOk" = "Ok";
 
 "Login.Title" = "Login";
-"Login.Placeholder.email" = "Email";
+"Login.Placeholder.username" = "Username";
 "Login.Placeholder.password" = "Password";
 
 "Login.MainButton.title" = "Login";
 
 
 "MoviesFeed.NavBar.title" = "Discover Movies";
+"MoviesFeed.NavBar.Buttons.logout" = "Logout";
