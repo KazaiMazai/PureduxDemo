@@ -13,6 +13,9 @@ import PureduxCommonOperators
 import PureduxNetworkOperator
 
 struct AppLauncher {
+    typealias PersistanceOperator<AppState: Codable> =
+        StatePersistanceOperator<StateStorage<AppState>, AppState, StateSize>
+
     private let theme: AppUITheme
     private let screenViewsFactory: ScreenViewsFactory
     private let environmentStore: ObservableStore<AppState, Action>
@@ -22,14 +25,21 @@ struct AppLauncher {
 
     private let timeEvents: Middleware<AppState, Action, TimeEventsOperator>
     private let network: Middleware<AppState, Action, NetworkOperator>
+    private let persistance: Middleware<AppState, Action, PersistanceOperator<AppState>>
+
+    private let stateStorage: StateStorage<AppState>
 
     private let logger: Logger
     private let client: Client
 
+    //swiftlint:disable function_body_length
     init() {
         let env = AppEnvironment.defaultAppEnvironment()
         let config = AppStateConfig.defaultConfig()
-        let initialState = AppState.createStateWith(config: config, env: env)
+        let storage: StateStorage<AppState>  = StateStorageFactory().defaultStorage()
+
+        let initialState: AppState = (try? storage.read()) ??
+            AppState.createStateWith(config: config, env: env)
 
         let logLevel = LogLevel.debug
         let reducerLogger: Logger = .with(label: "Reducer", logger: .console(logLevel))
@@ -46,6 +56,7 @@ struct AppLauncher {
         appStateConfig = config
         theme = AppUITheme.defaultTheme
         screenViewsFactory = ScreenViewsFactory.defaultScreenViewsFactory
+        stateStorage = storage
 
         client = Client(
             baseURL: URL(string: "https://api.themoviedb.org/3/")!,
@@ -70,6 +81,16 @@ struct AppLauncher {
                 AuthSideEffects(client: client).effects
 
             ].flatten())
+
+        persistance = Middleware(
+            store: store,
+            operator: StatePersistanceOperator(
+                storage: stateStorage,
+                label: "StatePersistance",
+                logger: .with(logLevel: .info,
+                              logger: logger)),
+            sideEffects: StatePersistenceSideEffect().effects)
+
     }
 }
 
@@ -94,6 +115,7 @@ private extension AppLauncher {
     func subscribeToStore() {
         store.subscribe(observer: timeEvents.asObserver)
         store.subscribe(observer: network.asObserver)
+        store.subscribe(observer: persistance.asObserver)
     }
 
     func rootViewWith<V: View>(view: V) -> some View {

@@ -27,13 +27,13 @@ extension StatePersistance {
 extension StatePersistance {
     mutating func reduce(_ action: Action, env: AppEnvironment) {
         switch action {
-        case is Actions.Persistance.Result.Success:
+        case is Actions.Persistance.SaveState.Success:
             delayedSaveJob.setFinished()
 
-        case is Actions.Persistance.Result.Failure:
+        case is Actions.Persistance.SaveState.Failure:
             delayedSaveJob.setFailed()
 
-        case is Actions.Persistance.Result.Cancel:
+        case is Actions.Persistance.SaveState.Cancel:
             delayedSaveJob.setCancelled()
 
         case is Actions.Auth.Login.Result.Success:

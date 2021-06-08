@@ -13,9 +13,9 @@ extension Actions {
 }
 
 extension Actions.Persistance {
-    enum Result { }
+    enum SaveState { }
 }
-extension Actions.Persistance.Result {
+extension Actions.Persistance.SaveState {
     struct Success: Action {
       
     }
