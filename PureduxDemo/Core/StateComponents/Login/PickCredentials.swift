@@ -52,7 +52,7 @@ extension LoginState.PickCredentials {
 
         case let action as Actions.Auth.ObtainToken.Result.Success:
             setRequesTokenSuccess()
-            createSessionWith(token: action.token, requestId:  env.makeUUID())
+            createSessionWith(token: action.token, requestId: env.makeUUID())
 
         case is Actions.Auth.ObtainToken.Result.Failed:
             setRequesTokenFailed()

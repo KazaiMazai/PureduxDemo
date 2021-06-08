@@ -7,17 +7,45 @@
 
 import Foundation
 
-struct AppState {
-    private(set) var login: LoginState
+struct AppState: Codable {
+    private(set) var login: LoginState = LoginState()
 
+    private(set) var authentication: AuthState
     private(set) var currentTime: AppTime
     private(set) var storage: Storage
 
     init(currentTime: AppTime, storage: Storage) {
         self.login = LoginState()
 
+        self.authentication = AuthState()
         self.currentTime = currentTime
         self.storage = storage
+    }
+}
+
+// MARK: - Reducer
+
+extension AppState {
+    mutating func reduce(_ action: Action, env: AppEnvironment) {
+        login.reduce(action, env: env)
+        
+        authentication.reduce(action, env: env)
+        currentTime.reduce(action, env: env)
+        storage.reduce(action, env: env)
+    }
+}
+
+// MARK: - CodingKeys
+
+/**
+ AppState's CodingKeys allow to specify which part of the state we will encode/decode and, eventually, persist.
+*/
+
+extension AppState {
+    private enum CodingKeys: String, CodingKey {
+        case currentTime
+        case storage
+        case authentication
     }
 }
 
@@ -30,13 +58,5 @@ extension AppState {
                 initialRequest: env.makeUUID()),
 
             storage: Storage())
-    }
-}
-
-extension AppState {
-    mutating func reduce(_ action: Action, env: AppEnvironment) {
-
-        currentTime.reduce(action, env: env)
-        storage.reduce(action, env: env)
     }
 }

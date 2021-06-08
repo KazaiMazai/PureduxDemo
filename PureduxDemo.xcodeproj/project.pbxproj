@@ -84,6 +84,7 @@
 		EAE4B6C4266F83E10005ACD2 /* SessionRequestToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B6C3266F83E10005ACD2 /* SessionRequestToken.swift */; };
 		EAE4B6C9266F86730005ACD2 /* AuthActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B6C8266F86730005ACD2 /* AuthActions.swift */; };
 		EAE4B6CE266F87910005ACD2 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B6CD266F87910005ACD2 /* Session.swift */; };
+		EAE4B6D9266F8EE70005ACD2 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B6D8266F8EE70005ACD2 /* AuthState.swift */; };
 		EAEE43842667F1C800F2C5FD /* PureduxCommonCore in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43832667F1C800F2C5FD /* PureduxCommonCore */; };
 		EAEE438A2667F64F00F2C5FD /* PureduxCommonOperators in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43892667F64F00F2C5FD /* PureduxCommonOperators */; };
 /* End PBXBuildFile section */
@@ -187,6 +188,7 @@
 		EAE4B6C3266F83E10005ACD2 /* SessionRequestToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRequestToken.swift; sourceTree = "<group>"; };
 		EAE4B6C8266F86730005ACD2 /* AuthActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthActions.swift; sourceTree = "<group>"; };
 		EAE4B6CD266F87910005ACD2 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		EAE4B6D8266F8EE70005ACD2 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -650,6 +652,7 @@
 		EAE4B6B0266F7BE50005ACD2 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				EAE4B6D8266F8EE70005ACD2 /* AuthState.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -964,6 +967,7 @@
 				EAE4B6BC266F7D3E0005ACD2 /* PickCredentials.swift in Sources */,
 				EA00C2912667E596001EED8D /* AppEnvironment.swift in Sources */,
 				EAE4B5B2266926790005ACD2 /* View+Placeholder.swift in Sources */,
+				EAE4B6D9266F8EE70005ACD2 /* AuthState.swift in Sources */,
 				EA00C2A42667E597001EED8D /* ScreenViewFactoryKey.swift in Sources */,
 				EAE4B653266E7DBF0005ACD2 /* ErrorResponse.swift in Sources */,
 			);
