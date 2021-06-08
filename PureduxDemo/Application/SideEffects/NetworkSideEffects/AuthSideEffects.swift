@@ -25,7 +25,10 @@ struct AuthSideEffects: NetworkSideEffects {
 }
 
 private extension AuthSideEffects {
-    func createRequestToken(state: AppState, on store: Store<AppState, Action>) -> NetworkOperator.Request? {
+    func createRequestToken(
+        state: AppState,
+        on store: Store<AppState, Action>) -> NetworkOperator.Request? {
+        
         guard case let .inProgress(requestState) = state.login.pickCredentials.requesToken,
               requestState.canPerform(state.currentTime.now)
         else {
@@ -130,7 +133,7 @@ private extension AuthSideEffects {
             }
 
         } catch {
-            store.dispatch(Actions.Auth.ValidateToken.Result.Failed(error: error))
+            store.dispatch(Actions.Auth.Login.Result.Failed(error: error))
             return nil
         }
     }

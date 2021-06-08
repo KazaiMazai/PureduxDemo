@@ -16,6 +16,8 @@ public struct Storage: Codable {
 extension Storage {
     mutating func reduce(_ action: Action, env: AppEnvironment) {
         switch action {
+        case let action as Actions.MoviesFeed.FetchResult.Success:
+            schema.movies.saveAll(action.items, timestamp: env.now())
         default:
             break
         }

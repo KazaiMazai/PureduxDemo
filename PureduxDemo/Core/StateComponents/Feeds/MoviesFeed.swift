@@ -63,7 +63,7 @@ extension MoviesFeed {
 
 // MARK: - Mutations
 
-extension MoviesFeed {
+private extension MoviesFeed {
     mutating func refreshFeed(requestId: UUID) {
         if intitialRequest.isInProgress {
             return

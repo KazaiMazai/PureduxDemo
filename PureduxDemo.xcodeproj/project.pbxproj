@@ -106,6 +106,8 @@
 		EAE4B7D4266FEEF80005ACD2 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B7D3266FEEF80005ACD2 /* Movie.swift */; };
 		EAE4B7DA266FEFE30005ACD2 /* MoviesFeedActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B7D9266FEFE30005ACD2 /* MoviesFeedActions.swift */; };
 		EAE4B7EE266FFABD0005ACD2 /* MoviesFeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B7ED266FFABD0005ACD2 /* MoviesFeedPresenter.swift */; };
+		EAE4B7F6267002060005ACD2 /* MoviesFeedSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B7F5267002060005ACD2 /* MoviesFeedSideEffects.swift */; };
+		EAE4B7FD267003F10005ACD2 /* MoviesMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B7FC267003F10005ACD2 /* MoviesMapping.swift */; };
 		EAEE43842667F1C800F2C5FD /* PureduxCommonCore in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43832667F1C800F2C5FD /* PureduxCommonCore */; };
 		EAEE438A2667F64F00F2C5FD /* PureduxCommonOperators in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43892667F64F00F2C5FD /* PureduxCommonOperators */; };
 /* End PBXBuildFile section */
@@ -231,6 +233,8 @@
 		EAE4B7D3266FEEF80005ACD2 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		EAE4B7D9266FEFE30005ACD2 /* MoviesFeedActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesFeedActions.swift; sourceTree = "<group>"; };
 		EAE4B7ED266FFABD0005ACD2 /* MoviesFeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesFeedPresenter.swift; sourceTree = "<group>"; };
+		EAE4B7F5267002060005ACD2 /* MoviesFeedSideEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesFeedSideEffects.swift; sourceTree = "<group>"; };
+		EAE4B7FC267003F10005ACD2 /* MoviesMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesMapping.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -407,6 +411,7 @@
 				EA00C27F2667E596001EED8D /* AppDelegate */,
 				EA00C2822667E596001EED8D /* SideEffects */,
 				EAEE43C12667FECD00F2C5FD /* Services */,
+				EAE4B7FA2670039C0005ACD2 /* Models */,
 				EA00C2782667E596001EED8D /* Utils */,
 			);
 			path = Application;
@@ -801,6 +806,7 @@
 			isa = PBXGroup;
 			children = (
 				EAE4B794266FC64E0005ACD2 /* AuthSideEffects.swift */,
+				EAE4B7F5267002060005ACD2 /* MoviesFeedSideEffects.swift */,
 			);
 			name = AppNetworkSideEffects;
 			sourceTree = "<group>";
@@ -811,6 +817,22 @@
 				EAE4B7CB266FEED20005ACD2 /* MoviesFeed.swift */,
 			);
 			path = Feeds;
+			sourceTree = "<group>";
+		};
+		EAE4B7FA2670039C0005ACD2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B7FB267003DB0005ACD2 /* Mapping */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EAE4B7FB267003DB0005ACD2 /* Mapping */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B7FC267003F10005ACD2 /* MoviesMapping.swift */,
+			);
+			path = Mapping;
 			sourceTree = "<group>";
 		};
 		EAEE43C12667FECD00F2C5FD /* Services */ = {
@@ -1083,6 +1105,7 @@
 				EAE4B5D9266E50E00005ACD2 /* LoginView.swift in Sources */,
 				EAE4B5A82669203D0005ACD2 /* ThemePaddings.swift in Sources */,
 				EA00C2AD2667E597001EED8D /* Command.swift in Sources */,
+				EAE4B7F6267002060005ACD2 /* MoviesFeedSideEffects.swift in Sources */,
 				EAE4B5E1266E50EA0005ACD2 /* LoginPresenter.swift in Sources */,
 				EAE4B5F7266E5B230005ACD2 /* KeyboardHeightPublisher.swift in Sources */,
 				EA00C2B12667E597001EED8D /* AppDelegate.swift in Sources */,
@@ -1107,6 +1130,7 @@
 				EAE4B7A0266FCE730005ACD2 /* NetworkSideEffect.swift in Sources */,
 				EAE4B59526690F130005ACD2 /* ThemeColors.swift in Sources */,
 				EA00C2AC2667E597001EED8D /* ViewStoreExtensions.swift in Sources */,
+				EAE4B7FD267003F10005ACD2 /* MoviesMapping.swift in Sources */,
 				EAE4B660266E81600005ACD2 /* Coder.swift in Sources */,
 				EA00C2962667E597001EED8D /* ModelSchema.swift in Sources */,
 				EAE4B5EF266E5AB20005ACD2 /* View+KeyboardAdaptive.swift in Sources */,

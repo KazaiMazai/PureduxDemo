@@ -23,8 +23,10 @@ extension Client: MoviesDBDiscover {
     func discoverPopularMovies(
         page: Int) throws -> Request<Responses.PaginatedResponse<Responses.Movie>> {
 
+        let incrementedPage = max(page + 1, 1)
+
         let parameters = [
-            URLQueryItem(name: Requests.QueryKeys.page, value: String(page)),
+            URLQueryItem(name: Requests.QueryKeys.page, value: String(incrementedPage)),
             URLQueryItem(name: Requests.QueryKeys.sort, value: "popularity.desc")
         ]
 
