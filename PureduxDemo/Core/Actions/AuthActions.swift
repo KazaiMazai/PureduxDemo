@@ -16,6 +16,7 @@ extension Actions.Auth {
     enum Login {}
     enum Logout {}
     enum ObtainToken {}
+    enum ValidateToken {}
 }
 
 // MARK: - Actions.Auth.Login
@@ -58,15 +59,33 @@ extension Actions.Auth.Login.Result {
     }
 }
 
-// MARK: - Actions.Auth.ObtainToken
+// MARK: - Actions.Auth.ObtainToken.Result
 
 extension Actions.Auth.ObtainToken {
     enum Result {}
 }
 
-// MARK: - Actions.Auth.ObtainToken.Result
-
 extension Actions.Auth.ObtainToken.Result {
+    struct Success: Action {
+        let token: TemporaryRequestToken
+    }
+
+    struct Cancelled: Action {
+
+    }
+
+    struct Failed: ErrorAction {
+        let error: SomeError
+    }
+}
+
+// MARK: - Actions.Auth.ObtainToken
+
+extension Actions.Auth.ValidateToken {
+    enum Result {}
+}
+
+extension Actions.Auth.ValidateToken.Result {
     struct Success: Action {
         let token: SessionRequestToken
     }

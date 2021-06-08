@@ -15,12 +15,14 @@ extension LoginState {
         private(set) var password: String = ""
 
         private(set) var requesToken: RequestState<SingleRequest> = .none
+        private(set) var validateToken: RequestState<ValidateTokenRequest> = .none
         private(set) var createSession: RequestState<SessionRequest> = .none
     }
 }
 
 extension LoginState.PickCredentials {
     typealias SessionRequest = RequestWithPayload<SingleRequest, SessionRequestToken>
+    typealias ValidateTokenRequest = RequestWithPayload<SingleRequest, TemporaryRequestToken>
 }
 
 extension LoginState.PickCredentials {
@@ -29,7 +31,9 @@ extension LoginState.PickCredentials {
     }
 
     var isInProgress: Bool {
-        requesToken.isInProgress || createSession.isInProgress
+        requesToken.isInProgress ||
+            validateToken.isInProgress ||
+            createSession.isInProgress
     }
 }
 
@@ -52,10 +56,17 @@ extension LoginState.PickCredentials {
 
         case let action as Actions.Auth.ObtainToken.Result.Success:
             setRequesTokenSuccess()
-            createSessionWith(token: action.token, requestId: env.makeUUID())
+            validateTokenWith(token: action.token, requestId: env.makeUUID())
 
         case is Actions.Auth.ObtainToken.Result.Failed:
             setRequesTokenFailed()
+
+        case let action as Actions.Auth.ValidateToken.Result.Success:
+            setValidateTokenSuccess()
+            createSessionWith(token: action.token, requestId: env.makeUUID())
+
+        case is Actions.Auth.ValidateToken.Result.Failed:
+            setValidateTokenFailed()
 
         case is Actions.Auth.Login.Result.Success:
             setCreateSessionSuccess()
@@ -105,6 +116,20 @@ private extension LoginState.PickCredentials {
 
     mutating func setRequesTokenSuccess() {
         requesToken = .success
+    }
+
+    mutating func setValidateTokenFailed() {
+        validateToken = .failed
+    }
+
+    mutating func setValidateTokenSuccess() {
+        validateToken = .success
+    }
+
+    mutating func validateTokenWith(token: TemporaryRequestToken, requestId: UUID) {
+        validateToken = .inProgress(ValidateTokenRequest(
+            payload: token,
+            state: SingleRequest(id: RequestID(rawValue: requestId))))
     }
 
     mutating func createSessionWith(token: SessionRequestToken, requestId: UUID) {

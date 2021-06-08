@@ -12,9 +12,9 @@ protocol MoviesDBAuth {
 
     func createSession(requestToken: String) throws -> Client.Request<Client.Responses.Session>
 
-    func createSessionWithLogin(username: String,
-                                password: String,
-                                requestToken: String) throws -> Client.Request<Client.Responses.Session>
+    func validateRequestToken(username: String,
+                              password: String,
+                              requestToken: String) throws -> Client.Request<Client.Responses.Token>
 }
 
 extension Client: MoviesDBAuth {
@@ -30,9 +30,9 @@ extension Client: MoviesDBAuth {
                 to: "authentication/session/new"))
     }
 
-    func createSessionWithLogin(username: String,
-                                password: String,
-                                requestToken: String) throws -> Request<Responses.Session> {
+    func validateRequestToken(username: String,
+                              password: String,
+                              requestToken: String) throws -> Request<Responses.Token> {
 
         let body = Requests.CreateSessionWithLogin(
             username: username,
