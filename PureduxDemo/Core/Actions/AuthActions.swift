@@ -48,6 +48,10 @@ extension Actions.Auth.Login {
 extension Actions.Auth.Login.Result {
     struct Failed: ErrorAction {
         let error: SomeError
+
+        init(error: Error) {
+            self.error = SomeError(error: error)
+        }
     }
 
     struct Success: Action {
@@ -75,7 +79,12 @@ extension Actions.Auth.ObtainToken.Result {
     }
 
     struct Failed: ErrorAction {
+        init(error: Error) {
+            self.error = SomeError(error: error)
+        }
+
         let error: SomeError
+
     }
 }
 
@@ -96,6 +105,10 @@ extension Actions.Auth.ValidateToken.Result {
 
     struct Failed: ErrorAction {
         let error: SomeError
+
+        init(error: Error) {
+            self.error = SomeError(error: error)
+        }
     }
 }
 
@@ -124,5 +137,9 @@ extension Actions.Auth.Logout.Result {
 
     struct Failed: ErrorAction {
         let error: SomeError
+
+        init(error: Error) {
+            self.error = SomeError(error: error)
+        }
     }
 }

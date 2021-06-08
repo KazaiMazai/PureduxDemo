@@ -47,12 +47,12 @@ private extension AuthSideEffects {
                 case .cancelled:
                     return Actions.Auth.ObtainToken.Result.Cancelled()
                 case let .unauthorized(error), let .failed(error):
-                    return Actions.Auth.ObtainToken.Result.Failed(error: error)
+                    return Actions.Auth.ObtainToken.Result.Failed(error: SomeError(error: error))
                 }
             }
 
         } catch {
-            store.dispatch(Actions.Auth.ObtainToken.Result.Failed(error: error))
+            store.dispatch(Actions.Auth.ObtainToken.Result.Failed(error: SomeError(error: error)))
             return nil
         }
     }

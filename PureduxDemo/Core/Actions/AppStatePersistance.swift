@@ -22,6 +22,10 @@ extension Actions.Persistance.SaveState {
 
     struct Failure: ErrorAction {
         let error: SomeError
+
+        init(error: Error) {
+            self.error = SomeError(error: error)
+        }
     }
 
     struct Cancel: Action {

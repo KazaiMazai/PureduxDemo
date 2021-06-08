@@ -9,5 +9,5 @@ import Foundation
 import PureduxCommonCore
 
 public struct ModelSchema: Codable {
-
+    var movies = Entities<Movie>()
 }

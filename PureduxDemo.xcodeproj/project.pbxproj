@@ -102,6 +102,9 @@
 		EAE4B795266FC64E0005ACD2 /* AuthSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B794266FC64E0005ACD2 /* AuthSideEffects.swift */; };
 		EAE4B7A0266FCE730005ACD2 /* NetworkSideEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B79F266FCE730005ACD2 /* NetworkSideEffect.swift */; };
 		EAE4B7BD266FE5860005ACD2 /* StatePersistanceSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B7BC266FE5860005ACD2 /* StatePersistanceSideEffects.swift */; };
+		EAE4B7CC266FEED20005ACD2 /* MoviesFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B7CB266FEED20005ACD2 /* MoviesFeed.swift */; };
+		EAE4B7D4266FEEF80005ACD2 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B7D3266FEEF80005ACD2 /* Movie.swift */; };
+		EAE4B7DA266FEFE30005ACD2 /* MoviesListActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B7D9266FEFE30005ACD2 /* MoviesListActions.swift */; };
 		EAEE43842667F1C800F2C5FD /* PureduxCommonCore in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43832667F1C800F2C5FD /* PureduxCommonCore */; };
 		EAEE438A2667F64F00F2C5FD /* PureduxCommonOperators in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43892667F64F00F2C5FD /* PureduxCommonOperators */; };
 /* End PBXBuildFile section */
@@ -223,6 +226,9 @@
 		EAE4B794266FC64E0005ACD2 /* AuthSideEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSideEffects.swift; sourceTree = "<group>"; };
 		EAE4B79F266FCE730005ACD2 /* NetworkSideEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSideEffect.swift; sourceTree = "<group>"; };
 		EAE4B7BC266FE5860005ACD2 /* StatePersistanceSideEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatePersistanceSideEffects.swift; sourceTree = "<group>"; };
+		EAE4B7CB266FEED20005ACD2 /* MoviesFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesFeed.swift; sourceTree = "<group>"; };
+		EAE4B7D3266FEEF80005ACD2 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		EAE4B7D9266FEFE30005ACD2 /* MoviesListActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListActions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -346,6 +352,7 @@
 		EA00C24F2667E596001EED8D /* StateComponents */ = {
 			isa = PBXGroup;
 			children = (
+				EAE4B7CA266FEEC20005ACD2 /* Feeds */,
 				EAE4B773266FAA620005ACD2 /* StatePersistance */,
 				EAE4B70D266F9EF40005ACD2 /* ErrorStateHandler */,
 				EAE4B6B2266F7BF30005ACD2 /* CurrentTime */,
@@ -374,6 +381,7 @@
 				EAE4B716266F9F240005ACD2 /* ErrorHandling.swift */,
 				EAE4B742266FA3E90005ACD2 /* AppStateActions.swift */,
 				EAE4B77C266FAB4B0005ACD2 /* AppStatePersistance.swift */,
+				EAE4B7D9266FEFE30005ACD2 /* MoviesListActions.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -794,6 +802,14 @@
 			name = AppNetworkSideEffects;
 			sourceTree = "<group>";
 		};
+		EAE4B7CA266FEEC20005ACD2 /* Feeds */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B7CB266FEED20005ACD2 /* MoviesFeed.swift */,
+			);
+			path = Feeds;
+			sourceTree = "<group>";
+		};
 		EAEE43C12667FECD00F2C5FD /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -806,6 +822,7 @@
 		EAEE43C82667FF0100F2C5FD /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				EAE4B7D3266FEEF80005ACD2 /* Movie.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1038,10 +1055,12 @@
 				EA00C2B22667E597001EED8D /* SceneDelegate.swift in Sources */,
 				EAE4B64D266E77B60005ACD2 /* Errors.swift in Sources */,
 				EA00C2B72667E597001EED8D /* DarkHostingController.swift in Sources */,
+				EAE4B7D4266FEEF80005ACD2 /* Movie.swift in Sources */,
 				EA00C2942667E597001EED8D /* Storage.swift in Sources */,
 				EAE4B743266FA3E90005ACD2 /* AppStateActions.swift in Sources */,
 				EAE4B648266E76F10005ACD2 /* Response.swift in Sources */,
 				EA00C29B2667E597001EED8D /* Action.swift in Sources */,
+				EAE4B7DA266FEFE30005ACD2 /* MoviesListActions.swift in Sources */,
 				EAE4B7BD266FE5860005ACD2 /* StatePersistanceSideEffects.swift in Sources */,
 				EAE4B65B266E7DCA0005ACD2 /* SuccessResponse.swift in Sources */,
 				EAE4B620266E64AC0005ACD2 /* IdentifiableItem.swift in Sources */,
@@ -1055,6 +1074,7 @@
 				EA00C28F2667E596001EED8D /* AppState.swift in Sources */,
 				EAE4B5B726692CAD0005ACD2 /* ThemeSizes.swift in Sources */,
 				EAE4B5A326691A3B0005ACD2 /* ThemeFonts.swift in Sources */,
+				EAE4B7CC266FEED20005ACD2 /* MoviesFeed.swift in Sources */,
 				EA00C2982667E597001EED8D /* Time.swift in Sources */,
 				EAE4B5D9266E50E00005ACD2 /* LoginView.swift in Sources */,
 				EAE4B5A82669203D0005ACD2 /* ThemePaddings.swift in Sources */,

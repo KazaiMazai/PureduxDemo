@@ -10,7 +10,7 @@ import PureduxCommonCore
 
 public struct Storage: Codable {
     public private(set) var lastModified: Date = .distantPast
-    private(set) var schema = ModelSchema()
+    private var schema = ModelSchema()
 }
 
 extension Storage {
@@ -19,5 +19,11 @@ extension Storage {
         default:
             break
         }
+    }
+}
+
+extension Storage {
+    var movies: Entities<Movie> {
+        schema.movies
     }
 }
