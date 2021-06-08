@@ -11,11 +11,11 @@ import PureduxNetworkOperator
 import PureduxSideEffects
 import PureduxCommonCore
 
-protocol NetworkSideEffect {
+protocol NetworkSideEffects {
     var effects: SideEffects<AppState, Action, [NetworkOperator.Request]> { get }
 }
 
-extension NetworkSideEffect {
+extension NetworkSideEffects {
     func prepareRequest<Data: Decodable>(
         _ id: RequestID,
         request: Client.Request<Data>,

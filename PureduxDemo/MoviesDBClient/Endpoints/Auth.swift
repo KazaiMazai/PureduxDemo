@@ -42,6 +42,6 @@ extension Client: MoviesDBAuth {
         return request(
             urlRequest: try post(
                 body,
-                to: "/authentication/token/validate_with_login"))
+                to: "authentication/token/validate_with_login"))
     }
 }

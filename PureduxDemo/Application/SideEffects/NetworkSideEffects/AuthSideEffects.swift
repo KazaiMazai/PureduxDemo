@@ -11,7 +11,7 @@ import PureduxNetworkOperator
 import PureduxSideEffects
 import PureduxCommonCore
 
-struct AuthSideEffects: NetworkSideEffect {
+struct AuthSideEffects: NetworkSideEffects {
     let client: MoviesDBAuth
 
     var effects: SideEffects<AppState, Action, [NetworkOperator.Request]> {

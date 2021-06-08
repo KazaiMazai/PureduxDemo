@@ -10,6 +10,7 @@ import PureduxSideEffects
 import PureduxSwiftUI
 import PureduxStore
 import PureduxCommonOperators
+import PureduxNetworkOperator
 
 struct AppLauncher {
     private let theme: AppUITheme
@@ -20,15 +21,21 @@ struct AppLauncher {
     private let appStateConfig: AppStateConfig
 
     private let timeEvents: Middleware<AppState, Action, TimeEventsOperator>
+    private let network: Middleware<AppState, Action, NetworkOperator>
+
+    private let logger: Logger
+    private let client: Client
 
     init() {
         let env = AppEnvironment.defaultAppEnvironment()
         let config = AppStateConfig.defaultConfig()
         let initialState = AppState.createStateWith(config: config, env: env)
-        let reducerLogger: Logger = .with(label: "Reducer", logger: .console(.debug))
 
+        let logLevel = LogLevel.debug
+        let reducerLogger: Logger = .with(label: "Reducer", logger: .console(logLevel))
         let actionsLogger = ActionsLogger(logger: reducerLogger)
-
+        logger = .console(logLevel)
+        
         store = Store(initial: initialState) { state, action in
             actionsLogger.log(action: action)
             state.reduce(action, env: env)
@@ -40,13 +47,29 @@ struct AppLauncher {
         theme = AppUITheme.defaultTheme
         screenViewsFactory = ScreenViewsFactory.defaultScreenViewsFactory
 
+        client = Client(
+            baseURL: URL(string: "https://api.themoviedb.org/3/")!,
+            apiKey: "37347f4b1c7ebd6c41b60e3e539d4a60")
+
         timeEvents = Middleware(
             store: store,
             operator: TimeEventsOperator(
-                label: "TimeEvents Operator",
+                label: "TimeEvents",
                 qos: .background,
-                logger: .console(.silent)),
-            sideEffects: TimeEventsSideEffects().sideEffects())
+                logger: .with(logLevel: .silent,
+                              logger: logger)),
+            sideEffects: TimeEventsSideEffects().effects)
+
+        network = Middleware(
+            store: store,
+            operator: NetworkOperator(
+                label: "Network",
+                logger: .with(logLevel: .trace,
+                              logger: logger)),
+            sideEffects: [
+                AuthSideEffects(client: client).effects
+
+            ].flatten())
     }
 }
 
@@ -70,6 +93,7 @@ extension AppLauncher {
 private extension AppLauncher {
     func subscribeToStore() {
         store.subscribe(observer: timeEvents.asObserver)
+        store.subscribe(observer: network.asObserver)
     }
 
     func rootViewWith<V: View>(view: V) -> some View {
