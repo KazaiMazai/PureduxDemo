@@ -11,6 +11,8 @@ struct ScreenViewsFactory {
     @ViewBuilder
     func makeView(for type: ScreenViews) -> some View {
         switch type {
+        case .authCoordinator:
+            AuthFlowPresenter()
         case .login:
             LoginPresenter()
         case .moviesFeed:

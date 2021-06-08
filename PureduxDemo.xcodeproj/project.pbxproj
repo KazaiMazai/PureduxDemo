@@ -85,6 +85,7 @@
 		EAE4B6CE266F87910005ACD2 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B6CD266F87910005ACD2 /* Session.swift */; };
 		EAE4B6D9266F8EE70005ACD2 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B6D8266F8EE70005ACD2 /* AuthState.swift */; };
 		EAE4B6FA266F9B700005ACD2 /* FlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B6F9266F9B700005ACD2 /* FlowView.swift */; };
+		EAE4B703266F9CBF0005ACD2 /* AuthFlowPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B702266F9CBF0005ACD2 /* AuthFlowPresenter.swift */; };
 		EAEE43842667F1C800F2C5FD /* PureduxCommonCore in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43832667F1C800F2C5FD /* PureduxCommonCore */; };
 		EAEE438A2667F64F00F2C5FD /* PureduxCommonOperators in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43892667F64F00F2C5FD /* PureduxCommonOperators */; };
 /* End PBXBuildFile section */
@@ -189,6 +190,7 @@
 		EAE4B6CD266F87910005ACD2 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		EAE4B6D8266F8EE70005ACD2 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
 		EAE4B6F9266F9B700005ACD2 /* FlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowView.swift; sourceTree = "<group>"; };
+		EAE4B702266F9CBF0005ACD2 /* AuthFlowPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFlowPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -541,6 +543,7 @@
 		EAE4B5D6266E50C80005ACD2 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				EAE4B701266F9CB30005ACD2 /* AuthFlow */,
 				EAE4B5D7266E50D00005ACD2 /* Login */,
 			);
 			path = Auth;
@@ -680,6 +683,14 @@
 				EAE4B6F9266F9B700005ACD2 /* FlowView.swift */,
 			);
 			path = FlowView;
+			sourceTree = "<group>";
+		};
+		EAE4B701266F9CB30005ACD2 /* AuthFlow */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B702266F9CBF0005ACD2 /* AuthFlowPresenter.swift */,
+			);
+			path = AuthFlow;
 			sourceTree = "<group>";
 		};
 		EAEE43C12667FECD00F2C5FD /* Services */ = {
@@ -971,6 +982,7 @@
 				EAE4B635266E753B0005ACD2 /* Client.swift in Sources */,
 				EAE4B608266E61A40005ACD2 /* MovieListItem.swift in Sources */,
 				EAE4B692266F77EE0005ACD2 /* MovieResponse.swift in Sources */,
+				EAE4B703266F9CBF0005ACD2 /* AuthFlowPresenter.swift in Sources */,
 				EA00C2AA2667E597001EED8D /* AppUITheme.swift in Sources */,
 				EAE4B6BC266F7D3E0005ACD2 /* PickCredentials.swift in Sources */,
 				EA00C2912667E596001EED8D /* AppEnvironment.swift in Sources */,
