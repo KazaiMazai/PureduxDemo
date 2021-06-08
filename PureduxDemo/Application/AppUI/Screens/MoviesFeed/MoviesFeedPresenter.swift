@@ -7,6 +7,7 @@
 
 import SwiftUI
 import PureduxSwiftUI
+import PureduxCommon
 
 struct MoviesFeedPresenter: PresentableView {
     func content(for props: MoviesFeedView.Props) -> MoviesFeedView {
@@ -19,6 +20,11 @@ struct MoviesFeedPresenter: PresentableView {
             items: movieItemsProps(for: state, on: store),
             onAppear: store.dispatching(Actions.MoviesFeed.Flow(isActive: true))
         )
+    }
+
+    var distinctStateChangesBy: Equating<AppState> {
+        .equal { $0.storage.lastModified } &&
+        .equal { $0.moviesFeed.lastModified }
     }
 }
 

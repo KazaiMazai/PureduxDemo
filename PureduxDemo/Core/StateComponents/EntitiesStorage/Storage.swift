@@ -17,6 +17,7 @@ extension Storage {
     mutating func reduce(_ action: Action, env: AppEnvironment) {
         switch action {
         case let action as Actions.MoviesFeed.FetchResult.Success:
+            lastModified = env.now()
             schema.movies.saveAll(action.items, timestamp: env.now())
         default:
             break

@@ -47,7 +47,7 @@ struct MovieListItem: View {
                 .foregroundColor(style.descriptionTitleColor)
                 .font(style.descriptionFont)
                 .padding(.bottom, style.verticalPadding)
-            
+
         }.onAppear { props.onAppear?() }
     }
 }

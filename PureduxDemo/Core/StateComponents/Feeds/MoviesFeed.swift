@@ -9,6 +9,7 @@ import Foundation
 import PureduxCommonCore
 
 struct MoviesFeed {
+    private(set) var lastModified: Date = .distantPast
     private(set) var movies: [Movie.ID] = []
     private(set) var intitialRequest: RequestState<SingleRequest> = .none
     private(set) var pageRequest: RequestState<PageRequest> = .none
@@ -36,6 +37,7 @@ extension MoviesFeed {
     mutating func reduce(_ action: Action, env: AppEnvironment) {
         switch action {
         case is Actions.App.State.DidBecomeActive:
+            lastModified = env.now()
             refreshFeed(requestId: env.makeUUID())
 
         case let action as Actions.MoviesFeed.Flow:
@@ -44,15 +46,19 @@ extension MoviesFeed {
                 return
             }
 
+            lastModified = env.now()
             refreshFeed(requestId: env.makeUUID())
 
         case is Actions.MoviesFeed.FetchMore:
+            lastModified = env.now()
             fetchMore(requestId: env.makeUUID())
 
         case let action as Actions.MoviesFeed.FetchResult.Failed:
+            lastModified = env.now()
             handleRequestFail(page: action.page)
 
         case let action as Actions.MoviesFeed.FetchResult.Success:
+            lastModified = env.now()
             handleRequestSucess(movies: action.items, page: action.page, totalPages: action.totalPages)
 
         default:
