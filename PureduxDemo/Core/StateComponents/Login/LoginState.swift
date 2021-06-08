@@ -8,7 +8,7 @@
 import Foundation
 import PureduxCommonCore
 
-struct LoginState {
+struct LoginState: Codable {
     private(set) var pickCredentials: PickCredentials = PickCredentials()
 
     mutating func reduce(_ action: Action, env: AppEnvironment) {
