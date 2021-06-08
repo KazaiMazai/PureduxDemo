@@ -28,6 +28,7 @@ struct AppState: Codable {
 extension AppState {
     mutating func reduce(_ action: Action, env: AppEnvironment) {
         login.reduce(action, env: env)
+        
         authentication.reduce(action, env: env)
         currentTime.reduce(action, env: env)
         storage.reduce(action, env: env)
@@ -36,10 +37,10 @@ extension AppState {
 
 // MARK: - CodingKeys
 
-/*
-We will persists only this part of state
-
+/**
+ AppState's CodingKeys allow to specify which part of the state we will encode/decode and, eventually, persist.
 */
+
 extension AppState {
     private enum CodingKeys: String, CodingKey {
         case currentTime
