@@ -12,17 +12,20 @@ import PureduxStore
 
 struct TimeEventsSideEffects {
     var effects: SideEffects<AppState, Action, [TimeEventsOperator.Request]> {
-        SideEffects(props: timeEventsRequests)
+        [
+            SideEffects(props: timeEventsRequest)
+        ]
+        .compactMap { $0 }
     }
 }
 
 extension TimeEventsSideEffects {
-    private func timeEventsRequests(
+    private func timeEventsRequest(
         state: AppState,
-        on store: Store<AppState, Action>) -> [TimeEventsOperator.Request] {
+        on store: Store<AppState, Action>) -> TimeEventsOperator.Request? {
         
         guard case let .inProgress(requestState) = state.currentTime.request else {
-            return []
+            return nil
         }
 
         let request = TimeEventsOperator.Request(id: requestState.id.rawValue,
@@ -39,6 +42,6 @@ extension TimeEventsSideEffects {
             }
         }
 
-        return [request]
+        return request
     }
 }
