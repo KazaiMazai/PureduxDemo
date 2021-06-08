@@ -29,7 +29,7 @@ extension Actions.Auth.Login {
         let value: String
     }
 
-    struct UpdatePassword: Action {
+    struct UpdatePassword: SecuredLogAction {
         let value: String
     }
 

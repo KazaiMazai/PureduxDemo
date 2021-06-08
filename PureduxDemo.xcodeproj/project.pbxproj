@@ -98,6 +98,7 @@
 		EAE4B76C266FA9F70005ACD2 /* StateSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B76B266FA9F70005ACD2 /* StateSize.swift */; };
 		EAE4B775266FAA730005ACD2 /* StatePersistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B774266FAA730005ACD2 /* StatePersistance.swift */; };
 		EAE4B77D266FAB4B0005ACD2 /* AppStatePersistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B77C266FAB4B0005ACD2 /* AppStatePersistance.swift */; };
+		EAE4B789266FC2C00005ACD2 /* ActionsLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B788266FC2C00005ACD2 /* ActionsLogger.swift */; };
 		EAEE43842667F1C800F2C5FD /* PureduxCommonCore in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43832667F1C800F2C5FD /* PureduxCommonCore */; };
 		EAEE438A2667F64F00F2C5FD /* PureduxCommonOperators in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43892667F64F00F2C5FD /* PureduxCommonOperators */; };
 /* End PBXBuildFile section */
@@ -215,6 +216,7 @@
 		EAE4B76B266FA9F70005ACD2 /* StateSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateSize.swift; sourceTree = "<group>"; };
 		EAE4B774266FAA730005ACD2 /* StatePersistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatePersistance.swift; sourceTree = "<group>"; };
 		EAE4B77C266FAB4B0005ACD2 /* AppStatePersistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStatePersistance.swift; sourceTree = "<group>"; };
+		EAE4B788266FC2C00005ACD2 /* ActionsLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsLogger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -767,9 +769,18 @@
 			path = StatePersistance;
 			sourceTree = "<group>";
 		};
+		EAE4B787266FC2B20005ACD2 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B788266FC2C00005ACD2 /* ActionsLogger.swift */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
 		EAEE43C12667FECD00F2C5FD /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				EAE4B787266FC2B20005ACD2 /* Logging */,
 				EAE4B767266FA9BA0005ACD2 /* StateStorage */,
 			);
 			path = Services;
@@ -1074,6 +1085,7 @@
 				EA00C2912667E596001EED8D /* AppEnvironment.swift in Sources */,
 				EAE4B75B266FA8CA0005ACD2 /* StateStorage.swift in Sources */,
 				EAE4B5B2266926790005ACD2 /* View+Placeholder.swift in Sources */,
+				EAE4B789266FC2C00005ACD2 /* ActionsLogger.swift in Sources */,
 				EAE4B6D9266F8EE70005ACD2 /* AuthState.swift in Sources */,
 				EA00C2A42667E597001EED8D /* ScreenViewFactoryKey.swift in Sources */,
 				EAE4B653266E7DBF0005ACD2 /* ErrorResponse.swift in Sources */,

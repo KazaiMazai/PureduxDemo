@@ -27,8 +27,10 @@ struct AppLauncher {
         let initialState = AppState.createStateWith(config: config, env: env)
         let reducerLogger: Logger = .with(label: "Reducer", logger: .console(.debug))
 
+        let actionsLogger = ActionsLogger(logger: reducerLogger)
+
         store = Store(initial: initialState) { state, action in
-            reducerLogger.log(.debug, "\(String(reflecting: action))")
+            actionsLogger.log(action: action)
             state.reduce(action, env: env)
         }
 
