@@ -9,18 +9,17 @@ import SwiftUI
 
 extension LoginView {
     struct Props {
-        let emailTextField: AuthTextField.Props
-        let passwordTextField: AuthSecuredTextField.Props
         let title: AuthTitle.Props
-
-        let actionButton: ActionButton.Props
+        let username: AuthTextField.Props
+        let password: AuthSecuredTextField.Props
+        let loginButton: ActionButton.Props
 
         static var preview: Props {
             Props(
-                emailTextField: .preview,
-                passwordTextField: .preview,
                 title: .preview,
-                actionButton: .preview)
+                username: .preview,
+                password: .preview,
+                loginButton: .preview)
         }
     }
 }
@@ -38,15 +37,15 @@ struct LoginView: View {
             Spacer()
             VStack(spacing: theme.config.paddings.large) {
                 AuthTextField(
-                    props: props.emailTextField,
+                    props: props.username,
                     style: theme.styles.authTextField)
                 AuthSecuredTextField(
-                    props: props.passwordTextField,
+                    props: props.password,
                     style: theme.styles.authSecuredTextField)
             }
             Spacer()
             ActionButton(
-                props: props.actionButton,
+                props: props.loginButton,
                 style: theme.styles.mainActionButton)
         }
         .padding([.leading, .trailing, .bottom], theme.config.paddings.huge)
