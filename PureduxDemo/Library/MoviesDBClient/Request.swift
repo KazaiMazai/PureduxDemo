@@ -31,6 +31,13 @@ extension Client {
     }
 }
 
+extension Client.Requests {
+    enum QueryKeys {
+        static let page = "page"
+        static let sort = "sort_by"
+    }
+}
+
 extension Encodable {
     var asDictionary: [String: Any]? {
         guard let data = try? JSONEncoder().encode(self) else {

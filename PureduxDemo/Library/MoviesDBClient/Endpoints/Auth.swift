@@ -7,7 +7,17 @@
 
 import Foundation
 
-extension Client {
+protocol MoviesDBAuth {
+    func createRequestToken() throws -> Client.Request<Client.Responses.Token>
+
+    func createSession(requestToken: String) throws -> Client.Request<Client.Responses.Session>
+
+    func createSessionWithLogin(username: String,
+                                password: String,
+                                requestToken: String) throws -> Client.Request<Client.Responses.Session>
+}
+
+extension Client: MoviesDBAuth {
     func createRequestToken() throws -> Request<Responses.Token> {
         request(urlRequest: try get(to: "authentication/token/new"))
     }

@@ -73,9 +73,12 @@
 		EAE4B65B266E7DCA0005ACD2 /* SuccessResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B65A266E7DCA0005ACD2 /* SuccessResponse.swift */; };
 		EAE4B660266E81600005ACD2 /* Coder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B65F266E81600005ACD2 /* Coder.swift */; };
 		EAE4B669266F6C0A0005ACD2 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B668266F6C0A0005ACD2 /* Auth.swift */; };
-		EAE4B671266F6C910005ACD2 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B670266F6C910005ACD2 /* Token.swift */; };
-		EAE4B67A266F737B0005ACD2 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B679266F737B0005ACD2 /* Session.swift */; };
+		EAE4B671266F6C910005ACD2 /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B670266F6C910005ACD2 /* TokenResponse.swift */; };
+		EAE4B67A266F737B0005ACD2 /* SessionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B679266F737B0005ACD2 /* SessionResponse.swift */; };
 		EAE4B680266F73F10005ACD2 /* CreateSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B67F266F73F10005ACD2 /* CreateSession.swift */; };
+		EAE4B688266F76020005ACD2 /* Discover.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B687266F76020005ACD2 /* Discover.swift */; };
+		EAE4B68D266F77690005ACD2 /* PaginatedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B68C266F77690005ACD2 /* PaginatedResponse.swift */; };
+		EAE4B692266F77EE0005ACD2 /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B691266F77EE0005ACD2 /* MovieResponse.swift */; };
 		EAEE43842667F1C800F2C5FD /* PureduxCommonCore in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43832667F1C800F2C5FD /* PureduxCommonCore */; };
 		EAEE438A2667F64F00F2C5FD /* PureduxCommonOperators in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43892667F64F00F2C5FD /* PureduxCommonOperators */; };
 /* End PBXBuildFile section */
@@ -168,9 +171,12 @@
 		EAE4B65A266E7DCA0005ACD2 /* SuccessResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessResponse.swift; sourceTree = "<group>"; };
 		EAE4B65F266E81600005ACD2 /* Coder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coder.swift; sourceTree = "<group>"; };
 		EAE4B668266F6C0A0005ACD2 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
-		EAE4B670266F6C910005ACD2 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
-		EAE4B679266F737B0005ACD2 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		EAE4B670266F6C910005ACD2 /* TokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponse.swift; sourceTree = "<group>"; };
+		EAE4B679266F737B0005ACD2 /* SessionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionResponse.swift; sourceTree = "<group>"; };
 		EAE4B67F266F73F10005ACD2 /* CreateSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSession.swift; sourceTree = "<group>"; };
+		EAE4B687266F76020005ACD2 /* Discover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discover.swift; sourceTree = "<group>"; };
+		EAE4B68C266F77690005ACD2 /* PaginatedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatedResponse.swift; sourceTree = "<group>"; };
+		EAE4B691266F77EE0005ACD2 /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -594,8 +600,6 @@
 			children = (
 				EAE4B67E266F73E40005ACD2 /* Requests */,
 				EAE4B675266F6C990005ACD2 /* Responses */,
-				EAE4B652266E7DBF0005ACD2 /* ErrorResponse.swift */,
-				EAE4B65A266E7DCA0005ACD2 /* SuccessResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -604,6 +608,7 @@
 			isa = PBXGroup;
 			children = (
 				EAE4B668266F6C0A0005ACD2 /* Auth.swift */,
+				EAE4B687266F76020005ACD2 /* Discover.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -611,8 +616,12 @@
 		EAE4B675266F6C990005ACD2 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
-				EAE4B670266F6C910005ACD2 /* Token.swift */,
-				EAE4B679266F737B0005ACD2 /* Session.swift */,
+				EAE4B65A266E7DCA0005ACD2 /* SuccessResponse.swift */,
+				EAE4B652266E7DBF0005ACD2 /* ErrorResponse.swift */,
+				EAE4B670266F6C910005ACD2 /* TokenResponse.swift */,
+				EAE4B679266F737B0005ACD2 /* SessionResponse.swift */,
+				EAE4B68C266F77690005ACD2 /* PaginatedResponse.swift */,
+				EAE4B691266F77EE0005ACD2 /* MovieResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -868,7 +877,7 @@
 				EAE4B65B266E7DCA0005ACD2 /* SuccessResponse.swift in Sources */,
 				EAE4B620266E64AC0005ACD2 /* IdentifiableItem.swift in Sources */,
 				EAE4B5CB26693C820005ACD2 /* CustomTextField.swift in Sources */,
-				EAE4B671266F6C910005ACD2 /* Token.swift in Sources */,
+				EAE4B671266F6C910005ACD2 /* TokenResponse.swift in Sources */,
 				EAE4B59B266917120005ACD2 /* ComponentsStyles.swift in Sources */,
 				EA00C28F2667E596001EED8D /* AppState.swift in Sources */,
 				EAE4B5B726692CAD0005ACD2 /* ThemeSizes.swift in Sources */,
@@ -899,12 +908,15 @@
 				EAE4B5BC266939CD0005ACD2 /* AuthSecuredTextField.swift in Sources */,
 				EAE4B58C26690EAB0005ACD2 /* UIColor+hex.swift in Sources */,
 				EA00C2AB2667E597001EED8D /* AppUIThemeKey.swift in Sources */,
-				EAE4B67A266F737B0005ACD2 /* Session.swift in Sources */,
+				EAE4B67A266F737B0005ACD2 /* SessionResponse.swift in Sources */,
 				EA00C2A52667E597001EED8D /* ScreenViewFactory.swift in Sources */,
 				EAE4B680266F73F10005ACD2 /* CreateSession.swift in Sources */,
+				EAE4B68D266F77690005ACD2 /* PaginatedResponse.swift in Sources */,
 				EA00C2AE2667E597001EED8D /* View+AnyView.swift in Sources */,
+				EAE4B688266F76020005ACD2 /* Discover.swift in Sources */,
 				EAE4B635266E753B0005ACD2 /* Client.swift in Sources */,
 				EAE4B608266E61A40005ACD2 /* MovieListItem.swift in Sources */,
+				EAE4B692266F77EE0005ACD2 /* MovieResponse.swift in Sources */,
 				EA00C2AA2667E597001EED8D /* AppUITheme.swift in Sources */,
 				EA00C2912667E596001EED8D /* AppEnvironment.swift in Sources */,
 				EAE4B5B2266926790005ACD2 /* View+Placeholder.swift in Sources */,
