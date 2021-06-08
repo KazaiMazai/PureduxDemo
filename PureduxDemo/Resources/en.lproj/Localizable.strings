@@ -1,0 +1,21 @@
+/* 
+  LocalizedStrings.strings
+  PureduxDemo
+
+  Created by Sergey Kazakov on 03.06.2021.
+  
+*/
+
+
+
+"Errors.Alert.title" = "Oops";
+"Errors.Alert.Actions.defaultOk" = "Ok";
+
+"Login.Title" = "Login";
+"Login.Placeholder.email" = "Email";
+"Login.Placeholder.password" = "Password";
+
+"Login.MainButton.title" = "Login";
+
+
+"MoviesFeed.NavBar.title" = "Discover Movies";
