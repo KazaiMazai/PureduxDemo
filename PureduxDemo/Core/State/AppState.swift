@@ -38,7 +38,8 @@ extension AppState {
 // MARK: - CodingKeys
 
 /**
- AppState's CodingKeys allow to specify which part of the state we will encode/decode and, eventually, persist.
+ AppState's CodingKeys allow to specify which part of the state
+ we will encode/decode and, eventually, persist.
 */
 
 extension AppState {

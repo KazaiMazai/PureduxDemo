@@ -29,7 +29,6 @@
 		EA00C2AD2667E597001EED8D /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C27A2667E596001EED8D /* Command.swift */; };
 		EA00C2AE2667E597001EED8D /* View+AnyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C27B2667E596001EED8D /* View+AnyView.swift */; };
 		EA00C2AF2667E597001EED8D /* AppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C27D2667E596001EED8D /* AppLauncher.swift */; };
-		EA00C2B02667E597001EED8D /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C27E2667E596001EED8D /* Types.swift */; };
 		EA00C2B12667E597001EED8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C2802667E596001EED8D /* AppDelegate.swift */; };
 		EA00C2B22667E597001EED8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C2812667E596001EED8D /* SceneDelegate.swift */; };
 		EA00C2B32667E597001EED8D /* TimeEventsSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00C2832667E596001EED8D /* TimeEventsSideEffects.swift */; };
@@ -135,7 +134,6 @@
 		EA00C27A2667E596001EED8D /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		EA00C27B2667E596001EED8D /* View+AnyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+AnyView.swift"; sourceTree = "<group>"; };
 		EA00C27D2667E596001EED8D /* AppLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLauncher.swift; sourceTree = "<group>"; };
-		EA00C27E2667E596001EED8D /* Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		EA00C2802667E596001EED8D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA00C2812667E596001EED8D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EA00C2832667E596001EED8D /* TimeEventsSideEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeEventsSideEffects.swift; sourceTree = "<group>"; };
@@ -442,7 +440,6 @@
 			isa = PBXGroup;
 			children = (
 				EA00C27D2667E596001EED8D /* AppLauncher.swift */,
-				EA00C27E2667E596001EED8D /* Types.swift */,
 			);
 			path = AppLauncher;
 			sourceTree = "<group>";
@@ -917,7 +914,6 @@
 				EA00C2942667E597001EED8D /* Storage.swift in Sources */,
 				EAE4B648266E76F10005ACD2 /* Response.swift in Sources */,
 				EA00C29B2667E597001EED8D /* Action.swift in Sources */,
-				EA00C2B02667E597001EED8D /* Types.swift in Sources */,
 				EAE4B65B266E7DCA0005ACD2 /* SuccessResponse.swift in Sources */,
 				EAE4B620266E64AC0005ACD2 /* IdentifiableItem.swift in Sources */,
 				EAE4B5CB26693C820005ACD2 /* CustomTextField.swift in Sources */,

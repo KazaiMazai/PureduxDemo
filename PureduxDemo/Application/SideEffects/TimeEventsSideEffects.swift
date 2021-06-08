@@ -7,6 +7,8 @@
 
 import Foundation
 import PureduxSideEffects
+import PureduxCommonOperators
+import PureduxStore
 
 struct TimeEventsSideEffects {
     func sideEffects() -> SideEffects<AppState, Action, [TimeEventsOperator.Request]> {
@@ -15,7 +17,10 @@ struct TimeEventsSideEffects {
 }
 
 extension TimeEventsSideEffects {
-    private func timeEventsRequests(state: AppState, on store: Store) -> [TimeEventsOperator.Request] {
+    private func timeEventsRequests(
+        state: AppState,
+        on store: Store<AppState, Action>) -> [TimeEventsOperator.Request] {
+        
         guard case let .inProgress(requestState) = state.currentTime.request else {
             return []
         }
