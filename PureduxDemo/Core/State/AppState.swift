@@ -8,10 +8,14 @@
 import Foundation
 
 struct AppState {
+    private(set) var login: LoginState
+
     private(set) var currentTime: AppTime
     private(set) var storage: Storage
 
     init(currentTime: AppTime, storage: Storage) {
+        self.login = LoginState()
+
         self.currentTime = currentTime
         self.storage = storage
     }

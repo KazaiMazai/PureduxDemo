@@ -79,6 +79,11 @@
 		EAE4B688266F76020005ACD2 /* Discover.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B687266F76020005ACD2 /* Discover.swift */; };
 		EAE4B68D266F77690005ACD2 /* PaginatedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B68C266F77690005ACD2 /* PaginatedResponse.swift */; };
 		EAE4B692266F77EE0005ACD2 /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B691266F77EE0005ACD2 /* MovieResponse.swift */; };
+		EAE4B6B4266F7C0A0005ACD2 /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B6B3266F7C0A0005ACD2 /* LoginState.swift */; };
+		EAE4B6BC266F7D3E0005ACD2 /* PickCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B6BB266F7D3E0005ACD2 /* PickCredentials.swift */; };
+		EAE4B6C4266F83E10005ACD2 /* SessionRequestToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B6C3266F83E10005ACD2 /* SessionRequestToken.swift */; };
+		EAE4B6C9266F86730005ACD2 /* AuthActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B6C8266F86730005ACD2 /* AuthActions.swift */; };
+		EAE4B6CE266F87910005ACD2 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B6CD266F87910005ACD2 /* Session.swift */; };
 		EAEE43842667F1C800F2C5FD /* PureduxCommonCore in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43832667F1C800F2C5FD /* PureduxCommonCore */; };
 		EAEE438A2667F64F00F2C5FD /* PureduxCommonOperators in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43892667F64F00F2C5FD /* PureduxCommonOperators */; };
 /* End PBXBuildFile section */
@@ -177,6 +182,11 @@
 		EAE4B687266F76020005ACD2 /* Discover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discover.swift; sourceTree = "<group>"; };
 		EAE4B68C266F77690005ACD2 /* PaginatedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatedResponse.swift; sourceTree = "<group>"; };
 		EAE4B691266F77EE0005ACD2 /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
+		EAE4B6B3266F7C0A0005ACD2 /* LoginState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginState.swift; sourceTree = "<group>"; };
+		EAE4B6BB266F7D3E0005ACD2 /* PickCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickCredentials.swift; sourceTree = "<group>"; };
+		EAE4B6C3266F83E10005ACD2 /* SessionRequestToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRequestToken.swift; sourceTree = "<group>"; };
+		EAE4B6C8266F86730005ACD2 /* AuthActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthActions.swift; sourceTree = "<group>"; };
+		EAE4B6CD266F87910005ACD2 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +245,7 @@
 				EA00C2442667E596001EED8D /* Core */,
 				EAEE43E22668EDE000F2C5FD /* Configuration */,
 				EA00C25D2667E596001EED8D /* Resources */,
+				EAE4B633266E750E0005ACD2 /* MoviesDBClient */,
 				EA00C2862667E596001EED8D /* Library */,
 			);
 			path = PureduxDemo;
@@ -299,7 +310,9 @@
 		EA00C24F2667E596001EED8D /* StateComponents */ = {
 			isa = PBXGroup;
 			children = (
-				EA00C2502667E596001EED8D /* CurrentTime.swift */,
+				EAE4B6B2266F7BF30005ACD2 /* CurrentTime */,
+				EAE4B6B1266F7BEC0005ACD2 /* Login */,
+				EAE4B6B0266F7BE50005ACD2 /* Auth */,
 				EA00C2522667E596001EED8D /* EntitiesStorage */,
 			);
 			path = StateComponents;
@@ -319,6 +332,7 @@
 			children = (
 				EA00C2582667E596001EED8D /* Time.swift */,
 				EA00C25B2667E596001EED8D /* Action.swift */,
+				EAE4B6C8266F86730005ACD2 /* AuthActions.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -451,7 +465,6 @@
 		EA00C2862667E596001EED8D /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				EAE4B633266E750E0005ACD2 /* MoviesDBClient */,
 				EAE4B58A26690E9E0005ACD2 /* UIKitExtensions */,
 				EA00C2872667E596001EED8D /* SwiftUIExtensions */,
 			);
@@ -634,6 +647,30 @@
 			path = Requests;
 			sourceTree = "<group>";
 		};
+		EAE4B6B0266F7BE50005ACD2 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		EAE4B6B1266F7BEC0005ACD2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B6B3266F7C0A0005ACD2 /* LoginState.swift */,
+				EAE4B6BB266F7D3E0005ACD2 /* PickCredentials.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EAE4B6B2266F7BF30005ACD2 /* CurrentTime */ = {
+			isa = PBXGroup;
+			children = (
+				EA00C2502667E596001EED8D /* CurrentTime.swift */,
+			);
+			path = CurrentTime;
+			sourceTree = "<group>";
+		};
 		EAEE43C12667FECD00F2C5FD /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -651,6 +688,8 @@
 		EAEE43C92667FF0800F2C5FD /* PlainModels */ = {
 			isa = PBXGroup;
 			children = (
+				EAE4B6C3266F83E10005ACD2 /* SessionRequestToken.swift */,
+				EAE4B6CD266F87910005ACD2 /* Session.swift */,
 			);
 			path = PlainModels;
 			sourceTree = "<group>";
@@ -864,6 +903,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAE4B6B4266F7C0A0005ACD2 /* LoginState.swift in Sources */,
+				EAE4B6C9266F86730005ACD2 /* AuthActions.swift in Sources */,
 				EAE4B4B32668F86E0005ACD2 /* Strings+Generated.swift in Sources */,
 				EA00C2B62667E597001EED8D /* Color+hex.swift in Sources */,
 				EAE4B5EA266E51460005ACD2 /* ActionButton.swift in Sources */,
@@ -897,8 +938,10 @@
 				EA00C2B32667E597001EED8D /* TimeEventsSideEffects.swift in Sources */,
 				EAE4B61A266E642E0005ACD2 /* MoviesListView.swift in Sources */,
 				EAE4B5AD266925BF0005ACD2 /* AuthTextField.swift in Sources */,
+				EAE4B6CE266F87910005ACD2 /* Session.swift in Sources */,
 				EAE4B640266E76DE0005ACD2 /* Request.swift in Sources */,
 				EA00C2A32667E597001EED8D /* ScreenViews.swift in Sources */,
+				EAE4B6C4266F83E10005ACD2 /* SessionRequestToken.swift in Sources */,
 				EAE4B59526690F130005ACD2 /* ThemeColors.swift in Sources */,
 				EA00C2AC2667E597001EED8D /* ViewStoreExtensions.swift in Sources */,
 				EAE4B660266E81600005ACD2 /* Coder.swift in Sources */,
@@ -918,6 +961,7 @@
 				EAE4B608266E61A40005ACD2 /* MovieListItem.swift in Sources */,
 				EAE4B692266F77EE0005ACD2 /* MovieResponse.swift in Sources */,
 				EA00C2AA2667E597001EED8D /* AppUITheme.swift in Sources */,
+				EAE4B6BC266F7D3E0005ACD2 /* PickCredentials.swift in Sources */,
 				EA00C2912667E596001EED8D /* AppEnvironment.swift in Sources */,
 				EAE4B5B2266926790005ACD2 /* View+Placeholder.swift in Sources */,
 				EA00C2A42667E597001EED8D /* ScreenViewFactoryKey.swift in Sources */,
