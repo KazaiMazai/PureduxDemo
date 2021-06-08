@@ -23,10 +23,12 @@ struct AppState: Codable {
 extension AppState {
     mutating func reduce(_ action: Action, env: AppEnvironment) {
         login.reduce(action, env: env)
-        
+        errorStateHandler.reduce(action, env: env)
         authentication.reduce(action, env: env)
+
         currentTime.reduce(action, env: env)
         storage.reduce(action, env: env)
+        persistance.reduce(action, env: env)
     }
 }
 

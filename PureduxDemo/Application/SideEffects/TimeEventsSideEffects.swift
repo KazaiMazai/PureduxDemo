@@ -11,7 +11,7 @@ import PureduxCommonOperators
 import PureduxStore
 
 struct TimeEventsSideEffects {
-    func sideEffects() -> SideEffects<AppState, Action, [TimeEventsOperator.Request]> {
+    var effects: SideEffects<AppState, Action, [TimeEventsOperator.Request]> {
         SideEffects(props: timeEventsRequests)
     }
 }

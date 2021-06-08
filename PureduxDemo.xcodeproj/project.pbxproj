@@ -99,6 +99,8 @@
 		EAE4B775266FAA730005ACD2 /* StatePersistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B774266FAA730005ACD2 /* StatePersistance.swift */; };
 		EAE4B77D266FAB4B0005ACD2 /* AppStatePersistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B77C266FAB4B0005ACD2 /* AppStatePersistance.swift */; };
 		EAE4B789266FC2C00005ACD2 /* ActionsLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B788266FC2C00005ACD2 /* ActionsLogger.swift */; };
+		EAE4B795266FC64E0005ACD2 /* AuthSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B794266FC64E0005ACD2 /* AuthSideEffects.swift */; };
+		EAE4B7A0266FCE730005ACD2 /* NetworkSideEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B79F266FCE730005ACD2 /* NetworkSideEffect.swift */; };
 		EAEE43842667F1C800F2C5FD /* PureduxCommonCore in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43832667F1C800F2C5FD /* PureduxCommonCore */; };
 		EAEE438A2667F64F00F2C5FD /* PureduxCommonOperators in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43892667F64F00F2C5FD /* PureduxCommonOperators */; };
 /* End PBXBuildFile section */
@@ -217,6 +219,8 @@
 		EAE4B774266FAA730005ACD2 /* StatePersistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatePersistance.swift; sourceTree = "<group>"; };
 		EAE4B77C266FAB4B0005ACD2 /* AppStatePersistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStatePersistance.swift; sourceTree = "<group>"; };
 		EAE4B788266FC2C00005ACD2 /* ActionsLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsLogger.swift; sourceTree = "<group>"; };
+		EAE4B794266FC64E0005ACD2 /* AuthSideEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSideEffects.swift; sourceTree = "<group>"; };
+		EAE4B79F266FCE730005ACD2 /* NetworkSideEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSideEffect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -390,18 +394,10 @@
 				EA00C27C2667E596001EED8D /* AppLauncher */,
 				EA00C27F2667E596001EED8D /* AppDelegate */,
 				EA00C2822667E596001EED8D /* SideEffects */,
-				EA00C2602667E596001EED8D /* Operators */,
 				EAEE43C12667FECD00F2C5FD /* Services */,
 				EA00C2782667E596001EED8D /* Utils */,
 			);
 			path = Application;
-			sourceTree = "<group>";
-		};
-		EA00C2602667E596001EED8D /* Operators */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Operators;
 			sourceTree = "<group>";
 		};
 		EA00C2682667E596001EED8D /* AppUI */ = {
@@ -495,6 +491,7 @@
 		EA00C2822667E596001EED8D /* SideEffects */ = {
 			isa = PBXGroup;
 			children = (
+				EAE4B793266FC63E0005ACD2 /* NetworkSideEffects */,
 				EA00C2832667E596001EED8D /* TimeEventsSideEffects.swift */,
 			);
 			path = SideEffects;
@@ -777,6 +774,23 @@
 			path = Logging;
 			sourceTree = "<group>";
 		};
+		EAE4B793266FC63E0005ACD2 /* NetworkSideEffects */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B7A4266FCE770005ACD2 /* AppNetworkSideEffects */,
+				EAE4B79F266FCE730005ACD2 /* NetworkSideEffect.swift */,
+			);
+			path = NetworkSideEffects;
+			sourceTree = "<group>";
+		};
+		EAE4B7A4266FCE770005ACD2 /* AppNetworkSideEffects */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B794266FC64E0005ACD2 /* AuthSideEffects.swift */,
+			);
+			name = AppNetworkSideEffects;
+			sourceTree = "<group>";
+		};
 		EAEE43C12667FECD00F2C5FD /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -1045,6 +1059,7 @@
 				EAE4B5F7266E5B230005ACD2 /* KeyboardHeightPublisher.swift in Sources */,
 				EA00C2B12667E597001EED8D /* AppDelegate.swift in Sources */,
 				EAE4B58326690A850005ACD2 /* AuthTitle.swift in Sources */,
+				EAE4B795266FC64E0005ACD2 /* AuthSideEffects.swift in Sources */,
 				EA00C2902667E596001EED8D /* AppStateConfig.swift in Sources */,
 				EAE4B72C266FA19B0005ACD2 /* RootView.swift in Sources */,
 				EAE4B6FA266F9B700005ACD2 /* FlowView.swift in Sources */,
@@ -1061,6 +1076,7 @@
 				EAE4B6C4266F83E10005ACD2 /* SessionRequestToken.swift in Sources */,
 				EAE4B750266FA5850005ACD2 /* AppUITheme+UIKit.swift in Sources */,
 				EAE4B775266FAA730005ACD2 /* StatePersistance.swift in Sources */,
+				EAE4B7A0266FCE730005ACD2 /* NetworkSideEffect.swift in Sources */,
 				EAE4B59526690F130005ACD2 /* ThemeColors.swift in Sources */,
 				EA00C2AC2667E597001EED8D /* ViewStoreExtensions.swift in Sources */,
 				EAE4B660266E81600005ACD2 /* Coder.swift in Sources */,

@@ -10,3 +10,7 @@ import Foundation
 struct SessionRequestToken: Codable {
     let token: String
 }
+
+struct TemporaryRequestToken: Codable {
+    let token: String
+}
