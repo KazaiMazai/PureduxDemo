@@ -17,8 +17,8 @@ struct AuthFlowPresenter: PresentableView {
     func props(for state: AppState, on store: ObservableStore<AppState, Action>) -> Props {
         Props(
             presentFirst: state.authentication.isAuthenticated,
-            first: { viewsFactory.makeView(for: .moviesFeed).eraseToAnyView },
-            second: { viewsFactory.makeView(for: .login).eraseToAnyView })
+            first: { viewsFactory.makeView(for: .moviesFeed) },
+            second: { viewsFactory.makeView(for: .login) })
     }
 
     func content(for props: Props) -> Content {

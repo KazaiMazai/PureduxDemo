@@ -9,7 +9,7 @@ import Foundation
 
 enum ScreenViews {
     case root
-    case authCoordinator
+    case authFlow
     case login
     case moviesFeed
     case movieDetail

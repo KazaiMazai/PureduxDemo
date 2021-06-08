@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct ScreenViewsFactory {
-    @ViewBuilder
-    func makeView(for type: ScreenViews) -> some View {
+
+    func makeView(for type: ScreenViews) -> AnyView {
         switch type {
         case .root:
-            RootPresenter()
-        case .authCoordinator:
-            AuthFlowPresenter()
+            return RootPresenter().eraseToAnyView
+        case .authFlow:
+            return AuthFlowPresenter().eraseToAnyView
         case .login:
-            LoginPresenter()
+            return LoginPresenter().eraseToAnyView
         case .moviesFeed:
-            Color.red
+            return Color.red.eraseToAnyView
         case .movieDetail:
-            Color.yellow
+            return Color.yellow.eraseToAnyView
         }
     }
 }

@@ -18,15 +18,13 @@ extension FlowView {
 
 struct FlowView<First: View, Second: View>: View {
     let props: Props<First, Second>
-
-    @ViewBuilder
+ 
     var body: some View {
         if props.presentFirst {
             props.first()
         } else {
             props.second()
         }
-
     }
 }
 

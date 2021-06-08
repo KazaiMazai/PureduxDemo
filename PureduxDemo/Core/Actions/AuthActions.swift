@@ -18,10 +18,6 @@ extension Actions.Auth {
     enum ObtainToken {}
 }
 
-extension Actions.Auth.Login {
-    enum Result {}
-}
-
 // MARK: - Actions.Auth.Login
 
 extension Actions.Auth.Login {
@@ -43,6 +39,10 @@ extension Actions.Auth.Login {
 }
 
 // MARK: - Actions.Auth.Login.Result
+
+extension Actions.Auth.Login {
+    enum Result {}
+}
 
 extension Actions.Auth.Login.Result {
     struct Failed: ErrorAction {
@@ -87,6 +87,8 @@ extension Actions.Auth.Logout {
         let forced: Bool
     }
 }
+
+// MARK: - Actions.Auth.Logout.Result
 
 extension Actions.Auth.Logout {
     enum Result {}

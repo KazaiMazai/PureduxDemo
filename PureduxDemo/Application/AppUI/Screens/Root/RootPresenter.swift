@@ -21,7 +21,7 @@ struct RootPresenter: PresentableView {
 
     func props(for state: AppState, on store: ObservableStore<AppState, Action>) -> Props {
         Props(
-            content: { viewsFactory.makeView(for: .authCoordinator).eraseToAnyView },
+            content: { viewsFactory.makeView(for: .authFlow) },
             alert: alertPropsFor(for: state, on: store),
             showAlert: Binding(
                 get: { state.errorStateHandler.hasError },
