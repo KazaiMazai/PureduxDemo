@@ -14,7 +14,7 @@ struct AuthState: Codable {
         switch action {
         case let action as Actions.Auth.Login.Result.Success:
             session = action.session
-        case is Actions.Auth.Logout.LogoutResult:
+        case is Actions.Auth.Logout.Result.Success:
             session = nil
         default:
             break

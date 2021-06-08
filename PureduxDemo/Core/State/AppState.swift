@@ -15,19 +15,7 @@ struct AppState: Codable {
 
     private(set) var currentTime: AppTime
     private(set) var storage: Storage
-
-    init(login: LoginState = LoginState(),
-         errorStateHandler: ErrorHandler = ErrorHandler(),
-         authentication: AuthState = AuthState(),
-         currentTime: AppTime,
-         storage: Storage) {
-
-        self.login = login
-        self.errorStateHandler = errorStateHandler
-        self.authentication = authentication
-        self.currentTime = currentTime
-        self.storage = storage
-    }
+    private(set) var persistance: StatePersistance
 }
 
 // MARK: - Reducer
@@ -54,6 +42,7 @@ extension AppState {
         case currentTime
         case storage
         case authentication
+        case persistance
     }
 }
 
@@ -65,6 +54,8 @@ extension AppState {
                 interval: config.timeEventsInterval,
                 initialRequest: env.makeUUID()),
 
-            storage: Storage())
+            storage: Storage(),
+            persistance: StatePersistance(
+                delayInterval: config.persistStateDelayTimeInterval))
     }
 }

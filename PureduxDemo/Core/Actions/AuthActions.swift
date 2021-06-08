@@ -86,8 +86,22 @@ extension Actions.Auth.Logout {
     struct PerformLogout: Action {
         let forced: Bool
     }
+}
 
-    struct LogoutResult: Action {
-        let forced: Bool
+extension Actions.Auth.Logout {
+    enum Result {}
+}
+
+extension Actions.Auth.Logout.Result {
+    struct Success: Action {
+
+    }
+
+    struct Cancelled: Action {
+
+    }
+
+    struct Failed: ErrorAction {
+        let error: SomeError
     }
 }
