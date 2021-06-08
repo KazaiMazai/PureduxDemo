@@ -72,6 +72,10 @@
 		EAE4B653266E7DBF0005ACD2 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B652266E7DBF0005ACD2 /* ErrorResponse.swift */; };
 		EAE4B65B266E7DCA0005ACD2 /* SuccessResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B65A266E7DCA0005ACD2 /* SuccessResponse.swift */; };
 		EAE4B660266E81600005ACD2 /* Coder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B65F266E81600005ACD2 /* Coder.swift */; };
+		EAE4B669266F6C0A0005ACD2 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B668266F6C0A0005ACD2 /* Auth.swift */; };
+		EAE4B671266F6C910005ACD2 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B670266F6C910005ACD2 /* Token.swift */; };
+		EAE4B67A266F737B0005ACD2 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B679266F737B0005ACD2 /* Session.swift */; };
+		EAE4B680266F73F10005ACD2 /* CreateSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B67F266F73F10005ACD2 /* CreateSession.swift */; };
 		EAEE43842667F1C800F2C5FD /* PureduxCommonCore in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43832667F1C800F2C5FD /* PureduxCommonCore */; };
 		EAEE438A2667F64F00F2C5FD /* PureduxCommonOperators in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43892667F64F00F2C5FD /* PureduxCommonOperators */; };
 /* End PBXBuildFile section */
@@ -163,6 +167,10 @@
 		EAE4B652266E7DBF0005ACD2 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		EAE4B65A266E7DCA0005ACD2 /* SuccessResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessResponse.swift; sourceTree = "<group>"; };
 		EAE4B65F266E81600005ACD2 /* Coder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coder.swift; sourceTree = "<group>"; };
+		EAE4B668266F6C0A0005ACD2 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		EAE4B670266F6C910005ACD2 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		EAE4B679266F737B0005ACD2 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		EAE4B67F266F73F10005ACD2 /* CreateSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -570,6 +578,7 @@
 		EAE4B633266E750E0005ACD2 /* MoviesDBClient */ = {
 			isa = PBXGroup;
 			children = (
+				EAE4B667266F6BDF0005ACD2 /* Endpoints */,
 				EAE4B651266E7DB20005ACD2 /* Models */,
 				EAE4B634266E753B0005ACD2 /* Client.swift */,
 				EAE4B65F266E81600005ACD2 /* Coder.swift */,
@@ -583,10 +592,37 @@
 		EAE4B651266E7DB20005ACD2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EAE4B67E266F73E40005ACD2 /* Requests */,
+				EAE4B675266F6C990005ACD2 /* Responses */,
 				EAE4B652266E7DBF0005ACD2 /* ErrorResponse.swift */,
 				EAE4B65A266E7DCA0005ACD2 /* SuccessResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		EAE4B667266F6BDF0005ACD2 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B668266F6C0A0005ACD2 /* Auth.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		EAE4B675266F6C990005ACD2 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B670266F6C910005ACD2 /* Token.swift */,
+				EAE4B679266F737B0005ACD2 /* Session.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		EAE4B67E266F73E40005ACD2 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B67F266F73F10005ACD2 /* CreateSession.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 		EAEE43C12667FECD00F2C5FD /* Services */ = {
@@ -832,6 +868,7 @@
 				EAE4B65B266E7DCA0005ACD2 /* SuccessResponse.swift in Sources */,
 				EAE4B620266E64AC0005ACD2 /* IdentifiableItem.swift in Sources */,
 				EAE4B5CB26693C820005ACD2 /* CustomTextField.swift in Sources */,
+				EAE4B671266F6C910005ACD2 /* Token.swift in Sources */,
 				EAE4B59B266917120005ACD2 /* ComponentsStyles.swift in Sources */,
 				EA00C28F2667E596001EED8D /* AppState.swift in Sources */,
 				EAE4B5B726692CAD0005ACD2 /* ThemeSizes.swift in Sources */,
@@ -858,10 +895,13 @@
 				EAE4B660266E81600005ACD2 /* Coder.swift in Sources */,
 				EA00C2962667E597001EED8D /* ModelSchema.swift in Sources */,
 				EAE4B5EF266E5AB20005ACD2 /* View+KeyboardAdaptive.swift in Sources */,
+				EAE4B669266F6C0A0005ACD2 /* Auth.swift in Sources */,
 				EAE4B5BC266939CD0005ACD2 /* AuthSecuredTextField.swift in Sources */,
 				EAE4B58C26690EAB0005ACD2 /* UIColor+hex.swift in Sources */,
 				EA00C2AB2667E597001EED8D /* AppUIThemeKey.swift in Sources */,
+				EAE4B67A266F737B0005ACD2 /* Session.swift in Sources */,
 				EA00C2A52667E597001EED8D /* ScreenViewFactory.swift in Sources */,
+				EAE4B680266F73F10005ACD2 /* CreateSession.swift in Sources */,
 				EA00C2AE2667E597001EED8D /* View+AnyView.swift in Sources */,
 				EAE4B635266E753B0005ACD2 /* Client.swift in Sources */,
 				EAE4B608266E61A40005ACD2 /* MovieListItem.swift in Sources */,

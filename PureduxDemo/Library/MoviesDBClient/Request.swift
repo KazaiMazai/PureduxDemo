@@ -8,6 +8,10 @@
 import Foundation
 
 extension Client {
+    enum Requests {}
+}
+
+extension Client {
     enum RequestType {
         case data
     }

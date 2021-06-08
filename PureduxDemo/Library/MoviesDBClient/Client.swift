@@ -68,24 +68,8 @@ extension Client {
 }
 
 extension Client {
-    func prepareRequest(for path: String,
-                        with params: [URLQueryItem] = []) throws -> URLRequest {
-
-        var url = baseURL
-        url.appendPathComponent(path)
-        guard var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
-            throw Errors.invalidUrlRequest
-        }
-
-        var parameters = params
-        parameters.append(URLQueryItem(name: "api_key", value: apiKey))
-
-        components.queryItems = parameters
-        guard let componentsUrl = components.url else {
-            throw Errors.invalidUrlRequest
-        }
-
-        return URLRequest(url: componentsUrl)
+    func request<Result: Decodable>(urlRequest: URLRequest) -> Request<Result> {
+        Request(urlRequest: urlRequest, type: .data, handler: responseHandler)
     }
 }
 
@@ -151,5 +135,27 @@ extension Client {
 fileprivate extension URLRequest {
     mutating func addJSONContentType() {
         addValue("application/json;charset=utf-8", forHTTPHeaderField: "Content-Type")
+    }
+}
+
+extension Client {
+    private func prepareRequest(for path: String,
+                                with params: [URLQueryItem] = []) throws -> URLRequest {
+
+        var url = baseURL
+        url.appendPathComponent(path)
+        guard var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
+            throw Errors.invalidUrlRequest
+        }
+
+        var parameters = params
+        parameters.append(URLQueryItem(name: "api_key", value: apiKey))
+
+        components.queryItems = parameters
+        guard let componentsUrl = components.url else {
+            throw Errors.invalidUrlRequest
+        }
+
+        return URLRequest(url: componentsUrl)
     }
 }
