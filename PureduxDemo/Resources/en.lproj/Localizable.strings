@@ -16,3 +16,6 @@
 "Login.Placeholder.password" = "Password";
 
 "Login.MainButton.title" = "Login";
+
+
+"MoviesFeed.NavBar.title" = "Discover Movies";

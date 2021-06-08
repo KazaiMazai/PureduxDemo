@@ -78,8 +78,8 @@ struct AppLauncher {
                 logger: .with(logLevel: .trace,
                               logger: logger)),
             sideEffects: [
-                AuthSideEffects(client: client).effects
-
+                AuthSideEffects(client: client).effects,
+                MoviesFeedSideEffects(client: client).effects
             ].flatten())
 
         persistance = Middleware(

@@ -10,14 +10,10 @@ import PureduxCommonCore
 
 protocol ErrorAction: Action {
     var error: SomeError { get }
-
-    init(error: SomeError)
 }
 
 extension ErrorAction {
-    init(error: Error) {
-        self.init(error: SomeError(error: error))
-    }
+    
 }
 
 extension Actions {

@@ -1,5 +1,5 @@
 //
-//  MoviesListView.swift
+//  MoviesFeedView.swift
 //  PureduxDemo
 //
 //  Created by Sergey Kazakov on 07.06.2021.
@@ -7,14 +7,21 @@
 
 import SwiftUI
 
-extension MoviesListView {
+extension MoviesFeedView {
     struct Props {
         let navBarTitle: String
         let items: [Identifying<Int, ItemType>]
+        let onAppear: Command
+
+        static var preview: Props {
+            Props(navBarTitle: "Title",
+                  items: [],
+                  onAppear: nop)
+        }
     }
 }
 
-struct MoviesListView: View {
+struct MoviesFeedView: View {
     @Environment(\.appUITheme) var theme
     let props: Props
 
@@ -29,11 +36,12 @@ struct MoviesListView: View {
                 }
             }
         }
+        .onAppear { props.onAppear() }
         .navigationBarTitle(props.navBarTitle)
     }
 }
 
-extension MoviesListView.Props {
+extension MoviesFeedView.Props {
     enum ItemType {
         case movieListItem(MovieListItem.Props)
         case placeholder

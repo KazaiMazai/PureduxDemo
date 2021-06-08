@@ -16,9 +16,9 @@ struct ScreenViewsFactory {
         case .authFlow:
             return AuthFlowPresenter().eraseToAnyView
         case .login:
-            return LoginPresenter().eraseToAnyView
+            return NavigationView { LoginPresenter() }.eraseToAnyView
         case .moviesFeed:
-            return Color.red.eraseToAnyView
+            return NavigationView { MoviesFeedPresenter() }.eraseToAnyView
         case .movieDetail:
             return Color.yellow.eraseToAnyView
         }

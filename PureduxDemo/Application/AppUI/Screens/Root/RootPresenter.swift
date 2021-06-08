@@ -24,7 +24,7 @@ struct RootPresenter: PresentableView {
             content: { viewsFactory.makeView(for: .authFlow) },
             alert: alertPropsFor(for: state, on: store),
             showAlert: Binding(
-                get: { state.errorStateHandler.hasError },
+                get: { state.errorHandler.hasError },
                 set: store.dispatching { _ in Actions.ErrorHandling.DequeueError() }),
 
             willResignActive: store.dispatching(Actions.App.State.WillResignActive()),
@@ -41,7 +41,7 @@ struct RootPresenter: PresentableView {
 
 private extension RootPresenter {
     func alertPropsFor(for state: AppState, on store: ObservableStore<AppState, Action>) -> Alert.Props {
-        guard let error = state.errorStateHandler.lastError else {
+        guard let error = state.errorHandler.lastError else {
             return .none
         }
 

@@ -9,13 +9,15 @@ import Foundation
 
 struct AppState: Codable {
     private(set) var login: LoginState = LoginState()
-    private(set) var errorStateHandler: ErrorHandler = ErrorHandler()
+    private(set) var moviesFeed: MoviesFeed = MoviesFeed()
 
     private(set) var authentication: AuthState = AuthState()
 
     private(set) var currentTime: AppTime
     private(set) var storage: Storage
     private(set) var persistance: StatePersistance
+
+    private(set) var errorHandler: ErrorHandler = ErrorHandler()
 }
 
 // MARK: - Reducer
@@ -23,12 +25,15 @@ struct AppState: Codable {
 extension AppState {
     mutating func reduce(_ action: Action, env: AppEnvironment) {
         login.reduce(action, env: env)
-        errorStateHandler.reduce(action, env: env)
+        moviesFeed.reduce(action, env: env)
+
         authentication.reduce(action, env: env)
 
         currentTime.reduce(action, env: env)
         storage.reduce(action, env: env)
         persistance.reduce(action, env: env)
+
+        errorHandler.reduce(action, env: env)
     }
 }
 

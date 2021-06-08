@@ -36,6 +36,13 @@ internal enum L10n {
       internal static let password = L10n.tr("Localizable", "Login.Placeholder.password")
     }
   }
+
+  internal enum MoviesFeed {
+    internal enum NavBar {
+      /// Discover Movies
+      internal static let title = L10n.tr("Localizable", "MoviesFeed.NavBar.title")
+    }
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces
