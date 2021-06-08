@@ -394,18 +394,10 @@
 				EA00C27C2667E596001EED8D /* AppLauncher */,
 				EA00C27F2667E596001EED8D /* AppDelegate */,
 				EA00C2822667E596001EED8D /* SideEffects */,
-				EA00C2602667E596001EED8D /* Operators */,
 				EAEE43C12667FECD00F2C5FD /* Services */,
 				EA00C2782667E596001EED8D /* Utils */,
 			);
 			path = Application;
-			sourceTree = "<group>";
-		};
-		EA00C2602667E596001EED8D /* Operators */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Operators;
 			sourceTree = "<group>";
 		};
 		EA00C2682667E596001EED8D /* AppUI */ = {
