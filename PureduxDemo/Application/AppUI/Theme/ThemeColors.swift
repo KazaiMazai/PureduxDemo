@@ -79,6 +79,7 @@ extension AppUITheme {
 
         let lightTitle: ColorType
         let darkTitle: ColorType
+        let buttonTitle: ColorType
 
         let title: ColorType
         let subtitle: ColorType
@@ -98,10 +99,11 @@ extension AppUITheme {
 
                 lightTitle: .gray,
                 darkTitle: .black,
+                buttonTitle: .white,
 
                 title: .black,
                 subtitle: .gray,
-                textFieldTint: .black,
+                textFieldTint: .gray,
                 lightPlaceholder: .gray,
                 border: .gray
             )

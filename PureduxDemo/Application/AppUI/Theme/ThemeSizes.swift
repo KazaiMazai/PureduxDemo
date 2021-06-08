@@ -35,11 +35,13 @@ extension AppUITheme.Sizes {
         let inputFields: CGFloat
         let mainButtonHeight: CGFloat
         let mainButtonMaxWidth: CGFloat
+        let navBarButtonHeight: CGFloat
 
         static let defaultComponentsSizes = ComponentsSizes(
             inputFields: 52,
             mainButtonHeight: 52,
-            mainButtonMaxWidth: .infinity)
+            mainButtonMaxWidth: .infinity,
+            navBarButtonHeight: 32)
     }
 }
 

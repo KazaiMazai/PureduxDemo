@@ -16,6 +16,7 @@ extension AppUITheme {
         let authSecuredTextField: AuthSecuredTextField.Style
         let mainActionButton: ActionButton.Style
         let movieListItem: MovieListItem.Style
+        let navBarButton: NavBarButton.Style
 
         static func stylesForTheme(config: AppUITheme.Config) -> Styles {
             Styles(navBar: .nativeStyle,
@@ -23,7 +24,8 @@ extension AppUITheme {
                    authTextField: .styleFor(config: config),
                    authSecuredTextField: .styleFor(config: config),
                    mainActionButton: .styleFor(config: config),
-                   movieListItem: .styleFor(config: config)
+                   movieListItem: .styleFor(config: config),
+                   navBarButton: .styleFor(config: config)
             )
         }
     }
@@ -61,6 +63,7 @@ extension MovieListItem.Style {
         MovieListItem.Style(
             titleColor: config.colors.title.color,
             descriptionTitleColor: config.colors.subtitle.color,
+            backgroundColor: config.colors.mainBackground.color,
             titleFont: config.fonts.title.font,
             descriptionFont: config.fonts.body.font,
             verticalPadding: config.paddings.normal)
@@ -80,7 +83,7 @@ extension AuthSecuredTextField.Style {
         AuthSecuredTextField.Style(
             keyboardType: .default,
             alignment: .center,
-            titleFont: config.fonts.title,
+            titleFont: config.fonts.body,
             borderColor: config.colors.border.color,
             borderColorFocused: config.colors.primary.color,
             placehodlerColor: config.colors.lightPlaceholder.color,
@@ -99,7 +102,7 @@ extension AuthTextField.Style {
         AuthTextField.Style(
             keyboardType: .default,
             alignment: .center,
-            titleFont: config.fonts.title.font,
+            titleFont: config.fonts.body.font,
             borderColor: config.colors.border.color,
             borderColorFocused: config.colors.primary.color,
             placehodlerColor: config.colors.lightPlaceholder.color,
@@ -116,13 +119,24 @@ extension AuthTextField.Style {
 extension ActionButton.Style {
     static func styleFor(config: AppUITheme.Config) -> ActionButton.Style {
         ActionButton.Style(
-            titleFont: config.fonts.title.font,
-            titleColor: config.colors.title.color,
+            titleFont: config.fonts.headline.font,
+            titleColor: config.colors.buttonTitle.color,
             backgroundColor: config.colors.primary.color,
             backgroundDisabledColor: config.colors.lightPlaceholder.color,
             cornerRadius: config.sizes.corners.small,
             height: config.sizes.components.mainButtonHeight,
             maxWidth: config.sizes.components.mainButtonMaxWidth
         )
+    }
+}
+
+extension NavBarButton.Style {
+    static func styleFor(config: AppUITheme.Config) -> NavBarButton.Style {
+        NavBarButton.Style(
+            titleFont: config.fonts.callout.font,
+            titleColor: config.colors.buttonTitle.color,
+            backgoundColor: config.colors.primary.color,
+            height: config.sizes.components.navBarButtonHeight,
+            horizontalPadding: config.paddings.large)
     }
 }

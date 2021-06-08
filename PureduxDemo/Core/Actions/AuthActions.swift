@@ -125,21 +125,3 @@ extension Actions.Auth.Logout {
 extension Actions.Auth.Logout {
     enum Result {}
 }
-
-extension Actions.Auth.Logout.Result {
-    struct Success: Action {
-
-    }
-
-    struct Cancelled: Action {
-
-    }
-
-    struct Failed: ErrorAction {
-        let error: SomeError
-
-        init(error: Error) {
-            self.error = SomeError(error: error)
-        }
-    }
-}

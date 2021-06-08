@@ -42,9 +42,6 @@ extension StatePersistance {
         case is Actions.Auth.Logout.PerformLogout:
             delayedSaveJob.forceSchedule(now: env.now(), makeUUID: env.makeUUID)
 
-        case is Actions.Auth.Logout.Result.Success:
-            delayedSaveJob.forceSchedule(now: env.now(), makeUUID: env.makeUUID)
-
         case is Actions.App.State.WillResignActive:
             delayedSaveJob.forceSchedule(now: env.now(), makeUUID: env.makeUUID)
 

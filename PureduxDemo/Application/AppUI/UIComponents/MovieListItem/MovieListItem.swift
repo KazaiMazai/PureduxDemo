@@ -26,7 +26,7 @@ extension MovieListItem {
     struct Style {
         var titleColor: Color = .black
         var descriptionTitleColor: Color = .gray
-
+        var backgroundColor: Color = .white
         var titleFont: Font = .title
         var descriptionFont: Font = .body
         var verticalPadding: CGFloat = 8
@@ -48,6 +48,8 @@ struct MovieListItem: View {
                 .font(style.descriptionFont)
                 .padding(.bottom, style.verticalPadding)
 
-        }.onAppear { props.onAppear?() }
+        }
+        .onAppear { props.onAppear?() }
+        .background(style.backgroundColor)
     }
 }
