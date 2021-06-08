@@ -9,9 +9,11 @@ import Foundation
 
 struct AppStateConfig {
     let timeEventsInterval: TimeInterval
+    let persistStateDelayTimeInterval: TimeInterval
 
     static func defaultConfig() -> AppStateConfig {
         AppStateConfig(
-            timeEventsInterval: 0.3)
+            timeEventsInterval: 0.3,
+            persistStateDelayTimeInterval: 5.0)
     }
 }
