@@ -9,15 +9,22 @@ import Foundation
 
 struct AppState: Codable {
     private(set) var login: LoginState = LoginState()
+    private(set) var errorStateHandler: ErrorHandler = ErrorHandler()
 
-    private(set) var authentication: AuthState
+    private(set) var authentication: AuthState = AuthState()
+
     private(set) var currentTime: AppTime
     private(set) var storage: Storage
 
-    init(currentTime: AppTime, storage: Storage) {
-        self.login = LoginState()
+    init(login: LoginState = LoginState(),
+         errorStateHandler: ErrorHandler = ErrorHandler(),
+         authentication: AuthState = AuthState(),
+         currentTime: AppTime,
+         storage: Storage) {
 
-        self.authentication = AuthState()
+        self.login = login
+        self.errorStateHandler = errorStateHandler
+        self.authentication = authentication
         self.currentTime = currentTime
         self.storage = storage
     }
