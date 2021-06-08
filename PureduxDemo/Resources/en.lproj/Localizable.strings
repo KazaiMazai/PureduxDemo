@@ -7,6 +7,10 @@
 */
 
 
+
+"Errors.Alert.title" = "Oops";
+"Errors.Alert.Actions.defaultOk" = "Ok";
+
 "Login.Title" = "Login";
 "Login.Placeholder.email" = "Email";
 "Login.Placeholder.password" = "Password";

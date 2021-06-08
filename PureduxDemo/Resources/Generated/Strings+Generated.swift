@@ -11,6 +11,17 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
 
+  internal enum Errors {
+    internal enum Alert {
+      /// Oops
+      internal static let title = L10n.tr("Localizable", "Errors.Alert.title")
+      internal enum Actions {
+        /// Ok
+        internal static let defaultOk = L10n.tr("Localizable", "Errors.Alert.Actions.defaultOk")
+      }
+    }
+  }
+
   internal enum Login {
     /// Login
     internal static let title = L10n.tr("Localizable", "Login.Title")
