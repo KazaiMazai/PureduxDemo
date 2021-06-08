@@ -8,14 +8,16 @@
 import SwiftUI
 
 extension MovieListItem {
-    struct Props: Hashable, Equatable {
+    struct Props {
         let title: String
         let description: String
+        let onAppear: Command?
 
         static var preview: Props {
             Props(
                 title: "Title",
-                description: "Description")
+                description: "Description",
+                onAppear: nil)
         }
     }
 }
@@ -43,6 +45,6 @@ struct MovieListItem: View {
             Text(props.title)
                 .foregroundColor(style.titleColor)
                 .font(style.titleFont)
-        }
+        }.onAppear { props.onAppear?() }
     }
 }

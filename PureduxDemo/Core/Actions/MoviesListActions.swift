@@ -22,7 +22,7 @@ extension Actions.MoviesList {
     }
 
     struct FetchMore: Action {
-        let isActive: Bool
+        
     }
 }
 

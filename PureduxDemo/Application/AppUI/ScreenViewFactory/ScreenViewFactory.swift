@@ -18,7 +18,7 @@ struct ScreenViewsFactory {
         case .login:
             return LoginPresenter().eraseToAnyView
         case .moviesFeed:
-            return Color.red.eraseToAnyView
+            return MoviesFeedPresenter().eraseToAnyView
         case .movieDetail:
             return Color.yellow.eraseToAnyView
         }
