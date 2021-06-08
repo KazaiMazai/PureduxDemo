@@ -38,7 +38,7 @@ extension MoviesFeed {
         case is Actions.App.State.DidBecomeActive:
             refreshFeed(requestId: env.makeUUID())
 
-        case let action as Actions.MoviesList.Flow:
+        case let action as Actions.MoviesFeed.Flow:
             guard action.isActive else {
                 self = .init()
                 return
@@ -46,13 +46,13 @@ extension MoviesFeed {
 
             refreshFeed(requestId: env.makeUUID())
 
-        case is Actions.MoviesList.FetchMore:
+        case is Actions.MoviesFeed.FetchMore:
             fetchMore(requestId: env.makeUUID())
 
-        case let action as Actions.MoviesList.FetchResult.Failed:
+        case let action as Actions.MoviesFeed.FetchResult.Failed:
             handleRequestFail(page: action.page)
 
-        case let action as Actions.MoviesList.FetchResult.Success:
+        case let action as Actions.MoviesFeed.FetchResult.Success:
             handleRequestSucess(movies: action.items, page: action.page, totalPages: action.totalPages)
 
         default:

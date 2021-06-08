@@ -9,14 +9,14 @@ import Foundation
 import PureduxCommonCore
 
 extension Actions {
-    enum MoviesList { }
+    enum MoviesFeed { }
 }
 
-extension Actions.MoviesList {
+extension Actions.MoviesFeed {
     enum FetchResult {}
 }
 
-extension Actions.MoviesList {
+extension Actions.MoviesFeed {
     struct Flow: Action {
         let isActive: Bool
     }
@@ -26,7 +26,7 @@ extension Actions.MoviesList {
     }
 }
 
-extension Actions.MoviesList.FetchResult {
+extension Actions.MoviesFeed.FetchResult {
     struct Failed: ErrorAction {
         var page: Int
         let error: SomeError

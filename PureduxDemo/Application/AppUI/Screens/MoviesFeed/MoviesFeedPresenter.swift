@@ -17,7 +17,7 @@ struct MoviesFeedPresenter: PresentableView {
         Props(
             navBarTitle: L10n.MoviesFeed.NavBar.title,
             items: movieItemsProps(for: state, on: store),
-            onAppear: store.dispatching(Actions.MoviesList.Flow(isActive: true))
+            onAppear: store.dispatching(Actions.MoviesFeed.Flow(isActive: true))
         )
     }
 }
@@ -40,7 +40,7 @@ extension MoviesFeedPresenter {
                     title: item.title,
                     description: item.description,
                     onAppear: idx == lastIndex && canPaginate ?
-                        store.dispatching(Actions.MoviesList.FetchMore())
+                        store.dispatching(Actions.MoviesFeed.FetchMore())
                         : nil)
             }
             .map { MoviesFeedView.Props.ItemType.movieListItem($0) }

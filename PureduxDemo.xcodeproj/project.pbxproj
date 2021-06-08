@@ -104,7 +104,7 @@
 		EAE4B7BD266FE5860005ACD2 /* StatePersistanceSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B7BC266FE5860005ACD2 /* StatePersistanceSideEffects.swift */; };
 		EAE4B7CC266FEED20005ACD2 /* MoviesFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B7CB266FEED20005ACD2 /* MoviesFeed.swift */; };
 		EAE4B7D4266FEEF80005ACD2 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B7D3266FEEF80005ACD2 /* Movie.swift */; };
-		EAE4B7DA266FEFE30005ACD2 /* MoviesListActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B7D9266FEFE30005ACD2 /* MoviesListActions.swift */; };
+		EAE4B7DA266FEFE30005ACD2 /* MoviesFeedActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B7D9266FEFE30005ACD2 /* MoviesFeedActions.swift */; };
 		EAE4B7EE266FFABD0005ACD2 /* MoviesFeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B7ED266FFABD0005ACD2 /* MoviesFeedPresenter.swift */; };
 		EAEE43842667F1C800F2C5FD /* PureduxCommonCore in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43832667F1C800F2C5FD /* PureduxCommonCore */; };
 		EAEE438A2667F64F00F2C5FD /* PureduxCommonOperators in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43892667F64F00F2C5FD /* PureduxCommonOperators */; };
@@ -229,7 +229,7 @@
 		EAE4B7BC266FE5860005ACD2 /* StatePersistanceSideEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatePersistanceSideEffects.swift; sourceTree = "<group>"; };
 		EAE4B7CB266FEED20005ACD2 /* MoviesFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesFeed.swift; sourceTree = "<group>"; };
 		EAE4B7D3266FEEF80005ACD2 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
-		EAE4B7D9266FEFE30005ACD2 /* MoviesListActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListActions.swift; sourceTree = "<group>"; };
+		EAE4B7D9266FEFE30005ACD2 /* MoviesFeedActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesFeedActions.swift; sourceTree = "<group>"; };
 		EAE4B7ED266FFABD0005ACD2 /* MoviesFeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesFeedPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -383,7 +383,7 @@
 				EAE4B716266F9F240005ACD2 /* ErrorHandling.swift */,
 				EAE4B742266FA3E90005ACD2 /* AppStateActions.swift */,
 				EAE4B77C266FAB4B0005ACD2 /* AppStatePersistance.swift */,
-				EAE4B7D9266FEFE30005ACD2 /* MoviesListActions.swift */,
+				EAE4B7D9266FEFE30005ACD2 /* MoviesFeedActions.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -1063,7 +1063,7 @@
 				EAE4B743266FA3E90005ACD2 /* AppStateActions.swift in Sources */,
 				EAE4B648266E76F10005ACD2 /* Response.swift in Sources */,
 				EA00C29B2667E597001EED8D /* Action.swift in Sources */,
-				EAE4B7DA266FEFE30005ACD2 /* MoviesListActions.swift in Sources */,
+				EAE4B7DA266FEFE30005ACD2 /* MoviesFeedActions.swift in Sources */,
 				EAE4B7BD266FE5860005ACD2 /* StatePersistanceSideEffects.swift in Sources */,
 				EAE4B65B266E7DCA0005ACD2 /* SuccessResponse.swift in Sources */,
 				EAE4B620266E64AC0005ACD2 /* IdentifiableItem.swift in Sources */,
