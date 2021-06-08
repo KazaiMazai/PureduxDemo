@@ -20,10 +20,12 @@ struct FlowView<First: View, Second: View>: View {
     let props: Props<First, Second>
  
     var body: some View {
-        if props.presentFirst {
-            props.first()
-        } else {
-            props.second()
+        ZStack {
+            if props.presentFirst {
+                props.first()
+            } else {
+                props.second()
+            }
         }
     }
 }
