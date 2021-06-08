@@ -20,8 +20,11 @@ struct AppLauncher {
     private let appStateEnvironment: AppEnvironment
     private let appStateConfig: AppStateConfig
 
+    private let stateStorage: StateStorage<AppState>
+
     private let timeEvents: Middleware<AppState, Action, TimeEventsOperator>
     private let network: Middleware<AppState, Action, NetworkOperator>
+    private let persistance: Middleware<AppState, Action, StatePersistanceOperator<StateStorage<AppState>, AppState, StateSize>>
 
     private let logger: Logger
     private let client: Client
@@ -46,6 +49,7 @@ struct AppLauncher {
         appStateConfig = config
         theme = AppUITheme.defaultTheme
         screenViewsFactory = ScreenViewsFactory.defaultScreenViewsFactory
+        stateStorage = StateStorageFactory().defaultStorage()
 
         client = Client(
             baseURL: URL(string: "https://api.themoviedb.org/3/")!,
@@ -70,6 +74,18 @@ struct AppLauncher {
                 AuthSideEffects(client: client).effects
 
             ].flatten())
+
+        persistance = Middleware(
+            store: store,
+            operator: StatePersistanceOperator(
+                storage: stateStorage,
+                label: "StatePersistance",
+                logger: .with(logLevel: .info,
+                              logger: logger)),
+            sideEffects:
+                StatePersistenceSideEffect().effects
+            )
+
     }
 }
 
@@ -94,6 +110,7 @@ private extension AppLauncher {
     func subscribeToStore() {
         store.subscribe(observer: timeEvents.asObserver)
         store.subscribe(observer: network.asObserver)
+        store.subscribe(observer: persistance.asObserver)
     }
 
     func rootViewWith<V: View>(view: V) -> some View {

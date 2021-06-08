@@ -101,6 +101,7 @@
 		EAE4B789266FC2C00005ACD2 /* ActionsLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B788266FC2C00005ACD2 /* ActionsLogger.swift */; };
 		EAE4B795266FC64E0005ACD2 /* AuthSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B794266FC64E0005ACD2 /* AuthSideEffects.swift */; };
 		EAE4B7A0266FCE730005ACD2 /* NetworkSideEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B79F266FCE730005ACD2 /* NetworkSideEffect.swift */; };
+		EAE4B7BD266FE5860005ACD2 /* StatePersistanceSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B7BC266FE5860005ACD2 /* StatePersistanceSideEffects.swift */; };
 		EAEE43842667F1C800F2C5FD /* PureduxCommonCore in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43832667F1C800F2C5FD /* PureduxCommonCore */; };
 		EAEE438A2667F64F00F2C5FD /* PureduxCommonOperators in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43892667F64F00F2C5FD /* PureduxCommonOperators */; };
 /* End PBXBuildFile section */
@@ -221,6 +222,7 @@
 		EAE4B788266FC2C00005ACD2 /* ActionsLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsLogger.swift; sourceTree = "<group>"; };
 		EAE4B794266FC64E0005ACD2 /* AuthSideEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSideEffects.swift; sourceTree = "<group>"; };
 		EAE4B79F266FCE730005ACD2 /* NetworkSideEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSideEffect.swift; sourceTree = "<group>"; };
+		EAE4B7BC266FE5860005ACD2 /* StatePersistanceSideEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatePersistanceSideEffects.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -493,6 +495,7 @@
 			children = (
 				EAE4B793266FC63E0005ACD2 /* NetworkSideEffects */,
 				EA00C2832667E596001EED8D /* TimeEventsSideEffects.swift */,
+				EAE4B7BC266FE5860005ACD2 /* StatePersistanceSideEffects.swift */,
 			);
 			path = SideEffects;
 			sourceTree = "<group>";
@@ -1039,6 +1042,7 @@
 				EAE4B743266FA3E90005ACD2 /* AppStateActions.swift in Sources */,
 				EAE4B648266E76F10005ACD2 /* Response.swift in Sources */,
 				EA00C29B2667E597001EED8D /* Action.swift in Sources */,
+				EAE4B7BD266FE5860005ACD2 /* StatePersistanceSideEffects.swift in Sources */,
 				EAE4B65B266E7DCA0005ACD2 /* SuccessResponse.swift in Sources */,
 				EAE4B620266E64AC0005ACD2 /* IdentifiableItem.swift in Sources */,
 				EAE4B73B266FA1CD0005ACD2 /* Alert+Props.swift in Sources */,
