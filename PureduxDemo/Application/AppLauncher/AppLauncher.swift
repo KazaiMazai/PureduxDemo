@@ -6,16 +6,20 @@
 //
 
 import SwiftUI
+import PureduxSideEffects
+import PureduxSwiftUI
+import PureduxStore
+import PureduxCommonOperators
 
 struct AppLauncher {
     private let theme: AppUITheme
     private let screenViewsFactory: ScreenViewsFactory
     private let environmentStore: ObservableStore<AppState, Action>
-    private let store: Store
+    private let store: Store<AppState, Action>
     private let appStateEnvironment: AppEnvironment
     private let appStateConfig: AppStateConfig
 
-    private let timeEvents: Middleware<TimeEventsOperator>
+    private let timeEvents: Middleware<AppState, Action, TimeEventsOperator>
 
     init() {
         let env = AppEnvironment.defaultAppEnvironment()

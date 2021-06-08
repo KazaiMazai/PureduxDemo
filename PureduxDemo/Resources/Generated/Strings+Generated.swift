@@ -10,6 +10,21 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
+
+  internal enum Login {
+    /// Login
+    internal static let title = L10n.tr("Localizable", "Login.Title")
+    internal enum MainButton {
+      /// Login
+      internal static let title = L10n.tr("Localizable", "Login.MainButton.title")
+    }
+    internal enum Placeholder {
+      /// Email
+      internal static let email = L10n.tr("Localizable", "Login.Placeholder.email")
+      /// Password
+      internal static let password = L10n.tr("Localizable", "Login.Placeholder.password")
+    }
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces
