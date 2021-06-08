@@ -93,6 +93,11 @@
 		EAE4B743266FA3E90005ACD2 /* AppStateActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B742266FA3E90005ACD2 /* AppStateActions.swift */; };
 		EAE4B74B266FA4500005ACD2 /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B74A266FA4500005ACD2 /* RootPresenter.swift */; };
 		EAE4B750266FA5850005ACD2 /* AppUITheme+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B74F266FA5850005ACD2 /* AppUITheme+UIKit.swift */; };
+		EAE4B75B266FA8CA0005ACD2 /* StateStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B75A266FA8CA0005ACD2 /* StateStorage.swift */; };
+		EAE4B760266FA9AB0005ACD2 /* StateStorageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B75F266FA9AB0005ACD2 /* StateStorageFactory.swift */; };
+		EAE4B76C266FA9F70005ACD2 /* StateSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B76B266FA9F70005ACD2 /* StateSize.swift */; };
+		EAE4B775266FAA730005ACD2 /* StatePersistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B774266FAA730005ACD2 /* StatePersistance.swift */; };
+		EAE4B77D266FAB4B0005ACD2 /* AppStatePersistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4B77C266FAB4B0005ACD2 /* AppStatePersistance.swift */; };
 		EAEE43842667F1C800F2C5FD /* PureduxCommonCore in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43832667F1C800F2C5FD /* PureduxCommonCore */; };
 		EAEE438A2667F64F00F2C5FD /* PureduxCommonOperators in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE43892667F64F00F2C5FD /* PureduxCommonOperators */; };
 /* End PBXBuildFile section */
@@ -205,6 +210,11 @@
 		EAE4B742266FA3E90005ACD2 /* AppStateActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateActions.swift; sourceTree = "<group>"; };
 		EAE4B74A266FA4500005ACD2 /* RootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
 		EAE4B74F266FA5850005ACD2 /* AppUITheme+UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppUITheme+UIKit.swift"; sourceTree = "<group>"; };
+		EAE4B75A266FA8CA0005ACD2 /* StateStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateStorage.swift; sourceTree = "<group>"; };
+		EAE4B75F266FA9AB0005ACD2 /* StateStorageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateStorageFactory.swift; sourceTree = "<group>"; };
+		EAE4B76B266FA9F70005ACD2 /* StateSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateSize.swift; sourceTree = "<group>"; };
+		EAE4B774266FAA730005ACD2 /* StatePersistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatePersistance.swift; sourceTree = "<group>"; };
+		EAE4B77C266FAB4B0005ACD2 /* AppStatePersistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStatePersistance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,6 +338,7 @@
 		EA00C24F2667E596001EED8D /* StateComponents */ = {
 			isa = PBXGroup;
 			children = (
+				EAE4B773266FAA620005ACD2 /* StatePersistance */,
 				EAE4B70D266F9EF40005ACD2 /* ErrorStateHandler */,
 				EAE4B6B2266F7BF30005ACD2 /* CurrentTime */,
 				EAE4B6B1266F7BEC0005ACD2 /* Login */,
@@ -354,6 +365,7 @@
 				EAE4B6C8266F86730005ACD2 /* AuthActions.swift */,
 				EAE4B716266F9F240005ACD2 /* ErrorHandling.swift */,
 				EAE4B742266FA3E90005ACD2 /* AppStateActions.swift */,
+				EAE4B77C266FAB4B0005ACD2 /* AppStatePersistance.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -738,9 +750,27 @@
 			path = Alert;
 			sourceTree = "<group>";
 		};
+		EAE4B767266FA9BA0005ACD2 /* StateStorage */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B75F266FA9AB0005ACD2 /* StateStorageFactory.swift */,
+				EAE4B75A266FA8CA0005ACD2 /* StateStorage.swift */,
+			);
+			path = StateStorage;
+			sourceTree = "<group>";
+		};
+		EAE4B773266FAA620005ACD2 /* StatePersistance */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4B774266FAA730005ACD2 /* StatePersistance.swift */,
+			);
+			path = StatePersistance;
+			sourceTree = "<group>";
+		};
 		EAEE43C12667FECD00F2C5FD /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				EAE4B767266FA9BA0005ACD2 /* StateStorage */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -757,6 +787,7 @@
 			children = (
 				EAE4B6C3266F83E10005ACD2 /* SessionRequestToken.swift */,
 				EAE4B6CD266F87910005ACD2 /* Session.swift */,
+				EAE4B76B266FA9F70005ACD2 /* StateSize.swift */,
 			);
 			path = PlainModels;
 			sourceTree = "<group>";
@@ -974,6 +1005,7 @@
 				EAE4B6C9266F86730005ACD2 /* AuthActions.swift in Sources */,
 				EAE4B4B32668F86E0005ACD2 /* Strings+Generated.swift in Sources */,
 				EA00C2B62667E597001EED8D /* Color+hex.swift in Sources */,
+				EAE4B76C266FA9F70005ACD2 /* StateSize.swift in Sources */,
 				EAE4B5EA266E51460005ACD2 /* ActionButton.swift in Sources */,
 				EA00C2B22667E597001EED8D /* SceneDelegate.swift in Sources */,
 				EAE4B64D266E77B60005ACD2 /* Errors.swift in Sources */,
@@ -988,6 +1020,8 @@
 				EAE4B5CB26693C820005ACD2 /* CustomTextField.swift in Sources */,
 				EAE4B671266F6C910005ACD2 /* TokenResponse.swift in Sources */,
 				EAE4B70F266F9F070005ACD2 /* ErrorHandler.swift in Sources */,
+				EAE4B77D266FAB4B0005ACD2 /* AppStatePersistance.swift in Sources */,
+				EAE4B760266FA9AB0005ACD2 /* StateStorageFactory.swift in Sources */,
 				EAE4B59B266917120005ACD2 /* ComponentsStyles.swift in Sources */,
 				EA00C28F2667E596001EED8D /* AppState.swift in Sources */,
 				EAE4B5B726692CAD0005ACD2 /* ThemeSizes.swift in Sources */,
@@ -1015,6 +1049,7 @@
 				EA00C2A32667E597001EED8D /* ScreenViews.swift in Sources */,
 				EAE4B6C4266F83E10005ACD2 /* SessionRequestToken.swift in Sources */,
 				EAE4B750266FA5850005ACD2 /* AppUITheme+UIKit.swift in Sources */,
+				EAE4B775266FAA730005ACD2 /* StatePersistance.swift in Sources */,
 				EAE4B59526690F130005ACD2 /* ThemeColors.swift in Sources */,
 				EA00C2AC2667E597001EED8D /* ViewStoreExtensions.swift in Sources */,
 				EAE4B660266E81600005ACD2 /* Coder.swift in Sources */,
@@ -1037,6 +1072,7 @@
 				EA00C2AA2667E597001EED8D /* AppUITheme.swift in Sources */,
 				EAE4B6BC266F7D3E0005ACD2 /* PickCredentials.swift in Sources */,
 				EA00C2912667E596001EED8D /* AppEnvironment.swift in Sources */,
+				EAE4B75B266FA8CA0005ACD2 /* StateStorage.swift in Sources */,
 				EAE4B5B2266926790005ACD2 /* View+Placeholder.swift in Sources */,
 				EAE4B6D9266F8EE70005ACD2 /* AuthState.swift in Sources */,
 				EA00C2A42667E597001EED8D /* ScreenViewFactoryKey.swift in Sources */,
